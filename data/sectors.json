@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "AGR",
+      "name": "Agriculture",
+      "icon": "◍"
+    },
+    {
+      "id": "PUB",
+      "name": "Public administration & education",
+      "icon": "◈"
+    },
+    {
+      "id": "MAN",
+      "name": "Manufacturing",
+      "icon": "▣"
+    },
+    {
+      "id": "HLT",
+      "name": "Healthcare",
+      "icon": "✚"
+    },
+    {
+      "id": "FIN",
+      "name": "Financial services",
+      "icon": "◉"
+    },
+    {
+      "id": "CON",
+      "name": "Construction",
+      "icon": "▥"
+    },
+    {
+      "id": "RET",
+      "name": "Wholesale & retail",
+      "icon": "▤"
+    },
+    {
+      "id": "ICT",
+      "name": "ICT",
+      "icon": "◐"
+    },
+    {
+      "id": "TRA",
+      "name": "Transport & storage",
+      "icon": "⊞"
+    },
+    {
+      "id": "OTH",
+      "name": "Other sectors",
+      "icon": "⊕"
+    },
+    {
+      "id": "ENE",
+      "name": "Energy",
+      "icon": "◆"
+    },
+    {
+      "id": "TOU",
+      "name": "Tourism",
+      "icon": "◇"
+    }
+  ]
+}

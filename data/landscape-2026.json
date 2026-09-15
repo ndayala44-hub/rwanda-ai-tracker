@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "id": "LANDSCAPE26",
+  "title": "Rwanda Artificial Intelligence Landscape Review 2026 — From Policy to Impact",
+  "subtitle": "The rules are built. The use cases are proving. The substrate is missing.",
+  "author": "Aurasoft Ltd",
+  "authorRole": "Independent AI policy and regulatory analysis, Kigali, Rwanda",
+  "published": "2026-09",
+  "type": "Independent analysis",
+  "independence": "Independent analysis. Not affiliated with any consulting firm.",
+  "thesis": "Between 2021 and 2026 Rwanda constructed the most institutionally complete AI governance architecture on the African continent, ahead of states with far greater fiscal capacity, research depth and installed computing infrastructure. The open question is no longer whether Rwanda can govern AI, but whether it can build the physical and human substrate to run it on.",
+  "headline": [
+    {
+      "value": "3.25 / 4",
+      "label": "First in Africa on AI governance",
+      "metric": "africa_governance_index"
+    },
+    {
+      "value": "111 / 121",
+      "label": "Global rank on measured AI usage",
+      "metric": "ai_usage_rank"
+    },
+    {
+      "value": "$67.5M",
+      "label": "AI commitments since 2025",
+      "metric": "ai_commitments_usd"
+    },
+    {
+      "value": "2.4 / 5",
+      "label": "National AI maturity score",
+      "metric": "landscape_maturity_avg"
+    }
+  ],
+  "findings": [
+    {
+      "n": 1,
+      "title": "Governance is settled",
+      "tone": "positive",
+      "text": "First national AI policy in Africa (2023) and first dedicated AI agency (2026). Ranked first on the Africa AI Governance Index at 3.25 of 4, the only state scoring strongly on both strategy and implementation."
+    },
+    {
+      "n": 2,
+      "title": "Deployment is real but narrow",
+      "tone": "positive",
+      "text": "Operational systems in health intelligence, agricultural voice advisory, social protection analytics, education and statistics. Two government AI systems recognised internationally in 2026."
+    },
+    {
+      "n": 3,
+      "title": "Adoption is the weak link",
+      "tone": "risk",
+      "text": "Measured usage ranks 111 of 121 globally at 0.20x the expected index. Usage skews to learning and drafting, though its composition is unusually technical."
+    },
+    {
+      "n": 4,
+      "title": "The constraints are physical and human",
+      "tone": "risk",
+      "text": "Human Capital Index 0.38. Roughly 300 MW of national generation against AI campuses drawing 100 MW each. Smartphone ownership near 34 percent."
+    },
+    {
+      "n": 5,
+      "title": "The gaps are cheap to close",
+      "tone": "opportunity",
+      "text": "No AI law, no public AI register, no evaluation capability and no model ownership term. Each is low cost relative to infrastructure and each raises Rwanda's position in the value chain."
+    }
+  ],
+  "maturityTrajectory": {
+    "note": "Maturity stages: 1 exploring, 2 experimenting, 3 implementing, 4 scaling, 5 AI-enabled economy. Assessment of this review, not a measured index.",
+    "series": {
+      "Governance and policy": {
+        "2021": 1.0,
+        "2022": 1.3,
+        "2023": 2.6,
+        "2024": 3.0,
+        "2025": 3.5,
+        "2026": 4.0
+      },
+      "Public sector adoption": {
+        "2021": 1.0,
+        "2022": 1.2,
+        "2023": 1.6,
+        "2024": 2.2,
+        "2025": 2.7,
+        "2026": 3.0
+      },
+      "Compute capability": {
+        "2021": 1.0,
+        "2022": 1.1,
+        "2023": 1.2,
+        "2024": 1.3,
+        "2025": 1.4,
+        "2026": 1.5
+      }
+    },
+    "reading": "Governance moved from exploring to the threshold of scaling in five years. Public sector adoption reached implementation, with two systems recognised internationally. Compute barely moved: Rwanda has no domestic frontier capacity and is absent from announced regional GPU deployments. The state has internalised the diagnosis — compute and investment are named in the new agency's mandate."
+  },
+  "maturityAssessment2026": {
+    "scale": "1 to 5",
+    "nationalAverage": 2.4,
+    "note": "Qualitative expert assessment across fourteen dimensions, published as analyst judgement. It is deliberately kept separate from the platform's computed readiness and maturity indices and is never merged into them.",
+    "reading": "Scores cluster at two poles: institutions above 3.0, capability and capital at or below 2.2. There is very little in the middle. Bimodality is the signature of a state that has built institutions faster than it has built industry. The failure mode to guard against is a widening gap between what the architecture can govern and what the economy can produce.",
+    "dimensions": [
+      {
+        "name": "Policy and governance",
+        "score": 4.0,
+        "pole": "institutional"
+      },
+      {
+        "name": "Digital infrastructure",
+        "score": 3.5,
+        "pole": "institutional"
+      },
+      {
+        "name": "Local language AI",
+        "score": 3.5,
+        "pole": "institutional"
+      },
+      {
+        "name": "Data ecosystem",
+        "score": 3.0,
+        "pole": "institutional"
+      },
+      {
+        "name": "Public sector adoption",
+        "score": 3.0,
+        "pole": "institutional"
+      },
+      {
+        "name": "Talent",
+        "score": 2.5,
+        "pole": "capability"
+      },
+      {
+        "name": "Data readiness",
+        "score": 2.2,
+        "pole": "capability"
+      },
+      {
+        "name": "Responsible AI controls",
+        "score": 2.0,
+        "pole": "capability"
+      },
+      {
+        "name": "Research",
+        "score": 2.0,
+        "pole": "capability"
+      },
+      {
+        "name": "Private sector",
+        "score": 2.0,
+        "pole": "capability"
+      },
+      {
+        "name": "Investment",
+        "score": 2.0,
+        "pole": "capital"
+      },
+      {
+        "name": "Sovereignty",
+        "score": 2.0,
+        "pole": "capital"
+      },
+      {
+        "name": "Compute",
+        "score": 1.5,
+        "pole": "capital"
+      },
+      {
+        "name": "Measured impact",
+        "score": 1.0,
+        "pole": "capital"
+      }
+    ]
+  },
+  "policySequencing": {
+    "argument": "A state that legislated on data before it strategised on AI, strategised before it institutionalised, and institutionalised before it attempted scale. That ordering is unusual among comparator states and is why declared policy and observed implementation are scored as mutually consistent.",
+    "timeline": [
+      {
+        "year": 2021,
+        "event": "Data Protection and Privacy Law enacted"
+      },
+      {
+        "year": 2023,
+        "event": "National AI Policy adopted, first in Africa"
+      },
+      {
+        "year": 2023,
+        "event": "Data protection law becomes enforceable"
+      },
+      {
+        "year": 2024,
+        "event": "NST2 approved; AI Playbook for Small States"
+      },
+      {
+        "year": 2025,
+        "event": "Global AI Summit hosted; Health Intelligence Centre; Scaling Hub; Data Sharing Policy"
+      },
+      {
+        "year": 2026,
+        "event": "Horizon 1000; DPI Strategy; National AI Agency; Institute of Computing"
+      }
+    ]
+  },
+  "nationalAiAgency": {
+    "approved": "2026-06-08",
+    "approvedBy": "Cabinet",
+    "claim": "Africa's first standalone national AI institution, succeeding the AI Office in the ICT ministry.",
+    "mandate": "Government transformation, research, skilling, ethics and safety, industry growth, commercialisation, investment and international engagement.",
+    "instruments": "The national data centre, and a governed data sandbox giving researchers, startups and firms secure access to domestic datasets.",
+    "design": "Expressly designed to build on existing institutions, not replace them.",
+    "constraintsItResolves": [
+      {
+        "n": 1,
+        "constraint": "Accelerating implementation",
+        "status": "Confirmed. Pilot survival unmeasured"
+      },
+      {
+        "n": 2,
+        "constraint": "Access to AI-ready data",
+        "status": "Partly addressed by the data sharing policy"
+      },
+      {
+        "n": 3,
+        "constraint": "Computing infrastructure",
+        "status": "Confirmed, and constrained by energy"
+      },
+      {
+        "n": 4,
+        "constraint": "Attracting talent",
+        "status": "Improving at literacy, not at engineering"
+      },
+      {
+        "n": 5,
+        "constraint": "Catalysing investment",
+        "status": "A quarter of the costed policy financed"
+      }
+    ]
+  },
+  "comparativePosition": {
+    "governanceIndex": {
+      "name": "Africa AI Governance Index 2026",
+      "scale": "score of 4, higher is better",
+      "values": [
+        {
+          "country": "Rwanda",
+          "value": 3.25
+        },
+        {
+          "country": "Nigeria",
+          "value": 2.81
+        },
+        {
+          "country": "Benin",
+          "value": 2.58
+        },
+        {
+          "country": "Kenya",
+          "value": 2.47
+        },
+        {
+          "country": "Egypt",
+          "value": 2.25
+        },
+        {
+          "country": "Ghana",
+          "value": 2.21
+        },
+        {
+          "country": "Mauritius",
+          "value": 2.2
+        }
+      ]
+    },
+    "readinessIndex": {
+      "name": "Global AI Readiness Index 2025",
+      "scale": "rank of 195, lower is better",
+      "values": [
+        {
+          "country": "Egypt",
+          "value": 51
+        },
+        {
+          "country": "Kenya",
+          "value": 65
+        },
+        {
+          "country": "South Africa",
+          "value": 67
+        },
+        {
+          "country": "Mauritius",
+          "value": 71
+        },
+        {
+          "country": "Rwanda",
+          "value": 75
+        }
+      ]
+    },
+    "reading": "Both indices are correct. One measures capacity to govern, the other readiness to build. Rwanda's distinction is that it is the state where the gap between declared strategy and observed implementation is narrowest, not where absolute capability is highest."
+  },
+  "measuredAdoption": {
+    "source": "Anthropic Economic Index, Rwanda country view, last updated 26 June 2026",
+    "caveat": "Measures Claude.ai usage only and is a proxy for frontier AI adoption, not a total measure. Percentages do not sum to 100 because privacy filters are applied.",
+    "usageRank": 111,
+    "usageUniverse": 121,
+    "usageIndex": 0.2,
+    "expectedIndex": 1.0,
+    "whyItMatters": "A testbed proposition requires users to test on. Governance leadership without usage is a rule set with no economy attached to it.",
+    "whatDrivesIt": "Smartphone ownership near 34 percent, mobile internet use near 20 percent, average handset prices around USD 160, and a Human Capital Index of 0.38.",
+    "opportunity": "Rwanda's constraint is demand-side and addressable through devices, connectivity cost and literacy, not through further strategy.",
+    "byCategory": [
+      {
+        "name": "Content creation and copywriting",
+        "share": 26.1
+      },
+      {
+        "name": "Education and learning",
+        "share": 25.7
+      },
+      {
+        "name": "Software development",
+        "share": 13.7
+      },
+      {
+        "name": "Document processing and research",
+        "share": 12.9
+      },
+      {
+        "name": "All other categories",
+        "share": 21.6
+      }
+    ],
+    "byOccupation": [
+      {
+        "name": "Computer and mathematical",
+        "share": 26.2
+      },
+      {
+        "name": "Educational instruction",
+        "share": 15.9
+      },
+      {
+        "name": "Arts, design and media",
+        "share": 14.2
+      },
+      {
+        "name": "Office and admin support",
+        "share": 9.5
+      },
+      {
+        "name": "Sales and related",
+        "share": 6.4
+      },
+      {
+        "name": "Management",
+        "share": 6.1
+      },
+      {
+        "name": "Architecture and engineering",
+        "share": 4.2
+      },
+      {
+        "name": "Life and social science",
+        "share": 4.1
+      }
+    ],
+    "composition": "Half of all Rwandan AI use is content creation and learning. Homework alone is the single most frequent topic at 13.2 percent. This is an early-curve profile: capability is being acquired, not yet applied to output.",
+    "distinctiveTopics": [
+      {
+        "name": "Math and CS theory",
+        "multiple": 3.0
+      },
+      {
+        "name": "AI app building",
+        "multiple": 2.5
+      },
+      {
+        "name": "Document transformation",
+        "multiple": 2.5
+      },
+      {
+        "name": "Homework",
+        "multiple": 2.1
+      },
+      {
+        "name": "Slide decks",
+        "multiple": 1.7
+      },
+      {
+        "name": "Instructional design",
+        "multiple": 1.6
+      },
+      {
+        "name": "Formatted writing",
+        "multiple": 1.5
+      },
+      {
+        "name": "Self-presentation writing",
+        "multiple": 1.4
+      },
+      {
+        "name": "Workplace writing",
+        "multiple": 1.4
+      }
+    ],
+    "launchpadSignal": "Math and computer science theory runs at three times the global average, and AI app building at two and a half times. These are construction categories, not consumption categories. Rwandans who do use frontier AI are disproportionately building with it. Raise volume and Rwanda gets builders, not just users."
+  },
+  "nationalPortfolio": {
+    "caveat": "Rwanda does not publish a consolidated AI project inventory, so this portfolio understates total activity by an unknown margin.",
+    "items": [
+      {
+        "name": "National AI Agency",
+        "domain": "Governance",
+        "status": "Approved June 2026",
+        "marker": "First in Africa"
+      },
+      {
+        "name": "AI Scaling Hub",
+        "domain": "Cross-sector",
+        "status": "Operational",
+        "marker": "USD 17.5 million"
+      },
+      {
+        "name": "Horizon 1000",
+        "domain": "Health",
+        "status": "Launched 2026",
+        "marker": "1,000 clinics by 2028"
+      },
+      {
+        "name": "Health Intelligence Centre",
+        "domain": "Health",
+        "status": "Operational",
+        "marker": "Real-time national data"
+      },
+      {
+        "name": "RSSB capitation analytics",
+        "domain": "Social protection",
+        "status": "Operational",
+        "marker": "1,000+ facilities"
+      },
+      {
+        "name": "Tunga voice assistant",
+        "domain": "Agriculture",
+        "status": "Operational",
+        "marker": "2.5M farmer target"
+      },
+      {
+        "name": "Chidi learning companion",
+        "domain": "Education",
+        "status": "Deploying",
+        "marker": "8 African countries"
+      },
+      {
+        "name": "Institute of Computing",
+        "domain": "Education",
+        "status": "Opened Sept 2026",
+        "marker": "AI and cyber degrees"
+      },
+      {
+        "name": "Kinyarwanda model suite",
+        "domain": "Language",
+        "status": "Open source",
+        "marker": "KinyaBERT, ColBERT, TTS"
+      }
+    ]
+  },
+  "sectorDeepDives": {
+    "health": {
+      "headline": "Health is the most mature AI sector and the largest recipient of external capital, which is also a concentration risk.",
+      "healthIntelligenceCentre": "Operational since April 2025; integrates data from community health workers to referral hospitals. Predicts disease trends up to three months ahead, enabling targeted rather than regional intervention. Four pillars including validation and evaluation — the only formally resourced model evaluation in Rwanda.",
+      "horizon1000": "USD 50 million from the Gates Foundation and OpenAI; 1,000 clinics by 2028, Rwanda first. A three-year government MOU with Anthropic covers malaria, maternal mortality and cervical cancer elimination. Both target frontline capability: triage, documentation, referral and follow-up under human oversight.",
+      "stats": [
+        {
+          "value": "USD 67.5M",
+          "label": "Committed to Rwandan AI by a single foundation"
+        },
+        {
+          "value": "5.6M",
+          "label": "Health worker shortfall across sub-Saharan Africa"
+        },
+        {
+          "value": "450 of 510",
+          "label": "Facilities reached by the platform that closed in 2023"
+        }
+      ],
+      "precedent": "Rwanda's largest digital health deployment reached close to a fifth of the population and collapsed in September 2023 when its foreign parent entered bankruptcy. Continuity, data portability and model portability should be mandatory clauses in every public AI contract."
+    },
+    "agriculture": {
+      "headline": "Tunga answers farmer questions by voice in Kinyarwanda, because most users have neither a smartphone nor broadband.",
+      "problem": "The national agricultural call centre was reported at one point as staffed by two agents serving more than two million farmers. Extension coverage stood at 35 percent in 2023.",
+      "architecture": [
+        {
+          "component": "KinyaBERT",
+          "detail": "Morphology-aware model, 107M and 365M parameters"
+        },
+        {
+          "component": "KinyaColBERT",
+          "detail": "Dense retrieval across the validated knowledge base"
+        },
+        {
+          "component": "Flex-TTS",
+          "detail": "Multi-speaker Kinyarwanda speech synthesis"
+        },
+        {
+          "component": "IVR layer",
+          "detail": "Delivery over basic phones, 24 hours a day"
+        }
+      ],
+      "performance": [
+        {
+          "value": "60%+",
+          "label": "Of technical farmer queries handled, with escalation to human experts"
+        },
+        {
+          "value": "2.5M",
+          "label": "Farmers targeted within three years"
+        },
+        {
+          "value": "35% to 69%",
+          "label": "Extension coverage, 2023 to 2029"
+        },
+        {
+          "value": "1.5M",
+          "label": "Farmers already registered on the input subsidy platform"
+        }
+      ],
+      "sovereignty": "Models released open source in March 2026, giving Rwanda the only genuinely sovereign layer of its AI stack."
+    },
+    "socialProtection": {
+      "headline": "RSSB is closing the last mile of digitisation and has already built the data engine an AI-enabled institution runs on.",
+      "pipeline": {
+        "name": "Medallion data pipeline",
+        "sources": "Ishema, CBHI, RAMA, EjoHeza, Pension, Oracle ERP",
+        "stages": [
+          "Landing — raw ingest",
+          "Bronze — cleaned",
+          "Silver — anonymised",
+          "Gold — business ready",
+          "Platinum — ML and AI features"
+        ],
+        "outputs": "Executive dashboards, self-service analytics, real-time tracking, and a layer built for ML models and agents",
+        "note": "Manual spreadsheets and ad-hoc data requests have been replaced by an automated pipeline consolidating every scheme into one governed store, with anonymisation applied before analytical use."
+      },
+      "achievements": {
+        "Last mile digitisation": [
+          "Pension approval now 7 days; 3,333 pensioners onboarded with zero paper and zero trips",
+          "Medical pre-approval cut from days to under 15 minutes, over 76,000 requests",
+          "100 percent paperless prescriptions across 250 or more private facilities"
+        ],
+        "Operational excellence": [
+          "Data sync at 96 percent to Oracle ERP and 98 percent to the revenue authority",
+          "93 percent first-contact resolution, averaging about four hours",
+          "Rwf 270 million in unallocated pension funds cleared through payroll integration"
+        ],
+        "Resilience and AI readiness": [
+          "Recovery point near zero and recovery time under five minutes across six databases",
+          "98 percent of penetration-test vulnerabilities remediated",
+          "Policy knowledge base with AI-assisted navigation already in use internally"
+        ]
+      },
+      "whyItMatters": "RSSB already runs capitation analytics across more than 1,000 health facilities on 20 million annual visits. Financing and eligibility data is more complete and more structured than clinical records, so this is the domain where AI effects are measurable in fiscal terms — which is what the national programme lacks."
+    }
+  },
+  "partnerships": {
+    "headline": "Rwanda has converted institutional credibility into partnerships larger than its economy would normally command.",
+    "exposure": "Two of the largest commitments come from one foundation and concentrate in health, and Rwanda's two largest human-services deployments run on two different foreign models it does not own.",
+    "items": [
+      {
+        "partner": "Anthropic",
+        "vehicle": "Three-year government MOU",
+        "amountUsd": null,
+        "detail": "Claude in public-sector developer workflows, 2,000 educator licences, and health goals including malaria, maternal mortality and cervical cancer elimination.",
+        "marker": "First multi-sector MOU the company has signed on the continent"
+      },
+      {
+        "partner": "Gates Foundation and OpenAI",
+        "vehicle": "Horizon 1000",
+        "amountUsd": 50000000,
+        "detail": "AI for triage, documentation, referral and follow-up in 1,000 primary care clinics by 2028.",
+        "marker": "Rwanda selected as first launch country, ahead of Kenya, South Africa and Nigeria"
+      },
+      {
+        "partner": "Gates Foundation and C4IR",
+        "vehicle": "AI Scaling Hub",
+        "amountUsd": 17500000,
+        "detail": "Scaling proven solutions in health, agriculture and education, then across the continent.",
+        "marker": "First of four planned continental scaling hubs"
+      },
+      {
+        "partner": "GIZ and BMZ",
+        "vehicle": "Tunga and FAIR Forward",
+        "amountUsd": null,
+        "detail": "Kinyarwanda voice advisory and the open-source model suite; earlier support to the National AI Policy.",
+        "marker": "Underwrote Rwanda's only sovereign AI layer"
+      },
+      {
+        "partner": "IDRC and FCDO",
+        "vehicle": "TAIRI Lab",
+        "amountUsd": 540000,
+        "detail": "Applied AI research in health, agriculture and environment with ten postgraduate researchers.",
+        "marker": "Part of a continental AI4D lab network"
+      }
+    ]
+  },
+  "deploymentBase": {
+    "headline": "Rwandan firms cluster where domain data is jurisdiction-specific and unavailable to frontier providers.",
+    "reading": "The base clusters where Rwanda holds an asset frontier providers cannot acquire: Kinyarwanda, Rwandan law and national health logistics. That is the right competitive instinct and it emerged without industrial policy direction. But the largest disclosed domestic raise is USD 2.6 million, an order of magnitude below the level at which firms build defensible technical moats. Procurement, not grant funding, is the state's most powerful available instrument.",
+    "clusters": [
+      {
+        "cluster": "Language and speech",
+        "firms": [
+          {
+            "name": "KiNLP",
+            "detail": "KinyaBERT, KinyaColBERT, Flex-TTS"
+          },
+          {
+            "name": "Digital Umuganda",
+            "detail": "Open voice datasets, speech-to-text"
+          },
+          {
+            "name": "CircuitNotion",
+            "detail": "Incuti AI localised language model"
+          },
+          {
+            "name": "Yali Labs",
+            "detail": "Enterprise Kinyarwanda NLP tooling"
+          }
+        ]
+      },
+      {
+        "cluster": "Health and logistics",
+        "firms": [
+          {
+            "name": "Viebeg",
+            "detail": "AI procurement and supply chain"
+          },
+          {
+            "name": "DoctorAI",
+            "detail": "Triage and diagnostic support"
+          },
+          {
+            "name": "Insightiv",
+            "detail": "Radiology image analysis"
+          },
+          {
+            "name": "Zipline",
+            "detail": "Autonomous medical delivery"
+          }
+        ]
+      },
+      {
+        "cluster": "Legal, risk and enterprise",
+        "firms": [
+          {
+            "name": "IST Legal",
+            "detail": "Rwandan legislation and case law"
+          },
+          {
+            "name": "AILEX Rwanda",
+            "detail": "Citation-grounded legal research"
+          },
+          {
+            "name": "Hence",
+            "detail": "Geopolitical risk models, USD 2.6M raised"
+          },
+          {
+            "name": "Soft Pi / AI7 Optivaro",
+            "detail": "Enterprise automation and agents"
+          }
+        ]
+      }
+    ]
+  },
+  "constraintStack": {
+    "headline": "Four constraints compound rather than sit in parallel, and none is resolved by further strategy.",
+    "compounding": "Each layer compounds the next: weak human capital limits usage, and weak usage limits the private capital needed to close the other gaps.",
+    "layers": [
+      {
+        "layer": "Human capital",
+        "metric": "0.38",
+        "detail": "Human Capital Index 0.38. Harmonised test score 358 of a possible 625. AI literacy is being built on top of a foundational literacy problem."
+      },
+      {
+        "layer": "Physical",
+        "metric": "~300 MW",
+        "detail": "Approximately 300 MW of national installed generation. A single hyperscale AI campus draws over 100 MW. Water-stressed highlands make evaporative cooling compete with agriculture."
+      },
+      {
+        "layer": "Access and demand",
+        "metric": "0.20x",
+        "detail": "Smartphone ownership near 34 percent, mobile internet use near 20 percent, handsets averaging USD 160. Measured AI usage sits at 0.20x the expected index."
+      },
+      {
+        "layer": "Institutional",
+        "metric": "0 of 4",
+        "detail": "No AI-specific legislation, no public register of state AI systems, no national model evaluation capability, and no standard term on ownership of models fine-tuned on Rwandan data."
+      }
+    ]
+  },
+  "humanCapital": {
+    "hci": 0.38,
+    "hciNote": "A child born in Rwanda today will be 38 percent as productive in adulthood as she could be with complete education and full health. Below the sub-Saharan African average, marginally above the low-income group average.",
+    "hciSource": "World Bank Human Capital Index, most recent value 2020",
+    "harmonisedTestScore": 358,
+    "harmonisedMin": 300,
+    "harmonisedMax": 625,
+    "gaps": [
+      {
+        "gap": "The workforce literacy gap",
+        "detail": "National AI literacy programmes have reached over 5,000 teachers and 50 civil servants across 24 institutions. Neither the general workforce nor the informal sector is covered by any current instrument."
+      },
+      {
+        "gap": "The engineering gap",
+        "detail": "The Institute of Computing produces its first AI and cybersecurity graduates in 2029. Until then the binding constraint on delivery is engineers, not policy."
+      },
+      {
+        "gap": "The retention gap",
+        "detail": "Continental assessment names brain drain as a critical risk for states that build technical talent without a domestic market able to absorb it at competitive pay. No published retention strategy exists."
+      }
+    ]
+  },
+  "physicalCeiling": {
+    "headline": "Sovereign frontier compute is not primarily a capital question for Rwanda; it is an energy and water question.",
+    "figures": [
+      {
+        "name": "National installed generation",
+        "mw": 300
+      },
+      {
+        "name": "National peak demand",
+        "mw": 190
+      },
+      {
+        "name": "One hyperscale AI campus",
+        "mw": 100
+      }
+    ],
+    "note": "Installed generation and peak demand are indicative national figures from grid operator and sector reporting, 2022 to 2023, pending updated publication. Hyperscale campus load is a typical industry figure, not a Rwandan project.",
+    "reading": "A single hyperscale AI facility would draw roughly a third of Rwanda's entire installed generating capacity, and more than half its peak demand. Cooling compounds the problem: Rwanda is a water-constrained highland economy where evaporative cooling would compete directly with agriculture and household supply.",
+    "recommendations": [
+      {
+        "title": "Do not chase frontier training",
+        "detail": "The energy and water arithmetic does not close. Competing for hyperscale training capacity would misallocate scarce generation."
+      },
+      {
+        "title": "Specialise in inference and adaptation",
+        "detail": "Fine-tuning, retrieval and small-model deployment fit the available envelope and match Rwanda's language advantage."
+      },
+      {
+        "title": "Partner for the rest, on stated terms",
+        "detail": "Secure regional compute access contractually, with model ownership and continuity clauses attached."
+      }
+    ]
+  },
+  "governanceGaps": {
+    "headline": "A country that wants to be a testbed must be able to certify what was tested.",
+    "closingNote": "The cheapest of these is the most valuable. A standard national term on ownership of fine-tuned models costs nothing to draft and changes Rwanda's position in the value chain.",
+    "exists": [
+      {
+        "item": "Five ethical principles",
+        "detail": "Beneficence, non-maleficence, autonomy, justice, explicability"
+      },
+      {
+        "item": "Enforceable data law",
+        "detail": "Registration mandatory, extraterritorial reach, 48-hour breach clock"
+      },
+      {
+        "item": "Data localisation",
+        "detail": "Personal data held in Rwanda absent an authorising certificate"
+      },
+      {
+        "item": "Impact assessment duty",
+        "detail": "Required for high-risk processing, which captures most AI"
+      },
+      {
+        "item": "A Responsible AI Office",
+        "detail": "Cited by continental assessment as a differentiator"
+      }
+    ],
+    "missing": [
+      {
+        "item": "No AI-specific legislation",
+        "detail": "Enforcement rests on the data protection regime alone",
+        "cost": "low"
+      },
+      {
+        "item": "No public register of state AI",
+        "detail": "Automated enforcement runs with no transparency duty",
+        "cost": "low"
+      },
+      {
+        "item": "No model evaluation capability",
+        "detail": "Vendor accuracy claims have no domestic verifier",
+        "cost": "medium"
+      },
+      {
+        "item": "No AI procurement standard",
+        "detail": "The state is anchor buyer without continuity or exit terms",
+        "cost": "low"
+      },
+      {
+        "item": "No model ownership term",
+        "detail": "Ownership of models fine-tuned on Rwandan public data is undefined",
+        "cost": "lowest"
+      }
+    ]
+  },
+  "proposition": {
+    "headline": "What Rwanda offers a partner that a larger market cannot.",
+    "ask": "Co-invest in the substrate, not only in the pilots. Devices and connectivity cost, workforce literacy beyond the civil service, regional compute access on contractual terms, and a national evaluation capability that lets Rwanda certify what it has tested.",
+    "points": [
+      {
+        "n": 1,
+        "title": "National scale at testable size",
+        "detail": "Fourteen million people, one jurisdiction, one regulator. A deployment can reach national coverage inside a programme cycle rather than a decade."
+      },
+      {
+        "n": 2,
+        "title": "Legal clarity that is actually enforced",
+        "detail": "An operative data protection regime with defined obligations, rather than a law awaiting commencement."
+      },
+      {
+        "n": 3,
+        "title": "A single accountable counterparty",
+        "detail": "The National AI Agency consolidates a mandate previously spread across four institutions."
+      },
+      {
+        "n": 4,
+        "title": "A technically inclined user base",
+        "detail": "Math and computer science theory at three times global average, AI app building at two and a half times."
+      },
+      {
+        "n": 5,
+        "title": "Sovereign language infrastructure",
+        "detail": "An openly licensed Kinyarwanda model suite that any partner can build on without licensing friction."
+      },
+      {
+        "n": 6,
+        "title": "A government willing to be first",
+        "detail": "Rwanda has been first launch country, first policy, first agency, and first summit host on the continent."
+      }
+    ]
+  },
+  "agenda2026to2030": {
+    "framing": "The decisive choices concern conversion, not ambition; none of them requires a new strategy. Converting policy into procurement standards, pilots into budget lines, literacy into engineering capability, concessional financing into commercial capital, and projected potential into measured impact.",
+    "phases": [
+      {
+        "period": "2026 to 2027",
+        "theme": "Institutionalise",
+        "actions": [
+          "Operationalise the AI Agency with a published statutory instrument",
+          "Launch the governed data sandbox with published access rules",
+          "Issue an AI procurement standard with continuity and exit provisions",
+          "Adopt a national term on ownership of fine-tuned models",
+          "Publish an AI project inventory and pilot survival rate",
+          "Set an energy and water envelope for AI infrastructure"
+        ]
+      },
+      {
+        "period": "2027 to 2028",
+        "theme": "Scale",
+        "actions": [
+          "Move agricultural advisory to national extension coverage",
+          "Extend health intelligence into routine clinical decision support",
+          "Complete Ishema onboarding and publish measured fiscal effects",
+          "Deliver Horizon 1000 with published independent evaluation",
+          "Stand up national model evaluation with Kinyarwanda benchmarks",
+          "Attack the usage gap through device and data cost intervention"
+        ]
+      },
+      {
+        "period": "2028 to 2030",
+        "theme": "Commercialise",
+        "actions": [
+          "Establish African language AI as an export capability",
+          "Sell evaluation and assurance as a tradable service line",
+          "Reposition business process services toward AI-augmented delivery",
+          "Attract private capital into inference-scale infrastructure",
+          "Graduate the first Institute of Computing cohort into domestic firms",
+          "Report measured AI contribution against the 5 to 6 percent target"
+        ]
+      }
+    ]
+  },
+  "verdict": {
+    "headline": "Rwanda's advantage is institutional; its constraint is physical and human.",
+    "paragraphs": [
+      "Institutional coherence, execution discipline and international credibility have attracted capability and capital that Rwanda's economic size would not otherwise command. It is the only African state where declared strategy and observed implementation are scored as mutually consistent.",
+      "The constraints are now measurable rather than rhetorical: a Human Capital Index of 0.38, roughly 300 MW of national generation, a third of the population holding smartphones, and measured AI usage at one fifth the expected rate. None of these is solved by strategy. All of them are solved by investment, sequencing and partnership.",
+      "Rwanda has proven it can write the rules for AI in Africa. The open question is whether it can build the substrate to run them on. On present trajectory Rwanda will remain the continent's reference case for AI governance. Whether it becomes a reference case for AI-driven economic transformation will be settled by execution rather than by further strategy."
+    ]
+  },
+  "publisher": "Aurasoft Ltd"
+}

@@ -1,0 +1,33 @@
+# Render blueprint — the full platform with a live FastAPI backend.
+#
+#   render.com → New → Blueprint → connect this repository
+#
+# Unlike a serverless host, this runs a normal process with a writable disk, so
+# durable writes work: set ADMIN_API_TOKEN and POST /api/observations persists to
+# data/observations.json and appends to data/revisions.jsonl.
+services:
+  - type: web
+    name: rwanda-ai-tracker
+    runtime: python
+    plan: free
+    region: frankfurt          # closest Render region to Rwanda
+    buildCommand: |
+      pip install -r services/api/requirements.txt
+      npm install
+      npm run build:web
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --app-dir services/api
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.4"
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATA_DIR
+        value: ./data
+      - key: NODE_ENV
+        value: production
+      - key: CORS_ORIGINS
+        value: "*"
+      # Leave unset for a read-only public deployment, which is the safe default.
+      # - key: ADMIN_API_TOKEN
+      #   generateValue: true

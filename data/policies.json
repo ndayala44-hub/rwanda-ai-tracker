@@ -1,0 +1,185 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "n": "National AI Policy",
+      "owner": "MINICT",
+      "year": 2022,
+      "status": "In force (contributed — pending verification)",
+      "cat": "AI policy",
+      "d": "Defines six priority policy areas: three enablers (skills, infrastructure and compute, data strategy), two accelerators (public and private sector adoption) and one safeguard (practical ethical guidelines). The readiness framework exists to monitor its implementation.",
+      "src": "AIRM22",
+      "url": "https://www.minict.gov.rw"
+    },
+    {
+      "n": "Data Protection and Privacy Law",
+      "owner": "NCSA",
+      "year": 2021,
+      "status": "In force",
+      "cat": "Data protection",
+      "d": "Provides mechanisms for personal data protection and privacy in processing, ensures free flow of non-personal data, and promotes data localisation. Governs processing regardless of the technology used.",
+      "src": "AIRM22",
+      "url": "https://www.dataprotection.gov.rw"
+    },
+    {
+      "n": "Guidelines on the Ethical Development and Implementation of AI",
+      "owner": "RURA",
+      "year": 2022,
+      "status": "Drafted — pending board approval",
+      "cat": "AI ethics",
+      "d": "A national ethics framework developed with an accompanying awareness and capacity-building programme. Publication is a capability gate for the next maturity level and a scoring precondition in global indices.",
+      "src": "AIRM22",
+      "url": "https://rura.rw"
+    },
+    {
+      "n": "Smart Rwanda Master Plan",
+      "owner": "MINICT",
+      "year": 2016,
+      "status": "In force",
+      "cat": "Digital transformation",
+      "d": "The digital transformation programme that established the platforms, connectivity and e-government services AI adoption now builds on.",
+      "src": "ECON22",
+      "url": "https://www.minict.gov.rw"
+    },
+    {
+      "n": "National data governance frameworks",
+      "owner": "RISA",
+      "year": 2022,
+      "status": "In force",
+      "cat": "Data governance",
+      "d": "Frameworks and protocols for the collection, storage, processing and sharing of data across government.",
+      "src": "AIRM22",
+      "url": "https://risa.gov.rw"
+    },
+    {
+      "n": "Digital Ambassadors Programme",
+      "owner": "MINICT",
+      "year": 2017,
+      "status": "In force",
+      "cat": "Digital skills",
+      "d": "Community-delivered training aiming to equip five million citizens with basic IT skills and bring them online.",
+      "src": "ECON22",
+      "url": "https://www.minict.gov.rw"
+    },
+    {
+      "n": "Regulatory sandbox framework",
+      "owner": "RURA",
+      "year": 2024,
+      "status": "Partially operational",
+      "cat": "Innovation regulation",
+      "d": "A controlled environment for testing AI and data-driven services. Launch and uptake are both tracked indicators and capability gates for maturity level 4.",
+      "src": "AIRM22",
+      "url": "https://rura.rw"
+    },
+    {
+      "n": "Open Data Charter",
+      "owner": "MINICT",
+      "year": null,
+      "status": "Not a signatory",
+      "cat": "International commitment",
+      "d": "Rwanda is not currently a signatory. Signing is one of the capability gates for the highest maturity level and is directly tracked by the Tortoise index.",
+      "src": "AIRM22",
+      "url": "https://opendatacharter.net"
+    },
+    {
+      "n": "ISO/IEC JTC 1/SC 42 — Artificial Intelligence",
+      "owner": "MINICT",
+      "year": null,
+      "status": "Observer participation",
+      "cat": "International standards",
+      "d": "Participation level in the international AI standards committee. The 2022 assessment recorded no participation; contributed data indicates observer status since 2024.",
+      "src": "CONTRIB",
+      "url": "https://www.iso.org/committee/6794475.html"
+    },
+    {
+      "n": "National AI Agency (establishment)",
+      "owner": "MINICT",
+      "year": 2026,
+      "status": "Approved by Cabinet, 8 June 2026",
+      "cat": "AI governance",
+      "d": "Africa's first standalone national AI institution, succeeding the AI Office in the ICT ministry. Mandate spans government transformation, research, skilling, ethics and safety, industry growth, commercialisation, investment and international engagement. Instruments are the national data centre and a governed data sandbox. Expressly designed to build on existing institutions, not replace them.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "National Data Sharing Policy",
+      "owner": "RISA",
+      "year": 2025,
+      "status": "In force",
+      "cat": "Data governance",
+      "d": "Establishes the terms on which government-held data can be shared for analytical and AI use. Partly addresses the access-to-AI-ready-data constraint named in the AI Agency's mandate.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "Digital Public Infrastructure Strategy",
+      "owner": "RISA",
+      "year": 2026,
+      "status": "In force",
+      "cat": "Digital transformation",
+      "d": "Sets the DPI direction within which AI services are to be delivered.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "NST2 — Second National Strategy for Transformation",
+      "owner": "MINECOFIN",
+      "year": 2024,
+      "status": "In force",
+      "cat": "National strategy",
+      "d": "National development strategy within which the AI programme sits. Includes a 5 to 6 percent measured AI economic contribution target to be reported against by 2030.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "AI-specific legislation",
+      "owner": "MINICT",
+      "year": null,
+      "status": "Not in place",
+      "cat": "AI regulation",
+      "d": "No AI-specific law exists. Enforcement rests on the data protection regime alone. Identified in the 2026 review as a low-cost, high-value gap.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "Public register of state AI systems",
+      "owner": "MINICT",
+      "year": null,
+      "status": "Not in place",
+      "cat": "Transparency",
+      "d": "Automated enforcement runs with no transparency duty. A public register would make state AI systems auditable.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "AI procurement standard",
+      "owner": "RPPA",
+      "year": null,
+      "status": "Not in place",
+      "cat": "Procurement",
+      "d": "The state is anchor buyer without continuity, data portability or exit terms. The 2023 collapse of Rwanda's largest digital health deployment — which reached close to a fifth of the population — is the governing precedent.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "National term on ownership of fine-tuned models",
+      "owner": "MINICT",
+      "year": null,
+      "status": "Not in place",
+      "cat": "Sovereignty",
+      "d": "Ownership of models fine-tuned on Rwandan public data is undefined. Costs nothing to draft and changes Rwanda's position in the value chain — the cheapest identified gap and, on the review's assessment, the most valuable.",
+      "src": "LANDSCAPE26",
+      "url": null
+    },
+    {
+      "n": "National model evaluation capability",
+      "owner": "MINICT",
+      "year": null,
+      "status": "Not in place",
+      "cat": "Assurance",
+      "d": "Vendor accuracy claims have no domestic verifier. The Health Intelligence Centre holds the only formally resourced evaluation function in the country. A country that wants to be a testbed must be able to certify what was tested.",
+      "src": "LANDSCAPE26",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "y": 2014,
+      "t": "First AI-enabled ventures established",
+      "d": "Zipline and Charis UAS are founded, later becoming Rwanda's most visible applied-AI deployments in logistics and geospatial analysis.",
+      "cat": "Ecosystem",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2016,
+      "t": "Babyl launches AI-supported triage",
+      "d": "AI-supported triage and teleconsultation enters the Rwandan health system, later cited as the country's single public–private AI partnership.",
+      "cat": "Adoption",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2018,
+      "t": "Rwanda Innovation Fund launched",
+      "d": "A technology and innovation fund created to address the financing gap facing tech-enabled companies at different growth stages.",
+      "cat": "Investment",
+      "src": "ECON22",
+      "status": "verified"
+    },
+    {
+      "y": 2019,
+      "t": "Open-source AI activity becomes visible",
+      "d": "GitHub commits from Rwanda rise more than 400% between 2018 and 2019, the first measurable signal of an informal developer community.",
+      "cat": "Skills",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2020,
+      "t": "C4IR Rwanda established",
+      "cat": "Ecosystem",
+      "src": "WEF_C4IR",
+      "status": "verified",
+      "d": "The Centre for the Fourth Industrial Revolution Rwanda is set up in partnership with the World Economic Forum, with a mandate focused on data governance, artificial intelligence and machine learning. It becomes the institutional home for most of the measurement work that follows — the 2021 landscape mapping, the 2022 economic sizing and the readiness framework all originate here."
+    },
+    {
+      "y": 2020,
+      "t": "Centre of Excellence in Digitalisation and AI announced",
+      "d": "A joint venture announced in November 2020 to focus on research, development and delivery of AI, security and critical-infrastructure solutions, with an associated training academy.",
+      "cat": "Ecosystem",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2021,
+      "t": "Data protection and privacy law enacted",
+      "d": "Establishes mechanisms for personal data protection, provides for free flow of non-personal data, and promotes data localisation. It does not refer to AI explicitly but governs processing regardless of the technology used.",
+      "cat": "Regulation",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2021,
+      "t": "Oxford Government AI Readiness position recorded",
+      "d": "Rwanda scores 35.16 and ranks 112 of 172 countries — 10th in Africa, behind South Africa, Kenya and Ghana. Sub-Saharan Africa averages 31.61, the lowest of any region.",
+      "cat": "Benchmark",
+      "src": "OXFORD",
+      "status": "verified"
+    },
+    {
+      "y": 2021,
+      "t": "Rwanda AI Landscape Overview published",
+      "d": "C4IR maps the national AI ecosystem, establishing the baseline for later measurement work.",
+      "cat": "Policy",
+      "src": "LANDSCAPE21",
+      "status": "verified"
+    },
+    {
+      "y": 2022,
+      "t": "AI Readiness and Maturity Framework and first-round assessment",
+      "d": "Six dimensions, 14 policy outputs and an 89-indicator main set, with a dashboard built on a 280-indicator landscape. The first round found six of eight examined institutions had no data custodian.",
+      "cat": "Evidence",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2022,
+      "t": "AI economic potential quantified",
+      "d": "The full potential of AI and advanced analytics in Rwanda is sized at ~USD 589m, about 6% of GDP, with five lighthouse use cases identified for early implementation.",
+      "cat": "Evidence",
+      "src": "ECON22",
+      "status": "verified"
+    },
+    {
+      "y": 2022,
+      "t": "C4IR Rwanda officially launched — Africa's first",
+      "cat": "Ecosystem",
+      "src": "WEF_C4IR",
+      "status": "verified",
+      "d": "Formally inaugurated in Kigali on 31 March 2022, the first C4IR to be officially launched on the African continent. It joins a global network of centres shaping technology governance policy, and anchors Rwanda's subsequent AI Scaling Hub and national AI programme work."
+    },
+    {
+      "y": 2022,
+      "t": "National AI ethics framework drafted",
+      "d": "Developed and submitted for board approval, with an awareness and capacity-building programme launched alongside it. Publication remains the binding constraint on the maturity level.",
+      "cat": "Regulation",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2022,
+      "t": "National AI policy developed",
+      "d": "Six priority policy areas defined across three enablers, two accelerators and one safeguard. At the time of the readiness assessment the policy was awaiting formal Cabinet approval.",
+      "cat": "Policy",
+      "src": "AIRM22",
+      "status": "verified"
+    },
+    {
+      "y": 2023,
+      "t": "National AI Policy adopted — first in Africa",
+      "cat": "Policy",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "Rwanda adopts the continent's first national AI policy. In the same year the 2021 data protection law becomes enforceable, completing a deliberate sequence: legislate on data, then strategise on AI."
+    },
+    {
+      "y": 2024,
+      "t": "NST2 approved and the AI Playbook for Small States published",
+      "cat": "Policy",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "AI is embedded in the second National Strategy for Transformation, and Rwanda co-authors guidance for small states pursuing AI."
+    },
+    {
+      "y": 2025,
+      "t": "Global AI Summit hosted; Health Intelligence Centre and Scaling Hub launched",
+      "cat": "Adoption",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "Rwanda hosts the continent's Global AI Summit, opens the National Health Intelligence Centre in April, launches the USD 17.5m AI Scaling Hub with the Gates Foundation and C4IR, and adopts a national Data Sharing Policy."
+    },
+    {
+      "y": 2026,
+      "t": "Horizon 1000 launched and the DPI Strategy adopted",
+      "cat": "Investment",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "USD 50m Gates Foundation and OpenAI programme places AI in 1,000 primary care clinics by 2028, with Rwanda as first launch country. A three-year government MOU with Anthropic covers malaria, maternal mortality and cervical cancer elimination."
+    },
+    {
+      "y": 2026,
+      "t": "Institute of Computing opens",
+      "cat": "Skills",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "Opened September 2026 offering AI and cybersecurity degrees. First graduates in 2029 — until then the binding constraint on delivery is engineers rather than policy."
+    },
+    {
+      "y": 2026,
+      "t": "Kinyarwanda model suite released open source",
+      "cat": "Evidence",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "KinyaBERT, KinyaColBERT and Flex-TTS released in March 2026, giving Rwanda the only genuinely sovereign layer of its AI stack and underpinning the Tunga farmer advisory service."
+    },
+    {
+      "y": 2026,
+      "t": "Measured usage gap quantified",
+      "cat": "Benchmark",
+      "src": "ANTHROPIC_EI",
+      "status": "verified",
+      "d": "Rwanda ranks 111 of 121 globally on measured frontier AI usage at 0.20x the level expected for its economic size — first in Africa on governance, near the bottom on observed use."
+    },
+    {
+      "y": 2026,
+      "t": "National AI Agency approved by Cabinet",
+      "cat": "Policy",
+      "src": "LANDSCAPE26",
+      "status": "verified",
+      "d": "Africa's first standalone national AI institution, approved 8 June 2026, succeeding the AI Office in the ICT ministry. Its mandate spans government transformation, research, skilling, ethics and safety, industry growth, commercialisation, investment and international engagement, with the national data centre and a governed data sandbox as instruments."
+    }
+  ]
+}

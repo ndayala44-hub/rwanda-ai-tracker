@@ -1,0 +1,17 @@
+node_modules
+__pycache__
+.pytest_cache
+*.log
+docs
+services/api/tests
+apps/web/test
+scripts/live_api_*
+scripts/parity-snapshot.mjs
+# Regenerated during the build, so there is no need to upload a 250 KB copy.
+apps/web/src/00-embedded-dataset.js
+
+# Never upload local state or secrets.
+.env
+.env.*
+!.env.example
+data/revisions.jsonl

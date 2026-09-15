@@ -1,0 +1,395 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "MINICT",
+      "name": "Ministry of ICT and Innovation",
+      "type": "Government",
+      "role": "AI policy and digital transformation",
+      "district": "Kigali City"
+    },
+    {
+      "id": "C4IR",
+      "name": "C4IR Rwanda",
+      "type": "Government-affiliated",
+      "role": "Centre for the Fourth Industrial Revolution; established 2020, officially launched March 2022 as Africa's first C4IR. Focus on data governance, AI and machine learning",
+      "district": "Kigali City",
+      "sourceId": "WEF_C4IR"
+    },
+    {
+      "id": "NISR",
+      "name": "National Institute of Statistics of Rwanda",
+      "type": "Government",
+      "role": "Official statistics",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RISA",
+      "name": "Rwanda Information Society Authority",
+      "type": "Government",
+      "role": "Digital infrastructure and e-government",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RURA",
+      "name": "Rwanda Utilities Regulatory Authority",
+      "type": "Regulator",
+      "role": "ICT sector regulation; AI ethics framework custodian",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RDB",
+      "name": "Rwanda Development Board",
+      "type": "Government",
+      "role": "Investment promotion and company registry",
+      "district": "Kigali City"
+    },
+    {
+      "id": "MINEDUC",
+      "name": "Ministry of Education",
+      "type": "Government",
+      "role": "Skills and higher education",
+      "district": "Kigali City"
+    },
+    {
+      "id": "MINECOFIN",
+      "name": "Ministry of Finance and Economic Planning",
+      "type": "Government",
+      "role": "Budget and economic planning",
+      "district": "Kigali City"
+    },
+    {
+      "id": "NCSA",
+      "name": "National Cyber Security Authority",
+      "type": "Regulator",
+      "role": "Cybersecurity and data protection supervision",
+      "district": "Kigali City"
+    },
+    {
+      "id": "REG",
+      "name": "Rwanda Energy Group",
+      "type": "State enterprise",
+      "role": "Electrification",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RSSB",
+      "name": "Rwanda Social Security Board",
+      "type": "Government",
+      "role": "Social security; lighthouse use-case owner",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RRA",
+      "name": "Rwanda Revenue Authority",
+      "type": "Government",
+      "role": "Tax administration; lighthouse use-case owner",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RPPA",
+      "name": "Rwanda Public Procurement Authority",
+      "type": "Government",
+      "role": "Public procurement; lighthouse use-case owner",
+      "district": "Kigali City"
+    },
+    {
+      "id": "UR",
+      "name": "University of Rwanda — African Centre of Excellence in Data Science",
+      "type": "Academia",
+      "role": "Research and postgraduate training",
+      "district": "Kigali City"
+    },
+    {
+      "id": "CMU",
+      "name": "Carnegie Mellon University Africa",
+      "type": "Academia",
+      "role": "MSc in Artificial Intelligence and Innovation",
+      "district": "Kigali City"
+    },
+    {
+      "id": "AIMS",
+      "name": "African Institute for Mathematical Sciences Rwanda",
+      "type": "Academia",
+      "role": "African Master's in Machine Intelligence",
+      "district": "Kigali City"
+    },
+    {
+      "id": "ICTC",
+      "name": "Rwanda ICT Chamber",
+      "type": "Industry association",
+      "role": "Private sector representation",
+      "district": "Kigali City"
+    },
+    {
+      "id": "NORRSKEN",
+      "name": "Norrsken House Kigali",
+      "type": "Ecosystem",
+      "role": "Entrepreneurship hub",
+      "district": "Kigali City"
+    },
+    {
+      "id": "KIC",
+      "name": "Kigali Innovation City",
+      "type": "Ecosystem",
+      "role": "Innovation and technology cluster",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RIF",
+      "name": "Rwanda Innovation Fund",
+      "type": "Investor",
+      "role": "Technology and innovation fund launched 2018",
+      "district": "Kigali City"
+    },
+    {
+      "id": "GIZ",
+      "name": "GIZ FAIR Forward",
+      "type": "Development partner",
+      "role": "AI for All programme",
+      "district": "Kigali City"
+    },
+    {
+      "id": "BABYL",
+      "name": "Babyl Rwanda",
+      "type": "Company",
+      "role": "AI-supported triage and teleconsultation",
+      "district": "Kigali City"
+    },
+    {
+      "id": "ZIPLINE",
+      "name": "Zipline",
+      "type": "Company",
+      "role": "Autonomous medical delivery",
+      "district": "Muhanga"
+    },
+    {
+      "id": "INSIGHTIV",
+      "name": "Insightiv",
+      "type": "Startup",
+      "role": "AI tele-radiology",
+      "district": "Kigali City"
+    },
+    {
+      "id": "EDPU",
+      "name": "EDPU Africa",
+      "type": "Startup",
+      "role": "Non-communicable disease risk prediction",
+      "district": "Huye"
+    },
+    {
+      "id": "DU",
+      "name": "Digital Umuganda",
+      "type": "Startup",
+      "role": "Kinyarwanda NLP and open voice datasets",
+      "district": "Kigali City"
+    },
+    {
+      "id": "CHARIS",
+      "name": "Charis UAS",
+      "type": "Company",
+      "role": "Drone and geospatial imagery analysis",
+      "district": "Kigali City"
+    },
+    {
+      "id": "AQUASAFI",
+      "name": "Aqua Safi",
+      "type": "Startup",
+      "role": "Aquaculture water monitoring",
+      "district": "Karongi"
+    },
+    {
+      "id": "TABIRI",
+      "name": "Tabiri Analytics",
+      "type": "Startup",
+      "role": "ML-based security monitoring",
+      "district": "Kigali City"
+    },
+    {
+      "id": "HEPTA",
+      "name": "Hepta Analytics",
+      "type": "Startup",
+      "role": "Data engineering and geospatial analytics",
+      "district": "Kigali City"
+    },
+    {
+      "id": "ZAKA",
+      "name": "Zaka",
+      "type": "Startup",
+      "role": "Voice-based digital identity",
+      "district": "Kigali City"
+    },
+    {
+      "id": "BAG",
+      "name": "BAGinnovation",
+      "type": "Startup",
+      "role": "AI-supported case-based learning",
+      "district": "Kigali City"
+    },
+    {
+      "id": "SOLVIT",
+      "name": "Solvit Africa",
+      "type": "Company",
+      "role": "Business process outsourcing with AI",
+      "district": "Kigali City"
+    },
+    {
+      "id": "BNR",
+      "name": "National Bank of Rwanda",
+      "type": "Government",
+      "role": "Fraud detection and cash management",
+      "district": "Kigali City"
+    },
+    {
+      "id": "RNP",
+      "name": "Rwanda National Police",
+      "type": "Government",
+      "role": "Smart traffic control systems",
+      "district": "Kigali City"
+    },
+    {
+      "id": "AIAGENCY",
+      "name": "National AI Agency",
+      "type": "Government",
+      "role": "Africa's first standalone national AI institution; approved by Cabinet 8 June 2026",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "HIC",
+      "name": "National Health Intelligence Centre",
+      "type": "Government",
+      "role": "Real-time national health data integration and disease trend prediction",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "IOC",
+      "name": "Institute of Computing",
+      "type": "Academia",
+      "role": "AI and cybersecurity degrees; opened September 2026, first graduates 2029",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "SCALEHUB",
+      "name": "AI Scaling Hub",
+      "type": "Ecosystem",
+      "role": "First of four planned continental scaling hubs; USD 17.5m",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "KINLP",
+      "name": "KiNLP",
+      "type": "Startup",
+      "role": "KinyaBERT, KinyaColBERT and Flex-TTS Kinyarwanda model suite",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "VIEBEG",
+      "name": "Viebeg",
+      "type": "Startup",
+      "role": "AI-driven medical procurement and supply chain",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "ISTLEGAL",
+      "name": "IST Legal",
+      "type": "Startup",
+      "role": "AI over Rwandan legislation and case law",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "DOCTORAI",
+      "name": "DoctorAI",
+      "type": "Startup",
+      "role": "Triage and diagnostic support",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "AILEX",
+      "name": "AILEX Rwanda",
+      "type": "Startup",
+      "role": "Citation-grounded legal research",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "CIRCUIT",
+      "name": "CircuitNotion",
+      "type": "Startup",
+      "role": "Incuti AI localised language model",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "HENCE",
+      "name": "Hence",
+      "type": "Startup",
+      "role": "Geopolitical risk models; USD 2.6m raised, the largest disclosed domestic raise",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "YALI",
+      "name": "Yali Labs",
+      "type": "Startup",
+      "role": "Enterprise Kinyarwanda NLP tooling",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "SOFTPI",
+      "name": "Soft Pi / AI7 Optivaro",
+      "type": "Startup",
+      "role": "Enterprise automation and agents",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "ANTHROPIC",
+      "name": "Anthropic",
+      "type": "Development partner",
+      "role": "Three-year government MOU: public-sector developer workflows, 2,000 educator licences, health goals",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "GATES",
+      "name": "Gates Foundation",
+      "type": "Development partner",
+      "role": "Horizon 1000 (USD 50m with OpenAI) and the AI Scaling Hub (USD 17.5m with C4IR)",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "OPENAI",
+      "name": "OpenAI",
+      "type": "Development partner",
+      "role": "Horizon 1000 primary care deployment partner",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "IDRC",
+      "name": "IDRC and FCDO",
+      "type": "Development partner",
+      "role": "TAIRI Lab, USD 540,000; applied AI research with ten postgraduate researchers",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    },
+    {
+      "id": "MINAGRI",
+      "name": "Ministry of Agriculture and Animal Resources",
+      "type": "Government",
+      "role": "Agricultural extension and the Tunga voice advisory service",
+      "district": "Kigali City",
+      "sourceId": "LANDSCAPE26"
+    }
+  ]
+}

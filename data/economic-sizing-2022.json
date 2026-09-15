@@ -1,0 +1,334 @@
+{
+  "version": 1,
+  "source": "ECON22",
+  "published": "September 2022",
+  "currency": "USD",
+  "headline": {
+    "totalMn": 589,
+    "shareOfGDP": 6,
+    "definition": "Full potential of today's AI and advanced-analytics applications if adopted across the economy — not a forecast, not value captured today, and not a target.",
+    "method": "Bottom-up, use-case-driven 'micro to macro' sizing: select use cases per sector, adjust benchmark impact to the Rwandan context, size at organisation level against a baseline, scale to sector and economy."
+  },
+  "redistributionMn": 295,
+  "redistributionNote": "A further ~USD 295m of company-level benefit was estimated to come at the expense of other firms — it shifts market share without adding to national output, and is excluded from the 589m figure.",
+  "sectors": [
+    {
+      "sector": "AGR",
+      "valueMn": 102,
+      "shareSectorGDP": 4,
+      "driver": "Increasing yields by reducing crop waste"
+    },
+    {
+      "sector": "PUB",
+      "valueMn": 84,
+      "shareSectorGDP": 10,
+      "driver": "Tax analytics, procurement savings, targeted social spending"
+    },
+    {
+      "sector": "MAN",
+      "valueMn": 77,
+      "shareSectorGDP": 8,
+      "driver": "Procurement and network optimisation"
+    },
+    {
+      "sector": "HLT",
+      "valueMn": 51,
+      "shareSectorGDP": 27,
+      "driver": "Workforce analytics and optimisation"
+    },
+    {
+      "sector": "FIN",
+      "valueMn": 40,
+      "shareSectorGDP": 15,
+      "driver": "Reduction of fraud losses"
+    },
+    {
+      "sector": "CON",
+      "valueMn": 33,
+      "shareSectorGDP": 4,
+      "driver": "Almost exclusively procurement analytics"
+    },
+    {
+      "sector": "RET",
+      "valueMn": 30,
+      "shareSectorGDP": 3,
+      "driver": "Supplier optimisation and personalisation"
+    },
+    {
+      "sector": "ICT",
+      "valueMn": 25,
+      "shareSectorGDP": 6,
+      "driver": "Customer service and network optimisation"
+    },
+    {
+      "sector": "TRA",
+      "valueMn": 18,
+      "shareSectorGDP": 3,
+      "driver": "Supply-chain refinement"
+    },
+    {
+      "sector": "OTH",
+      "valueMn": 128,
+      "shareSectorGDP": 8,
+      "driver": "Mining, real estate, utilities, admin and support, accommodation and food"
+    }
+  ],
+  "domainSplit": {
+    "available": false,
+    "note": "The study also splits the 589m across 15 analytics domains (procurement analytics, fraud & debt, personalisation, throughput/yield and others). The column-to-domain pairing could not be recovered reliably from the source deck, so it is not published here. Digitising it requires the original full-potential sizing tool.",
+    "domains": [
+      "Integrated supply chain optimisation",
+      "Pricing, promotions and assortment",
+      "Strategic & financial analytics",
+      "Customer service optimisation",
+      "Sales channel optimisation",
+      "R&D & innovation analytics",
+      "Network optimisation",
+      "Robotics / automation",
+      "Procurement analytics",
+      "HR & people analytics",
+      "Fraud & debt analytics",
+      "Personalisation insights",
+      "Accounting & IT analytics",
+      "Digital marketing",
+      "Throughput, yield"
+    ]
+  },
+  "lighthouse": [
+    {
+      "id": "LH1",
+      "name": "Crop-loss early warning for farmers",
+      "sector": "AGR",
+      "lowMn": 20,
+      "highMn": 30,
+      "owner": "MINAGRI / Rwanda Meteorology Agency",
+      "mechanism": "Localised weather prediction delivered to farmers by SMS/voice, built on automatic weather stations and the national farmer registry.",
+      "benchmark": "Reduce crop loss by 5–10%",
+      "context": "Agriculture provides a livelihood to over 76% of the population and accounts for about 33% of GDP. FAO estimates farmers could be losing up to 40% of current production for want of early warning, among other risks. Mobile connectivity of 73.9% makes SMS delivery viable.",
+      "social": "Improved national food security; greater income stability for farmers."
+    },
+    {
+      "id": "LH2",
+      "name": "Bus routing and scheduling optimisation, Kigali",
+      "sector": "TRA",
+      "lowMn": 2,
+      "highMn": 5,
+      "owner": "City of Kigali / MININFRA",
+      "mechanism": "Optimise routes and timetables to cut fuel cost and passenger waiting time.",
+      "benchmark": "2–5% savings in operating costs (fuel and labour)",
+      "context": "Direct operator value only; commuter time savings are additional and were not monetised.",
+      "social": "Time saved for citizens, lower emissions, higher on-time reliability."
+    },
+    {
+      "id": "LH3",
+      "name": "Social security claims risk profiling",
+      "sector": "PUB",
+      "lowMn": 3,
+      "highMn": 7,
+      "owner": "Rwanda Social Security Board",
+      "mechanism": "Risk-score claims to reduce incorrect payments — wrong decision, wrong amount, or inconsistent with plan.",
+      "benchmark": "Reduce improper payments by 5–10%",
+      "context": "Applied to ~USD 98m of social benefit payouts (2019 RSSB annual report), of which roughly 70% were medical, CBHI and maternity payouts excluding pensions.",
+      "social": "Reinforced integrity of the social security system; funds freed for legitimate claims."
+    },
+    {
+      "id": "LH4",
+      "name": "Public spend and procurement analytics",
+      "sector": "PUB",
+      "lowMn": 10,
+      "highMn": 20,
+      "owner": "Rwanda Public Procurement Authority",
+      "mechanism": "Spend visualisation and contract-text analytics across agencies to surface savings opportunities and contractual clauses of interest.",
+      "benchmark": "10–15% procurement savings on addressable categories",
+      "context": "Government spending for FY 2021/22 was estimated at about USD 3.6bn.",
+      "social": "Better functioning agencies; less repetitive work for staff."
+    },
+    {
+      "id": "LH5",
+      "name": "Tax audit targeting and compliance scoring",
+      "sector": "PUB",
+      "lowMn": 8,
+      "highMn": 16,
+      "owner": "Rwanda Revenue Authority",
+      "mechanism": "Advanced analytics over tax submissions to select audit cases and target inspections.",
+      "benchmark": "1–2% increase in tax revenue collected",
+      "context": "Higher taxable income recovered and fewer underreporting cases.",
+      "social": "Helps taxpayers comply; increases budget available for national investment."
+    }
+  ],
+  "socialDimensions": [
+    {
+      "id": "ECO",
+      "name": "Economic & education opportunity",
+      "desc": "Reduce unemployment and raise education levels through adaptive learning and targeted upskilling against future job demand."
+    },
+    {
+      "id": "SOC",
+      "name": "Socio-environment",
+      "desc": "Improve citizen safety and government efficiency through preventive, targeted intervention — for example better placement of schools and social services."
+    },
+    {
+      "id": "HLT",
+      "name": "Public health",
+      "desc": "Better health outcomes through higher-quality care and improved employee safety."
+    },
+    {
+      "id": "WRK",
+      "name": "Work life & recreation",
+      "desc": "Automate repetitive and tedious tasks, raising job quality, satisfaction and safety."
+    },
+    {
+      "id": "ENV",
+      "name": "Environment",
+      "desc": "Reduce emissions and resource use."
+    }
+  ],
+  "socialGrades": {
+    "PUB": {
+      "ECO": 3,
+      "SOC": 3,
+      "HLT": 2,
+      "WRK": 3,
+      "ENV": 1
+    },
+    "AGR": {
+      "ECO": 3,
+      "SOC": 2,
+      "HLT": 1,
+      "WRK": 2,
+      "ENV": 3
+    },
+    "HLT": {
+      "ECO": 1,
+      "SOC": 2,
+      "HLT": 3,
+      "WRK": 2,
+      "ENV": 1
+    },
+    "MAN": {
+      "ECO": 2,
+      "SOC": 1,
+      "HLT": 1,
+      "WRK": 3,
+      "ENV": 2
+    },
+    "FIN": {
+      "ECO": 3,
+      "SOC": 1,
+      "HLT": 1,
+      "WRK": 2,
+      "ENV": 1
+    },
+    "ICT": {
+      "ECO": 2,
+      "SOC": 3,
+      "HLT": 1,
+      "WRK": 2,
+      "ENV": 1
+    },
+    "TRA": {
+      "ECO": 1,
+      "SOC": 2,
+      "HLT": 1,
+      "WRK": 2,
+      "ENV": 3
+    },
+    "RET": {
+      "ECO": 2,
+      "SOC": 1,
+      "HLT": 1,
+      "WRK": 3,
+      "ENV": 1
+    },
+    "CON": {
+      "ECO": 2,
+      "SOC": 1,
+      "HLT": 2,
+      "WRK": 3,
+      "ENV": 1
+    }
+  },
+  "socialGradeNote": "Each sized use case was graded 1 (low) to 3 (high) on five qualitative dimensions and averaged to a sector grade. Only use cases with a sized financial value were graded — high-social-value cases without a financial estimate are absent.",
+  "enablerInitiatives": [
+    {
+      "id": "EI-A",
+      "name": "National AI Innovation Lab",
+      "costK": 270,
+      "owner": "C4IR",
+      "desc": "Matchmaker between innovators and problem statements, through targeted competitions on priority use cases that benefit many organisations."
+    },
+    {
+      "id": "EI-B",
+      "name": "Venture builder programme",
+      "costK": 260,
+      "owner": "C4IR",
+      "desc": "Support companies to frame AI problem statements, design architecture and find AI engineers."
+    },
+    {
+      "id": "EI-C",
+      "name": "AI awareness and training programmes",
+      "costK": 110,
+      "owner": "C4IR / MINICT",
+      "desc": "Broad AI literacy for communities and institutions, modelled on programmes such as Finland's Elements of AI."
+    },
+    {
+      "id": "EI-D",
+      "name": "AI Summit",
+      "costK": 200,
+      "owner": "C4IR",
+      "desc": "Convene research, innovation, talent, financiers and ecosystem partners."
+    },
+    {
+      "id": "EI-E",
+      "name": "Rwanda AI community",
+      "costK": 153,
+      "owner": "C4IR",
+      "desc": "Forums, working sessions and networking to connect innovators across the country."
+    }
+  ],
+  "enablerNote": "Indicative first-year operating costs from international benchmarks, as published in the 2022 study. Not budget allocations and not commitments.",
+  "context": [
+    {
+      "k": "Global AI economic impact",
+      "v": "~USD 13 trillion by 2030",
+      "note": "Global estimate cited as the motivating context for the study."
+    },
+    {
+      "k": "Rwanda R&D intensity",
+      "v": "~0.7% of GDP",
+      "note": "Indicative, where data is available; the share attributable to AI is unknown."
+    },
+    {
+      "k": "4G LTE coverage",
+      "v": "95%",
+      "note": "Cited in the 2022 enabler snapshot."
+    },
+    {
+      "k": "National Data Centre",
+      "v": "Tier 3, 99.98% reliability",
+      "note": "Launching point for many government services."
+    },
+    {
+      "k": "Mobile connectivity",
+      "v": "73.9%",
+      "note": "Basis for SMS-delivered advisory services."
+    },
+    {
+      "k": "Agriculture share of GDP",
+      "v": "~33%, ~70% of population engaged",
+      "note": "Context for the agriculture use case."
+    },
+    {
+      "k": "Government spending FY2021/22",
+      "v": "~USD 3.6bn",
+      "note": "Base for procurement and tax use cases."
+    }
+  ],
+  "caveats": [
+    "A full-potential exercise, not a view of what can be captured in any given period.",
+    "An order-of-magnitude sizing to support directional prioritisation — not a business case for any specific investment.",
+    "Measures the potential of the technology available in 2022; it makes no assumption about later technologies, including generative AI.",
+    "Excludes the cost of capture and the investment required to realise the value.",
+    "Redeployment of freed resources is assumed but does not happen automatically; it requires reskilling and may lag."
+  ]
+}

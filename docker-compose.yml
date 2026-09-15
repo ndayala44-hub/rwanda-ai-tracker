@@ -1,0 +1,38 @@
+# Rwanda AI Tracker — reference deployment.
+#   docker compose up --build
+#   dashboard  http://localhost:4000
+#   API        http://localhost:4010/api/bootstrap
+#   API docs   http://localhost:4010/docs
+services:
+  api:
+    build: { context: ., dockerfile: services/api/Dockerfile }
+    environment:
+      PORT: 4010
+      HOST: 0.0.0.0
+      NODE_ENV: production
+      DATA_DIR: /app/data
+      CORS_ORIGINS: http://localhost:4000
+      CACHE_TTL_SECONDS: 300
+      # Unset means read-only. Supply from a secret store to enable writes.
+      ADMIN_API_TOKEN: ${ADMIN_API_TOKEN:-}
+    volumes:
+      # Mounted read-only: the service serves the data, it does not own it.
+      - ./data:/app/data:ro
+    ports: ["4010:4010"]
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:4010/health', timeout=5).status==200 else 1)\""]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+
+  web:
+    image: nginx:alpine
+    volumes:
+      - ./apps/web:/usr/share/nginx/html:ro
+      - ./deploy/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      # Points the dashboard at this origin, so /api is proxied and CORS never arises.
+      - ./deploy/app-config.docker.js:/usr/share/nginx/html/app-config.js:ro
+    ports: ["4000:80"]
+    depends_on: { api: { condition: service_healthy } }
+    restart: unless-stopped

@@ -1,0 +1,38 @@
+{
+  "name": "rwanda-ai-tracker",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Rwanda AI Tracker \u2014 an independent, multi-source policy and decision-intelligence platform on Rwanda's AI ecosystem.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build:web",
+    "validate": "python3 scripts/validate_data.py",
+    "snapshot": "tsx scripts/build-snapshot.ts",
+    "ingest:worldbank": "tsx scripts/ingest-worldbank.ts",
+    "dev": "npm run build:web && npm-run-all --parallel dev:api dev:web",
+    "dev:api": "cd services/api && uvicorn app.main:app --host 0.0.0.0 --port 4010 --reload",
+    "dev:web": "npx --yes serve apps/web -l 4000",
+    "start": "npm run build:web && cd services/api && uvicorn app.main:app --host 0.0.0.0 --port 4010",
+    "test": "npm run test:engine && npm run test:parity && npm run test:persistence && npm run test:web && npm run test:live",
+    "build:web": "tsx scripts/build-web.ts",
+    "test:web": "node --test apps/web/test/render.test.mjs",
+    "check": "npm run validate && npm run build:web && npm test",
+    "test:engine": "python3 services/api/tests/test_engine.py",
+    "test:parity": "python3 services/api/tests/test_parity.py",
+    "test:api": "python3 -m pytest services/api/tests -q",
+    "parity:snapshot": "node scripts/parity-snapshot.mjs",
+    "install:api": "pip install -r services/api/requirements-dev.txt",
+    "test:live": "python3 scripts/live_api_check.py",
+    "vendor:echarts": "node scripts/vendor-echarts.mjs",
+    "test:persistence": "python3 services/api/tests/test_persistence.py",
+    "serve:static": "python3 deploy/serve-static.py"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}

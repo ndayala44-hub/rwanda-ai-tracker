@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "note": "Comparator data for the continental and global position view. Every series carries its own comparability tier, because these indices measure different things and must not be blended into a single ranking.",
+  "tiers": {
+    "A": {
+      "label": "Directly comparable",
+      "detail": "The same variable, published by the same body, computed identically for every country in the set."
+    },
+    "B": {
+      "label": "Index-aligned estimate",
+      "detail": "Rwanda's position within a published index whose methodology and country set change between editions. Comparable within an edition, not across them."
+    },
+    "C": {
+      "label": "Rwanda-specific",
+      "detail": "Indicators with no peer equivalent. Time-series and target tracking only — never a cross-country comparison."
+    }
+  },
+  "series": [
+    {
+      "id": "africa-governance-2026",
+      "name": "Africa AI Governance Index (AAIGI)",
+      "edition": 2026,
+      "scale": "score out of 4, higher is better",
+      "tier": "B",
+      "scope": "continental",
+      "sourceId": "AFGOVIDX",
+      "measures": "Capacity to govern AI, scored across strategy and implementation.",
+      "reading": "Rwanda tops the inaugural index and is the only state scoring strongly on both Strategy & Vision and Implementation & Impact. Only Rwanda, Nigeria and Benin reach the 'Established' band; 16 states are 'Developing', 29 'Nascent' and six 'Minimal'. No African sub-region crosses the midpoint of the scale.",
+      "values": [
+        {
+          "country": "Rwanda",
+          "iso3": "RWA",
+          "value": 3.25,
+          "band": "Established"
+        },
+        {
+          "country": "Nigeria",
+          "iso3": "NGA",
+          "value": 2.81,
+          "band": "Established"
+        },
+        {
+          "country": "Benin",
+          "iso3": "BEN",
+          "value": 2.58,
+          "band": "Established"
+        },
+        {
+          "country": "Kenya",
+          "iso3": "KEN",
+          "value": 2.47,
+          "band": "Developing"
+        },
+        {
+          "country": "Morocco",
+          "iso3": "MAR",
+          "value": 2.38,
+          "band": "Developing"
+        },
+        {
+          "country": "Egypt",
+          "iso3": "EGY",
+          "value": 2.25,
+          "band": "Developing"
+        },
+        {
+          "country": "Ethiopia",
+          "iso3": "ETH",
+          "value": 2.22,
+          "band": "Developing"
+        },
+        {
+          "country": "Ghana",
+          "iso3": "GHA",
+          "value": 2.21,
+          "band": "Developing"
+        },
+        {
+          "country": "Mauritius",
+          "iso3": "MUS",
+          "value": 2.2,
+          "band": "Developing"
+        },
+        {
+          "country": "Tunisia",
+          "iso3": "TUN",
+          "value": 2.12,
+          "band": "Developing"
+        },
+        {
+          "country": "South Africa",
+          "iso3": "ZAF",
+          "value": 2.1,
+          "band": "Developing"
+        }
+      ],
+      "publisher": "Lawyers Hub and Africa AI Policy Lab",
+      "coverage": "All 54 African states, 80 indicators across 8 pillars"
+    },
+    {
+      "id": "global-readiness-2025",
+      "name": "Government AI Readiness Index",
+      "edition": 2025,
+      "scale": "rank of 195, lower is better",
+      "tier": "B",
+      "scope": "global",
+      "sourceId": "GAIRIDX",
+      "measures": "Readiness to deploy AI, rather than capacity to govern it.",
+      "reading": "Rwanda ranks 75th globally. Oxford Insights revised the methodology for the 2025 edition, so this position cannot be compared with the 2021 score of 35.16 — the platform holds the two editions as separate series.",
+      "invert": true,
+      "values": [
+        {
+          "country": "Egypt",
+          "iso3": "EGY",
+          "value": 51
+        },
+        {
+          "country": "Kenya",
+          "iso3": "KEN",
+          "value": 65
+        },
+        {
+          "country": "South Africa",
+          "iso3": "ZAF",
+          "value": 67
+        },
+        {
+          "country": "Mauritius",
+          "iso3": "MUS",
+          "value": 71
+        },
+        {
+          "country": "Rwanda",
+          "iso3": "RWA",
+          "value": 75
+        }
+      ],
+      "publisher": "Oxford Insights",
+      "coverage": "195 governments, 69 indicators across 14 dimensions and 6 pillars"
+    },
+    {
+      "id": "oxford-2021",
+      "name": "Government AI Readiness Index",
+      "edition": 2021,
+      "scale": "score out of 100",
+      "tier": "B",
+      "scope": "global",
+      "sourceId": "OXFORD",
+      "measures": "Government readiness to implement AI in public service delivery.",
+      "reading": "Rwanda scored 35.16 and ranked 112 of 172, tenth in Africa. The neighbours shown are the countries immediately around it in that edition — the band is tightly packed, so small score movements produce large rank movements.",
+      "values": [
+        {
+          "country": "Gabon",
+          "iso3": "GAB",
+          "value": 36.51,
+          "rank": 107
+        },
+        {
+          "country": "Senegal",
+          "iso3": "SEN",
+          "value": 36.34,
+          "rank": 108
+        },
+        {
+          "country": "Botswana",
+          "iso3": "BWA",
+          "value": 36.33,
+          "rank": 109
+        },
+        {
+          "country": "Bangladesh",
+          "iso3": "BGD",
+          "value": 36.1,
+          "rank": 110
+        },
+        {
+          "country": "Cabo Verde",
+          "iso3": "CPV",
+          "value": 36.07,
+          "rank": 111
+        },
+        {
+          "country": "Rwanda",
+          "iso3": "RWA",
+          "value": 35.16,
+          "rank": 112
+        },
+        {
+          "country": "Nigeria",
+          "iso3": "NGA",
+          "value": 35.15,
+          "rank": 113
+        }
+      ]
+    },
+    {
+      "id": "usage-2026",
+      "name": "Measured frontier AI usage",
+      "edition": 2026,
+      "scale": "index against an expected value of 1.00",
+      "tier": "A",
+      "scope": "global",
+      "sourceId": "ANTHROPIC_EI",
+      "measures": "Observed frontier AI usage relative to the level expected for an economy of that size and working-age population.",
+      "reading": "Rwanda ranks 111 of 121 economies at 0.20x the expected index. This is the sharpest contrast on the platform: first in Africa on the rules, near the bottom of the world on observed use.",
+      "values": [
+        {
+          "country": "Rwanda observed",
+          "iso3": "RWA",
+          "value": 0.2
+        },
+        {
+          "country": "Expected for economic size",
+          "iso3": "REF",
+          "value": 1.0
+        }
+      ]
+    }
+  ],
+  "oxfordPillars2021": {
+    "sourceId": "OXFORD",
+    "note": "Rwanda's pillar scores in the 2021 edition, as reported in the national readiness assessment. The Data and Infrastructure pillar is the weakest and matches the constraint the 2026 review identifies five years later.",
+    "country": "Rwanda",
+    "overall": 35.16,
+    "pillars": [
+      {
+        "name": "Government",
+        "value": 44.44
+      },
+      {
+        "name": "Technology sector",
+        "value": 27.03
+      },
+      {
+        "name": "Data and infrastructure",
+        "value": 34.01
+      }
+    ]
+  },
+  "regionalAverages2021": {
+    "sourceId": "OXFORD",
+    "note": "Regional averages in the 2021 edition, as reported in the national readiness assessment.",
+    "items": [
+      {
+        "name": "Sub-Saharan Africa — overall",
+        "value": 31.61,
+        "comment": "The lowest of any global region"
+      },
+      {
+        "name": "Sub-Saharan Africa — data and infrastructure pillar",
+        "value": 39.36,
+        "comment": "Every other global region averages above 47.42"
+      }
+    ]
+  },
+  "africaPosition": {
+    "sourceId": "AIRM22",
+    "note": "Rwanda's standing among African states in the 2021 Oxford edition, as reported in the national readiness assessment.",
+    "rankInAfrica": 10,
+    "ahead": [
+      "South Africa",
+      "Kenya",
+      "Ghana"
+    ],
+    "comment": "Behind more advanced digital economies. The 2026 governance index inverts this — the two indices are measuring different things."
+  },
+  "indexComparison": [
+    {
+      "index": "Africa AI Governance Index 2026",
+      "measures": "Capacity to govern AI",
+      "rwandaPosition": "1st in Africa",
+      "value": "3.25 / 4",
+      "tier": "B"
+    },
+    {
+      "index": "Global AI Readiness Index 2025",
+      "measures": "Readiness to deploy AI",
+      "rwandaPosition": "5th of the African states in the set",
+      "value": "rank 75 of 195",
+      "tier": "B"
+    },
+    {
+      "index": "Government AI Readiness Index 2021",
+      "measures": "Government readiness for public service AI",
+      "rwandaPosition": "10th in Africa",
+      "value": "35.16 / 100, rank 112 of 172",
+      "tier": "B"
+    },
+    {
+      "index": "Measured frontier AI usage 2026",
+      "measures": "Observed usage against expected",
+      "rwandaPosition": "111th of 121 globally",
+      "value": "0.20x expected",
+      "tier": "A"
+    }
+  ],
+  "verifiedOn": "2026-09-15",
+  "verificationNote": "Every series on this page was checked against its publisher in September 2026. The AAIGI values are the published top ten plus South Africa; the Oxford Insights 2025 values are the African cluster reported for that edition.",
+  "verification": {
+    "checkedOn": "2026-09-15",
+    "method": "Each index was located at its publisher, and Rwanda's value cross-checked against at least two independent reports.",
+    "findings": [
+      "Africa AI Governance Index — confirmed. Published July 2026 by the Africa AI Policy Lab and Lawyers Hub. Rwanda 3.25 of 4. The publisher was previously recorded as unattributed and has been corrected.",
+      "Government AI Readiness Index 2025 — confirmed as an Oxford Insights product, 195 countries. Rwanda rank 75, Kenya 65, South Africa 67, Mauritius 71. Previously recorded as an unnamed publisher and has been corrected.",
+      "Government AI Readiness Index 2021 — as cited in the 2022 national assessment. Held separately because the 2025 methodology changed.",
+      "Anthropic Economic Index — a real published country view; the Rwanda figures are as reported in the 2026 landscape review rather than re-fetched."
+    ]
+  }
+}

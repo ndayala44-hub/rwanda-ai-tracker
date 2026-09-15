@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "t": "Artificial intelligence (AI)",
+      "d": "The ability of a computer to perform tasks that normally require human intelligence — visual perception, speech recognition, decision-making, translation between languages. The 2022 economic sizing study deliberately used a broad definition covering both AI and traditional advanced analytics, because in an economy at Rwanda's stage most of the near-term value comes from analytics applied to existing processes.",
+      "src": "ECON22"
+    },
+    {
+      "t": "Machine learning",
+      "d": "The subset of AI in which a system learns patterns from data rather than following rules written by a programmer. Supervised learning — the most common commercial form — needs labelled examples, which is why the count of annotated Rwandan datasets is tracked as an indicator in its own right.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "Generative AI",
+      "d": "Models that produce new text, images, code or audio rather than only classifying or predicting. Note that the 2022 sizing study predates the commercial generative wave and explicitly measured only the technology available at the time — so its estimates neither include nor anticipate generative AI.",
+      "src": "ECON22"
+    },
+    {
+      "t": "Advanced analytics",
+      "d": "Analysing large datasets with advanced techniques to find trends, make predictions and recommend action. Treated as in-scope alongside AI in the economic sizing.",
+      "src": "ECON22"
+    },
+    {
+      "t": "AI infrastructure",
+      "d": "Connectivity, electricity, data centres, cloud services and accelerated compute — the physical capacity to train, host and serve models. Tracked through dimension D2.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "AI ecosystem",
+      "d": "The organisations that create and sustain AI activity: start-ups, corporates, universities, research centres, incubators, investors, regulators and public agencies, and the relationships between them.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "AI governance",
+      "d": "The rules, institutions and accountability mechanisms that determine how AI may be developed and used — data protection law, ethics guidelines, sector regulation, standards participation and an accountable national body.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "AI readiness",
+      "d": "Whether the preconditions for AI are in place: skills, infrastructure, data and the institutions to govern them. Readiness can be high while actual use remains low.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "AI maturity",
+      "d": "How far AI is actually deployed, funded, governed and producing outcomes. The gap between readiness and maturity is the conversion deficit — capability that has not yet become deployment.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "AI adoption",
+      "d": "Observed use of AI in production by an organisation. Measured here through a registry of use cases with a lifecycle stage, rather than through self-reported survey claims.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "Full potential (economic sizing)",
+      "d": "The value that would be created if today's AI applications were adopted across the whole economy. It is an order-of-magnitude ceiling for prioritisation — not a forecast, not a target, and not value captured.",
+      "src": "ECON22"
+    },
+    {
+      "t": "Coverage",
+      "d": "The share of an index's weighted indicators that actually have a reported observation this cycle. A score computed on 60% coverage is not the same claim as one computed on 95%, and the platform always shows which.",
+      "src": "AIRM22"
+    },
+    {
+      "t": "Confidence",
+      "d": "A 0–1 composite of source reliability, data accessibility, recency and validation level. It is published beside a score and never used to adjust it.",
+      "src": "AIRM22"
+    }
+  ]
+}

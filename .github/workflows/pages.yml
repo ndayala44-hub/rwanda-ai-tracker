@@ -1,0 +1,59 @@
+# Publish the dashboard to GitHub Pages on every push to main.
+#
+# Static only: no backend, no cold starts, no runtime cost. The dashboard serves
+# from apps/web/data/bootstrap.json, which the build regenerates from data/.
+name: pages
+
+on:
+  push: { branches: [main] }
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - run: npm install
+
+      # Fail the deployment rather than publish a dataset that does not validate.
+      - name: Validate datasets
+        run: npm run validate
+
+      - name: Build dashboard
+        run: npm run build:web
+
+      # Tell the dashboard there is no backend here, so it goes straight to the
+      # published snapshot instead of failing a request first.
+      - name: Configure for static hosting
+        run: cp deploy/app-config.static.js apps/web/app-config.js
+
+      # Pages serves from a subpath on the default domain; relative URLs handle it.
+      - name: Disable Jekyll
+        run: touch apps/web/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: apps/web }
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

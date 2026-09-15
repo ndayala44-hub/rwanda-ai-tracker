@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "methodologyVersion": "v1.2",
+  "weightSet": "equal-v1",
+  "registry": {
+    "candidate": 280,
+    "main": 89,
+    "backup": 61,
+    "notRelevant": 130
+  },
+  "targets": {
+    "readiness": 70,
+    "maturity": 60
+  },
+  "dimensions": [
+    {
+      "id": "D1",
+      "name": "21st Century Skills & AI Literacy",
+      "shortName": "Skills & AI Literacy",
+      "class": "Enabler",
+      "color": "#0E88CC",
+      "objective": "Increase the number and skills of AI talent and prepare the workforce for changing skills demand.",
+      "rationale": "Nothing else in the framework moves without people who can build, buy and govern AI. Skills is the slowest-moving enabler and the one with the longest lag to impact.",
+      "outputs": [
+        "O1",
+        "O2",
+        "O3",
+        "O4"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Reliable Infrastructure & Compute Capacity",
+      "shortName": "Infrastructure & Compute",
+      "class": "Enabler",
+      "color": "#0F8B84",
+      "objective": "Increase access to scalable storage and high-performance computing infrastructure.",
+      "rationale": "Connectivity, electricity, data centres and accelerated compute set the ceiling on what can be built and served locally.",
+      "outputs": [
+        "O5",
+        "O6"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Robust Data Strategy",
+      "shortName": "Data Strategy",
+      "class": "Enabler",
+      "color": "#5B8DEF",
+      "objective": "Increase availability of and access to quality data for training AI models through data-sharing frameworks and guidance.",
+      "rationale": "Models are trained on data. Without Rwandan datasets, Rwandan problems get solved with other countries' data or not at all.",
+      "outputs": [
+        "O7"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "Trustworthy AI Adoption in the Public Sector",
+      "shortName": "Public Sector Adoption",
+      "class": "Accelerator",
+      "color": "#B8770E",
+      "objective": "Accelerate public sector AI adoption to improve services and lead by example with lighthouse projects.",
+      "rationale": "Government is the largest single buyer and the most visible adopter. Public deployments set norms for everyone else.",
+      "outputs": [
+        "O8",
+        "O9",
+        "O10"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Widely Beneficial AI Adoption in the Private Sector",
+      "shortName": "Private Sector Adoption",
+      "class": "Accelerator",
+      "color": "#D2603A",
+      "objective": "Boost productivity in key sectors, scale adoption from start-ups to corporates, increase AI employment.",
+      "rationale": "This is where the economic value in the 2022 sizing study would actually be captured.",
+      "outputs": [
+        "O11",
+        "O12"
+      ]
+    },
+    {
+      "id": "D6",
+      "name": "Practical AI Ethical Guidelines",
+      "shortName": "Ethical Guidelines",
+      "class": "Safeguard",
+      "color": "#5E4BB8",
+      "objective": "Mitigate AI risks, promote responsible adoption, uphold national priorities in privacy, security and ethics.",
+      "rationale": "Adoption without safeguards is fragile. Ethics instruments are also preconditions for scoring in the global indices.",
+      "outputs": [
+        "O13",
+        "O14"
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "O1",
+      "dimension": "D1",
+      "statement": "A highly skilled workforce with 21st century skills and AI literacy"
+    },
+    {
+      "id": "O2",
+      "dimension": "D1",
+      "statement": "A solid foundation in AI university education and applied research"
+    },
+    {
+      "id": "O3",
+      "dimension": "D1",
+      "statement": "A young generation of students empowered with AI/ML and data analytic skills"
+    },
+    {
+      "id": "O4",
+      "dimension": "D1",
+      "statement": "Streamlined exchange of students and professionals with foreign countries"
+    },
+    {
+      "id": "O5",
+      "dimension": "D2",
+      "statement": "Access to affordable, reliable, secure scalable storage and HPC infrastructure"
+    },
+    {
+      "id": "O6",
+      "dimension": "D2",
+      "statement": "A continental hub providing affordable, reliable, secure AI cloud infrastructure"
+    },
+    {
+      "id": "O7",
+      "dimension": "D3",
+      "statement": "Increased availability of and access to quality data for training AI models"
+    },
+    {
+      "id": "O8",
+      "dimension": "D4",
+      "statement": "AI policy and regulatory capacity building programme established"
+    },
+    {
+      "id": "O9",
+      "dimension": "D4",
+      "statement": "Rwanda recognised as an African/global leader in AI"
+    },
+    {
+      "id": "O10",
+      "dimension": "D4",
+      "statement": "Improved public service delivery through deployment of AI in government"
+    },
+    {
+      "id": "O11",
+      "dimension": "D5",
+      "statement": "Robust investment in targeted AI projects creating social & economic impact"
+    },
+    {
+      "id": "O12",
+      "dimension": "D5",
+      "statement": "A strong ecosystem supporting AI start-ups with finance and business resources"
+    },
+    {
+      "id": "O13",
+      "dimension": "D6",
+      "statement": "Widely diffused & operationalised national AI ethics guidelines"
+    },
+    {
+      "id": "O14",
+      "dimension": "D6",
+      "statement": "Rwanda contributing to responsible AI principles in international platforms"
+    }
+  ],
+  "maturityLadder": [
+    {
+      "level": 1,
+      "name": "Exploring",
+      "bandMin": 0,
+      "bandMax": 20,
+      "descriptor": "Isolated pilots and proofs of concept; no national instruments in force.",
+      "gates": []
+    },
+    {
+      "level": 2,
+      "name": "Emerging",
+      "bandMin": 20,
+      "bandMax": 40,
+      "descriptor": "Institutional foundations in place; first production deployments.",
+      "gates": [
+        {
+          "indicator": "OXF1",
+          "label": "National AI policy in force"
+        },
+        {
+          "indicator": "TOR118",
+          "label": "Dedicated AI governmental body"
+        },
+        {
+          "indicator": "OXF2",
+          "label": "Data protection regulation in force"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "Operational",
+      "bandMin": 40,
+      "bandMax": 60,
+      "descriptor": "AI in routine public service delivery; a funded pipeline; a functioning private AI market.",
+      "gates": [
+        {
+          "indicator": "OXF4",
+          "label": "National AI ethics framework published"
+        },
+        {
+          "indicator": "TOR108",
+          "label": "Dedicated public AI budget line"
+        },
+        {
+          "indicator": "RWA10",
+          "label": "At least 10 AI solutions in public value chains"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "Integrated",
+      "bandMin": 60,
+      "bandMax": 80,
+      "descriptor": "AI embedded across sectors with measurable service and productivity outcomes.",
+      "gates": [
+        {
+          "indicator": "RWA11-SUBb",
+          "label": "Sector AI deployment plans implemented"
+        },
+        {
+          "indicator": "RWA12-SUBf-S",
+          "label": "Regulatory sandbox operating"
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "name": "Leading",
+      "bandMin": 80,
+      "bandMax": 100,
+      "descriptor": "Continental standard-setter; exporter of AI capability, standards and datasets.",
+      "gates": [
+        {
+          "indicator": "TOR87",
+          "label": "ISO AI committee participation"
+        },
+        {
+          "indicator": "TOR58",
+          "label": "Open Data Charter signatory"
+        },
+        {
+          "indicator": "RWA9",
+          "label": "Top-3 African index position"
+        }
+      ]
+    }
+  ]
+}

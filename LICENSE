@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 Aurasoft Ltd
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+THIRD-PARTY COMPONENTS
+
+Apache ECharts — Apache License 2.0. Loaded from a CDN at runtime; not bundled.
+
+react-rwanda-map — MIT, © Igwaneza Bruce.
+  https://github.com/knowbee/react-rwanda-map
+  The RwandaMap component in apps/web/src/13-view-ecosystem-geo-policy-talent.js
+  is an adaptation: the prop contract and interaction model are preserved, the
+  rendering is reimplemented against this project's design tokens, and geometry
+  is loaded at runtime instead of being bundled. See docs/ARCHITECTURE.md §5.
+
+DATA
+
+The datasets in data/ are compiled from public sources, each recorded in
+data/sources.json with its publisher, year and URL. Rights in the underlying
+publications remain with their publishers. Cite the original source alongside
+this platform — see the citation guidance in the About section of the
+dashboard.

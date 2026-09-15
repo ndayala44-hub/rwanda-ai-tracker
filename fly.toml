@@ -1,0 +1,36 @@
+# Fly.io — the full platform, close to its users, with a writable volume.
+#
+#   fly launch --no-deploy     # creates the app, keeps this file
+#   fly volumes create tracker_data --size 1 --region jnb
+#   fly deploy
+#
+# Johannesburg is the nearest Fly region to Kigali. A volume makes writes durable
+# across restarts; without one the container filesystem resets on each deploy.
+app = "rwanda-ai-tracker"
+primary_region = "jnb"
+
+[build]
+  dockerfile = "services/api/Dockerfile"
+
+[env]
+  PORT = "4010"
+  DATA_DIR = "/app/data"
+  NODE_ENV = "production"
+  CORS_ORIGINS = "*"
+
+[http_service]
+  internal_port = 4010
+  force_https = true
+  auto_stop_machines = "suspend"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.checks]
+    [http_service.checks.health]
+      path = "/health"
+      interval = "30s"
+      timeout = "5s"
+
+[[mounts]]
+  source = "tracker_data"
+  destination = "/app/data"

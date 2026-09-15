@@ -1,0 +1,49 @@
+name: ci
+
+on:
+  push: { branches: [main] }
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version-file: .nvmrc, cache: npm }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+
+      - run: npm install
+      - run: pip install -r services/api/requirements-dev.txt
+
+      # Referential integrity: unregistered sources, duplicate codes, missing
+      # definitions, dangling maturity gates, unclassified value origins.
+      - name: Validate datasets
+        run: npm run validate
+
+      # Rebuild the dashboard and fail if the committed artefact is stale.
+      - name: Build dashboard
+        run: |
+          npm run build:web
+          git diff --exit-code apps/web/index.html apps/web/data/bootstrap.json \
+            || (echo "::error::apps/web/index.html is stale. Run: npm run build:web" && exit 1)
+
+      - name: Engine tests
+        run: npm run test:engine
+
+      # The methodology has two implementations — Python on the server, TypeScript
+      # in the browser. This is where drift between them is caught.
+      - name: Cross-engine parity
+        run: npm run test:parity
+
+      - name: API contract tests
+        run: npm run test:api
+
+      - name: Dashboard render tests
+        run: npm run test:web
+
+      # Asserts the dashboard reports dataOrigin=api rather than silently
+      # falling back to the snapshot or the embedded dataset.
+      - name: Live backend integration
+        run: npm run test:live

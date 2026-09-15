@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "C-1042",
+      "when": "2026-09-12",
+      "who": "Rwanda ICT Chamber",
+      "kind": "Indicator observation",
+      "target": "RWA1-SUB6",
+      "value": "38 firms (2026)",
+      "note": "Member survey, 214 respondents, self-reported AI or advanced-analytics use.",
+      "state": "In review",
+      "reviewer": "NISR"
+    },
+    {
+      "id": "C-1041",
+      "when": "2026-09-10",
+      "who": "Carnegie Mellon University Africa",
+      "kind": "Indicator observation",
+      "target": "RWA2-SUBf",
+      "value": "128 postgraduates (2026)",
+      "note": "Combined AI and data-science cohorts across three institutions.",
+      "state": "In review",
+      "reviewer": "MINEDUC"
+    },
+    {
+      "id": "C-1039",
+      "when": "2026-09-08",
+      "who": "Norrsken House Kigali",
+      "kind": "Use case",
+      "target": "UC-018",
+      "value": "AI credit scoring for informal traders",
+      "note": "Portfolio company; pilot with two microfinance institutions.",
+      "state": "Awaiting evidence",
+      "reviewer": "—"
+    },
+    {
+      "id": "C-1036",
+      "when": "2026-09-03",
+      "who": "Independent researcher",
+      "kind": "Correction",
+      "target": "TOR51",
+      "value": "Download speed methodology",
+      "note": "Flags that fixed and mobile medians are being conflated in the published series.",
+      "state": "Accepted — correction queued",
+      "reviewer": "RURA"
+    },
+    {
+      "id": "C-1031",
+      "when": "2026-08-27",
+      "who": "Development partner",
+      "kind": "Source",
+      "target": "—",
+      "value": "Skills gap assessment 2026",
+      "note": "Offers microdata under a data-sharing agreement.",
+      "state": "In review",
+      "reviewer": "MINICT"
+    }
+  ]
+}

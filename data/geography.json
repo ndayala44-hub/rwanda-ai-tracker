@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "provinces": [
+    "City of Kigali",
+    "Northern Province",
+    "Southern Province",
+    "Eastern Province",
+    "Western Province"
+  ],
+  "districts": [
+    {
+      "code": "RW-KG-NYA",
+      "name": "Nyarugenge",
+      "prov": "City of Kigali",
+      "lat": -1.957,
+      "lon": 30.056
+    },
+    {
+      "code": "RW-KG-GAS",
+      "name": "Gasabo",
+      "prov": "City of Kigali",
+      "lat": -1.905,
+      "lon": 30.121
+    },
+    {
+      "code": "RW-KG-KIC",
+      "name": "Kicukiro",
+      "prov": "City of Kigali",
+      "lat": -1.999,
+      "lon": 30.104
+    },
+    {
+      "code": "RW-NO-BUR",
+      "name": "Burera",
+      "prov": "Northern Province",
+      "lat": -1.47,
+      "lon": 29.848
+    },
+    {
+      "code": "RW-NO-GAK",
+      "name": "Gakenke",
+      "prov": "Northern Province",
+      "lat": -1.7,
+      "lon": 29.78
+    },
+    {
+      "code": "RW-NO-GIC",
+      "name": "Gicumbi",
+      "prov": "Northern Province",
+      "lat": -1.58,
+      "lon": 30.104
+    },
+    {
+      "code": "RW-NO-MUS",
+      "name": "Musanze",
+      "prov": "Northern Province",
+      "lat": -1.499,
+      "lon": 29.634
+    },
+    {
+      "code": "RW-NO-RUL",
+      "name": "Rulindo",
+      "prov": "Northern Province",
+      "lat": -1.77,
+      "lon": 30.06
+    },
+    {
+      "code": "RW-SO-GIS",
+      "name": "Gisagara",
+      "prov": "Southern Province",
+      "lat": -2.61,
+      "lon": 29.84
+    },
+    {
+      "code": "RW-SO-HUY",
+      "name": "Huye",
+      "prov": "Southern Province",
+      "lat": -2.596,
+      "lon": 29.739
+    },
+    {
+      "code": "RW-SO-KAM",
+      "name": "Kamonyi",
+      "prov": "Southern Province",
+      "lat": -2,
+      "lon": 29.9
+    },
+    {
+      "code": "RW-SO-MUH",
+      "name": "Muhanga",
+      "prov": "Southern Province",
+      "lat": -2.085,
+      "lon": 29.756
+    },
+    {
+      "code": "RW-SO-NYM",
+      "name": "Nyamagabe",
+      "prov": "Southern Province",
+      "lat": -2.4,
+      "lon": 29.47
+    },
+    {
+      "code": "RW-SO-NYZ",
+      "name": "Nyanza",
+      "prov": "Southern Province",
+      "lat": -2.35,
+      "lon": 29.75
+    },
+    {
+      "code": "RW-SO-NYR",
+      "name": "Nyaruguru",
+      "prov": "Southern Province",
+      "lat": -2.65,
+      "lon": 29.52
+    },
+    {
+      "code": "RW-SO-RUH",
+      "name": "Ruhango",
+      "prov": "Southern Province",
+      "lat": -2.2,
+      "lon": 29.78
+    },
+    {
+      "code": "RW-EA-BUG",
+      "name": "Bugesera",
+      "prov": "Eastern Province",
+      "lat": -2.2,
+      "lon": 30.15
+    },
+    {
+      "code": "RW-EA-GAT",
+      "name": "Gatsibo",
+      "prov": "Eastern Province",
+      "lat": -1.58,
+      "lon": 30.43
+    },
+    {
+      "code": "RW-EA-KAY",
+      "name": "Kayonza",
+      "prov": "Eastern Province",
+      "lat": -1.88,
+      "lon": 30.61
+    },
+    {
+      "code": "RW-EA-KIR",
+      "name": "Kirehe",
+      "prov": "Eastern Province",
+      "lat": -2.26,
+      "lon": 30.7
+    },
+    {
+      "code": "RW-EA-NGO",
+      "name": "Ngoma",
+      "prov": "Eastern Province",
+      "lat": -2.15,
+      "lon": 30.47
+    },
+    {
+      "code": "RW-EA-NYG",
+      "name": "Nyagatare",
+      "prov": "Eastern Province",
+      "lat": -1.293,
+      "lon": 30.325
+    },
+    {
+      "code": "RW-EA-RWA",
+      "name": "Rwamagana",
+      "prov": "Eastern Province",
+      "lat": -1.949,
+      "lon": 30.434
+    },
+    {
+      "code": "RW-WE-KAR",
+      "name": "Karongi",
+      "prov": "Western Province",
+      "lat": -2,
+      "lon": 29.38
+    },
+    {
+      "code": "RW-WE-NGO",
+      "name": "Ngororero",
+      "prov": "Western Province",
+      "lat": -1.87,
+      "lon": 29.62
+    },
+    {
+      "code": "RW-WE-NYB",
+      "name": "Nyabihu",
+      "prov": "Western Province",
+      "lat": -1.65,
+      "lon": 29.51
+    },
+    {
+      "code": "RW-WE-NYM",
+      "name": "Nyamasheke",
+      "prov": "Western Province",
+      "lat": -2.35,
+      "lon": 29.14
+    },
+    {
+      "code": "RW-WE-RSZ",
+      "name": "Rusizi",
+      "prov": "Western Province",
+      "lat": -2.484,
+      "lon": 28.901
+    },
+    {
+      "code": "RW-WE-RTS",
+      "name": "Rutsiro",
+      "prov": "Western Province",
+      "lat": -1.93,
+      "lon": 29.33
+    },
+    {
+      "code": "RW-WE-RUB",
+      "name": "Rubavu",
+      "prov": "Western Province",
+      "lat": -1.678,
+      "lon": 29.261
+    }
+  ],
+  "config": {
+    "boundarySources": [
+      "./data/rw-districts.geojson",
+      "/api/geography/districts.geojson"
+    ],
+    "expected": "Level-2 administrative boundaries (30 districts), NISR / RCMRD, EPSG:4326 GeoJSON",
+    "joinKey": "district name or NISR district code"
+  }
+}

@@ -1,0 +1,561 @@
+{
+  "version": 1,
+  "note": "The measurement roadmap: indicators this platform argues should exist but for which no observation is yet available. They are deliberately NOT part of methodology v1.3 and do not enter any score — declaring a gap is not the same as filling it. Promote one by moving its definition into indicators.json and supplying an observation.",
+  "items": [
+    {
+      "domain": "Compute & energy",
+      "name": "Accelerated compute available to researchers",
+      "unit": "GPU-hours/yr",
+      "rationale": "The actual currency of AI work; headline FLOPs say nothing about access.",
+      "proposedSource": "RISA, institutional returns",
+      "feasibility": "medium",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Compute & energy",
+      "name": "Cost per GPU-hour, domestic versus regional",
+      "unit": "USD",
+      "rationale": "Determines whether training locally is rational at all.",
+      "proposedSource": "Vendor price survey",
+      "feasibility": "medium",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Compute & energy",
+      "name": "National compute utilisation",
+      "unit": "%",
+      "rationale": "Idle capacity is a different policy problem from absent capacity.",
+      "proposedSource": "Operator telemetry",
+      "feasibility": "hard",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Compute & energy",
+      "name": "Data centre power usage effectiveness",
+      "unit": "ratio",
+      "rationale": "Energy efficiency of the hosting estate.",
+      "proposedSource": "Operator reporting",
+      "feasibility": "medium",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Compute & energy",
+      "name": "AI workload share of national electricity demand",
+      "unit": "%",
+      "rationale": "Directly tests the claim that one campus would draw a third of generation.",
+      "proposedSource": "REG and operators",
+      "feasibility": "medium",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Compute & energy",
+      "name": "Renewable share powering data centres",
+      "unit": "%",
+      "rationale": "Rwanda's largely hydro grid is an unmeasured comparative advantage.",
+      "proposedSource": "REG",
+      "feasibility": "easy",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Compute & energy",
+      "name": "Water withdrawal for data-centre cooling",
+      "unit": "m³/yr",
+      "rationale": "Cooling competes with agriculture in a water-constrained highland economy.",
+      "proposedSource": "Operators, WASAC",
+      "feasibility": "hard",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Pilot survival rate at 24 months",
+      "unit": "%",
+      "rationale": "The 2026 review states outright that this is unmeasured; it is the single most diagnostic adoption metric.",
+      "proposedSource": "Use case registry longitudinal",
+      "feasibility": "medium",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Time from pilot to production",
+      "unit": "months",
+      "rationale": "Distinguishes an ecosystem that ships from one that pilots.",
+      "proposedSource": "Use case registry",
+      "feasibility": "easy",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Citizens served by AI-supported public services",
+      "unit": "count",
+      "rationale": "Converts deployment counts into reach.",
+      "proposedSource": "Agency reporting",
+      "feasibility": "medium",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Transactions processed with AI in the loop",
+      "unit": "count/yr",
+      "rationale": "The denominator for any productivity claim.",
+      "proposedSource": "Agency reporting",
+      "feasibility": "medium",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Public services with an AI component",
+      "unit": "% of catalogue",
+      "rationale": "Comparable across countries via e-government service catalogues.",
+      "proposedSource": "RISA",
+      "feasibility": "medium",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Agencies publishing an AI system inventory",
+      "unit": "%",
+      "rationale": "Prerequisite for the transparency register the 2026 review calls for.",
+      "proposedSource": "MINICT",
+      "feasibility": "easy",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Adoption depth",
+      "name": "Decommissioned or abandoned AI systems",
+      "unit": "count",
+      "rationale": "Nobody publishes failures. A platform that did would be genuinely distinctive.",
+      "proposedSource": "Use case registry",
+      "feasibility": "medium",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Public AI systems running on domestically-owned models",
+      "unit": "%",
+      "rationale": "Measures the layer of the stack Rwanda actually controls.",
+      "proposedSource": "Use case registry",
+      "feasibility": "easy",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "AI contracts carrying a model-ownership clause",
+      "unit": "%",
+      "rationale": "The cheapest governance gap identified in 2026, and the most valuable.",
+      "proposedSource": "RPPA",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Public data processed in-country",
+      "unit": "%",
+      "rationale": "Tests the data localisation regime in practice rather than in law.",
+      "proposedSource": "RURA authorisation register",
+      "feasibility": "medium",
+      "targetDimension": "D3",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Kinyarwanda tokens in openly licensed corpora",
+      "unit": "count",
+      "rationale": "Free, versioned and queryable; directly measures the sovereign layer.",
+      "proposedSource": "Hugging Face Hub API",
+      "feasibility": "easy",
+      "targetDimension": "D3",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Openly licensed Rwandan models published",
+      "unit": "count",
+      "rationale": "Automatable daily.",
+      "proposedSource": "Hugging Face Hub API",
+      "feasibility": "easy",
+      "targetDimension": "D3",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Downloads of Rwandan open models",
+      "unit": "count/yr",
+      "rationale": "Demand signal for the sovereign language layer.",
+      "proposedSource": "Hugging Face Hub API",
+      "feasibility": "easy",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Kinyarwanda speech recognition word error rate",
+      "unit": "%",
+      "rationale": "Quality, not just existence, of the language capability.",
+      "proposedSource": "Published benchmarks",
+      "feasibility": "medium",
+      "targetDimension": "D3",
+      "status": "proposed"
+    },
+    {
+      "domain": "Sovereignty",
+      "name": "Government AI spend awarded to domestic vendors",
+      "unit": "%",
+      "rationale": "Procurement is the state's most powerful available instrument.",
+      "proposedSource": "RPPA",
+      "feasibility": "medium",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "Algorithmic impact assessments completed",
+      "unit": "count/yr",
+      "rationale": "The data protection law already requires them for high-risk processing.",
+      "proposedSource": "NCSA",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "High-risk systems with documented human oversight",
+      "unit": "%",
+      "rationale": "Oversight claimed is not oversight evidenced.",
+      "proposedSource": "Agency returns",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "Independent model evaluations conducted",
+      "unit": "count/yr",
+      "rationale": "A testbed must be able to certify what it tested.",
+      "proposedSource": "MINICT",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "AI incidents recorded and resolved",
+      "unit": "count",
+      "rationale": "No incident register exists anywhere in the framework.",
+      "proposedSource": "NCSA",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "Redress requests concerning automated decisions",
+      "unit": "count",
+      "rationale": "Rights without a measured remedy are rights on paper.",
+      "proposedSource": "NCSA",
+      "feasibility": "hard",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "Breach notifications within the 48-hour statutory clock",
+      "unit": "%",
+      "rationale": "Tests whether the enforceable regime is actually enforced.",
+      "proposedSource": "NCSA",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "Public trust in government use of AI",
+      "unit": "% agreeing",
+      "rationale": "Adoption without consent is fragile.",
+      "proposedSource": "National survey",
+      "feasibility": "medium",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Assurance & rights",
+      "name": "Data-labelling workforce covered by labour protections",
+      "unit": "%",
+      "rationale": "The continental index flags this as a blind spot no national strategy addresses.",
+      "proposedSource": "MIFOTRA",
+      "feasibility": "hard",
+      "targetDimension": "D6",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "Gender gap in AI and digital skills participation",
+      "unit": "percentage points",
+      "rationale": "Nothing on the platform is currently disaggregated.",
+      "proposedSource": "MINEDUC, NISR",
+      "feasibility": "medium",
+      "targetDimension": "D1",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "Gender gap in measured AI usage",
+      "unit": "percentage points",
+      "rationale": "For a country at 0.20x expected usage, distribution is the policy question.",
+      "proposedSource": "Survey or provider data",
+      "feasibility": "hard",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "Rural–urban smartphone ownership gap",
+      "unit": "percentage points",
+      "rationale": "Device access is the binding demand-side constraint.",
+      "proposedSource": "RURA, NISR",
+      "feasibility": "easy",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "Entry smartphone cost as a share of monthly median income",
+      "unit": "%",
+      "rationale": "Handsets average USD 160 against the incomes that must buy them.",
+      "proposedSource": "NISR, market survey",
+      "feasibility": "easy",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "1 GB mobile data as a share of monthly median income",
+      "unit": "%",
+      "rationale": "The international affordability target is 2%.",
+      "proposedSource": "A4AI, RURA",
+      "feasibility": "easy",
+      "targetDimension": "D2",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "Public AI services available in Kinyarwanda",
+      "unit": "%",
+      "rationale": "Language access is the difference between a service existing and being usable.",
+      "proposedSource": "RISA",
+      "feasibility": "easy",
+      "targetDimension": "D3",
+      "status": "proposed"
+    },
+    {
+      "domain": "Inclusion",
+      "name": "Digital accessibility compliance of public services",
+      "unit": "% WCAG AA",
+      "rationale": "Disability access is absent from the framework entirely.",
+      "proposedSource": "RISA audit",
+      "feasibility": "medium",
+      "targetDimension": "D4",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "Measured AI contribution to GDP",
+      "unit": "%",
+      "rationale": "NST2 carries a 5–6% target with no measurement behind it.",
+      "proposedSource": "NISR national accounts",
+      "feasibility": "hard",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "Value realised against the 2022 sizing, by sector",
+      "unit": "USD m",
+      "rationale": "Closes the loop on the 589m potential the platform already publishes.",
+      "proposedSource": "NISR, sector surveys",
+      "feasibility": "hard",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "AI-related job postings",
+      "unit": "% of all postings",
+      "rationale": "Leading indicator of demand, available before employment statistics.",
+      "proposedSource": "Job board scrape",
+      "feasibility": "easy",
+      "targetDimension": "D1",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "Wage premium for AI skills",
+      "unit": "%",
+      "rationale": "Whether the skills programme pays for its participants.",
+      "proposedSource": "Labour force survey",
+      "feasibility": "medium",
+      "targetDimension": "D1",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "Net migration of AI and technical talent",
+      "unit": "headcount",
+      "rationale": "The 2026 review names retention as a critical risk with no strategy behind it.",
+      "proposedSource": "DGIE, professional bodies",
+      "feasibility": "hard",
+      "targetDimension": "D1",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "Firms reporting productivity gains from AI",
+      "unit": "%",
+      "rationale": "The micro evidence behind any macro claim.",
+      "proposedSource": "Establishment survey",
+      "feasibility": "medium",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "AI venture funding per capita",
+      "unit": "USD",
+      "rationale": "Comparable across the peer set.",
+      "proposedSource": "Crunchbase",
+      "feasibility": "easy",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "Follow-on funding rate for AI start-ups",
+      "unit": "%",
+      "rationale": "Distinguishes a pipeline from a cohort.",
+      "proposedSource": "Crunchbase, RDB",
+      "feasibility": "medium",
+      "targetDimension": "D5",
+      "status": "proposed"
+    },
+    {
+      "domain": "Economy & labour",
+      "name": "AI service exports",
+      "unit": "USD m",
+      "rationale": "Tests the business-process repositioning the 2026 agenda proposes.",
+      "proposedSource": "BNR, RDB",
+      "feasibility": "medium",
+      "targetDimension": "D5",
+      "status": "proposed"
+    }
+  ],
+  "proposedComposites": [
+    {
+      "name": "Conversion Efficiency",
+      "construction": "maturity ÷ readiness, normalised",
+      "question": "Is capability turning into deployment? Currently visible only as a raw gap."
+    },
+    {
+      "name": "Sovereignty Index",
+      "construction": "model ownership + local hosting + local language capability + domestic vendor share",
+      "question": "How much of the stack does Rwanda control?"
+    },
+    {
+      "name": "Assurance Index",
+      "construction": "evaluation capability + oversight coverage + incident handling + redress",
+      "question": "Can Rwanda certify what it deploys?"
+    },
+    {
+      "name": "Inclusion Index",
+      "construction": "gender, rural–urban, affordability and language access",
+      "question": "Who is excluded from the 0.20x usage figure?"
+    },
+    {
+      "name": "Compute Adequacy",
+      "construction": "available capacity ÷ estimated demand, bounded by the energy envelope",
+      "question": "Can Rwanda physically run what it plans?"
+    }
+  ],
+  "externalIndicesToIngest": [
+    {
+      "index": "AI Preparedness Index",
+      "publisher": "IMF",
+      "why": "Digital infrastructure, human capital, innovation and regulation — the closest methodological peer to this framework, covering roughly 174 economies.",
+      "effort": "low"
+    },
+    {
+      "index": "Network Readiness Index",
+      "publisher": "Portulans Institute",
+      "why": "Technology, people, governance and impact, with a long time series.",
+      "effort": "low"
+    },
+    {
+      "index": "E-Government Development Index",
+      "publisher": "UN DESA",
+      "why": "The public-service delivery substrate AI is deployed onto.",
+      "effort": "low"
+    },
+    {
+      "index": "GovTech Maturity Index",
+      "publisher": "World Bank",
+      "why": "Public-sector digital capability, directly relevant to public adoption.",
+      "effort": "low"
+    },
+    {
+      "index": "Mobile Connectivity Index",
+      "publisher": "GSMA",
+      "why": "Infrastructure, affordability, readiness and content — the demand-side gap.",
+      "effort": "low"
+    },
+    {
+      "index": "Global Innovation Index",
+      "publisher": "WIPO",
+      "why": "Innovation inputs and outputs across 130+ economies.",
+      "effort": "low"
+    },
+    {
+      "index": "ICT Development Index",
+      "publisher": "ITU",
+      "why": "Universal meaningful connectivity.",
+      "effort": "low"
+    },
+    {
+      "index": "Global AI Vibrancy Tool",
+      "publisher": "Stanford HAI",
+      "why": "36 cross-country indicators, research and economy heavy.",
+      "effort": "medium"
+    },
+    {
+      "index": "Global AI Index",
+      "publisher": "Tortoise Media",
+      "why": "Rwanda is not indexed. Inclusion is itself a tracked objective of the 2022 framework.",
+      "effort": "medium"
+    },
+    {
+      "index": "Training compute database",
+      "publisher": "Epoch AI",
+      "why": "The only public source for the compute dimension.",
+      "effort": "medium"
+    },
+    {
+      "index": "Hugging Face Hub",
+      "publisher": "Hugging Face",
+      "why": "Models and datasets by language — the sovereignty layer, fully automatable.",
+      "effort": "low"
+    }
+  ]
+}
