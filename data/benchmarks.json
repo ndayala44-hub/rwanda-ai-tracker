@@ -12,7 +12,7 @@
     },
     "C": {
       "label": "Rwanda-specific",
-      "detail": "Indicators with no peer equivalent. Time-series and target tracking only — never a cross-country comparison."
+      "detail": "Indicators with no peer equivalent. Time-series and target tracking only, never a cross-country comparison."
     }
   },
   "series": [
@@ -106,7 +106,7 @@
       "scope": "global",
       "sourceId": "GAIRIDX",
       "measures": "Readiness to deploy AI, rather than capacity to govern it.",
-      "reading": "Rwanda ranks 75th globally. Oxford Insights revised the methodology for the 2025 edition, so this position cannot be compared with the 2021 score of 35.16 — the platform holds the two editions as separate series.",
+      "reading": "Rwanda ranks 75th globally. Oxford Insights revised the methodology for the 2025 edition, so this position cannot be compared with the 2021 score of 35.16, the platform holds the two editions as separate series.",
       "invert": true,
       "values": [
         {
@@ -147,7 +147,7 @@
       "scope": "global",
       "sourceId": "OXFORD",
       "measures": "Government readiness to implement AI in public service delivery.",
-      "reading": "Rwanda scored 35.16 and ranked 112 of 172, tenth in Africa. The neighbours shown are the countries immediately around it in that edition — the band is tightly packed, so small score movements produce large rank movements.",
+      "reading": "Rwanda scored 35.16 and ranked 112 of 172, tenth in Africa. The neighbours shown are the countries immediately around it in that edition, the band is tightly packed, so small score movements produce large rank movements.",
       "values": [
         {
           "country": "Gabon",
@@ -242,12 +242,12 @@
     "note": "Regional averages in the 2021 edition, as reported in the national readiness assessment.",
     "items": [
       {
-        "name": "Sub-Saharan Africa — overall",
+        "name": "Sub-Saharan Africa, overall",
         "value": 31.61,
         "comment": "The lowest of any global region"
       },
       {
-        "name": "Sub-Saharan Africa — data and infrastructure pillar",
+        "name": "Sub-Saharan Africa, data and infrastructure pillar",
         "value": 39.36,
         "comment": "Every other global region averages above 47.42"
       }
@@ -262,7 +262,7 @@
       "Kenya",
       "Ghana"
     ],
-    "comment": "Behind more advanced digital economies. The 2026 governance index inverts this — the two indices are measuring different things."
+    "comment": "Behind more advanced digital economies. The 2026 governance index inverts this, the two indices are measuring different things."
   },
   "indexComparison": [
     {
@@ -300,10 +300,10 @@
     "checkedOn": "2026-09-15",
     "method": "Each index was located at its publisher, and Rwanda's value cross-checked against at least two independent reports.",
     "findings": [
-      "Africa AI Governance Index — confirmed. Published July 2026 by the Africa AI Policy Lab and Lawyers Hub. Rwanda 3.25 of 4. The publisher was previously recorded as unattributed and has been corrected.",
-      "Government AI Readiness Index 2025 — confirmed as an Oxford Insights product, 195 countries. Rwanda rank 75, Kenya 65, South Africa 67, Mauritius 71. Previously recorded as an unnamed publisher and has been corrected.",
-      "Government AI Readiness Index 2021 — as cited in the 2022 national assessment. Held separately because the 2025 methodology changed.",
-      "Anthropic Economic Index — a real published country view; the Rwanda figures are as reported in the 2026 landscape review rather than re-fetched."
+      "Africa AI Governance Index, confirmed. Published July 2026 by the Africa AI Policy Lab and Lawyers Hub. Rwanda 3.25 of 4. The publisher was previously recorded as unattributed and has been corrected.",
+      "Government AI Readiness Index 2025, confirmed as an Oxford Insights product, 195 countries. Rwanda rank 75, Kenya 65, South Africa 67, Mauritius 71. Previously recorded as an unnamed publisher and has been corrected.",
+      "Government AI Readiness Index 2021, as cited in the 2022 national assessment. Held separately because the 2025 methodology changed.",
+      "Anthropic Economic Index, a real published country view; the Rwanda figures are as reported in the 2026 landscape review rather than re-fetched."
     ]
   }
 }

@@ -3,17 +3,17 @@
   "items": [
     {
       "t": "Artificial intelligence (AI)",
-      "d": "The ability of a computer to perform tasks that normally require human intelligence — visual perception, speech recognition, decision-making, translation between languages. The 2022 economic sizing study deliberately used a broad definition covering both AI and traditional advanced analytics, because in an economy at Rwanda's stage most of the near-term value comes from analytics applied to existing processes.",
+      "d": "The ability of a computer to perform tasks that normally require human intelligence, visual perception, speech recognition, decision-making, translation between languages. The 2022 economic sizing study deliberately used a broad definition covering both AI and traditional advanced analytics, because in an economy at Rwanda's stage most of the near-term value comes from analytics applied to existing processes.",
       "src": "ECON22"
     },
     {
       "t": "Machine learning",
-      "d": "The subset of AI in which a system learns patterns from data rather than following rules written by a programmer. Supervised learning — the most common commercial form — needs labelled examples, which is why the count of annotated Rwandan datasets is tracked as an indicator in its own right.",
+      "d": "The subset of AI in which a system learns patterns from data rather than following rules written by a programmer. Supervised learning, the most common commercial form, needs labelled examples, which is why the count of annotated Rwandan datasets is tracked as an indicator in its own right.",
       "src": "AIRM22"
     },
     {
       "t": "Generative AI",
-      "d": "Models that produce new text, images, code or audio rather than only classifying or predicting. Note that the 2022 sizing study predates the commercial generative wave and explicitly measured only the technology available at the time — so its estimates neither include nor anticipate generative AI.",
+      "d": "Models that produce new text, images, code or audio rather than only classifying or predicting. Note that the 2022 sizing study predates the commercial generative wave and explicitly measured only the technology available at the time, so its estimates neither include nor anticipate generative AI.",
       "src": "ECON22"
     },
     {
@@ -23,7 +23,7 @@
     },
     {
       "t": "AI infrastructure",
-      "d": "Connectivity, electricity, data centres, cloud services and accelerated compute — the physical capacity to train, host and serve models. Tracked through dimension D2.",
+      "d": "Connectivity, electricity, data centres, cloud services and accelerated compute, the physical capacity to train, host and serve models. Tracked through dimension D2.",
       "src": "AIRM22"
     },
     {
@@ -33,7 +33,7 @@
     },
     {
       "t": "AI governance",
-      "d": "The rules, institutions and accountability mechanisms that determine how AI may be developed and used — data protection law, ethics guidelines, sector regulation, standards participation and an accountable national body.",
+      "d": "The rules, institutions and accountability mechanisms that determine how AI may be developed and used, data protection law, ethics guidelines, sector regulation, standards participation and an accountable national body.",
       "src": "AIRM22"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "t": "AI maturity",
-      "d": "How far AI is actually deployed, funded, governed and producing outcomes. The gap between readiness and maturity is the conversion deficit — capability that has not yet become deployment.",
+      "d": "How far AI is actually deployed, funded, governed and producing outcomes. The gap between readiness and maturity is the conversion deficit, capability that has not yet become deployment.",
       "src": "AIRM22"
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "t": "Full potential (economic sizing)",
-      "d": "The value that would be created if today's AI applications were adopted across the whole economy. It is an order-of-magnitude ceiling for prioritisation — not a forecast, not a target, and not value captured.",
+      "d": "The value that would be created if today's AI applications were adopted across the whole economy. It is an order-of-magnitude ceiling for prioritisation, not a forecast, not a target, and not value captured.",
       "src": "ECON22"
     },
     {

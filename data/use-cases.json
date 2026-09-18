@@ -13,7 +13,9 @@
       "risk": "High",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Symptom triage supporting remote consultation at national scale within the health system."
+      "desc": "Symptom triage supporting remote consultation at national scale within the health system.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-002",
@@ -27,7 +29,10 @@
       "risk": "Medium",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "On-demand drone delivery of blood and essential medicines; AI used for routing and trajectory planning."
+      "desc": "On-demand drone delivery of blood and essential medicines; AI used for routing and trajectory planning.",
+      "onNationalRecord": true,
+      "raiaName": "Autonomous medicine drone delivery",
+      "origin": "demo"
     },
     {
       "id": "UC-003",
@@ -41,7 +46,9 @@
       "risk": "High",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "AI applications for smart traffic lights and traffic control systems."
+      "desc": "AI applications for smart traffic lights and traffic control systems.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-004",
@@ -55,7 +62,9 @@
       "risk": "High",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Machine learning applied to transaction monitoring and currency operations."
+      "desc": "Machine learning applied to transaction monitoring and currency operations.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-005",
@@ -69,7 +78,9 @@
       "risk": "Medium",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Machine learning algorithms detecting faults and errors in vehicle speed governors."
+      "desc": "Machine learning algorithms detecting faults and errors in vehicle speed governors.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-006",
@@ -83,7 +94,9 @@
       "risk": "High",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Detection of disease indicators from radiology images on a tele-radiology platform."
+      "desc": "Detection of disease indicators from radiology images on a tele-radiology platform.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-007",
@@ -97,7 +110,9 @@
       "risk": "High",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Risk-factor prediction piloted in three district hospitals and one private clinic."
+      "desc": "Risk-factor prediction piloted in three district hospitals and one private clinic.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-008",
@@ -111,7 +126,9 @@
       "risk": "Medium",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Open voice and language datasets for Kinyarwanda, reducing the access gap for local-language services."
+      "desc": "Open voice and language datasets for Kinyarwanda, reducing the access gap for local-language services.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-009",
@@ -125,7 +142,9 @@
       "risk": "Medium",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "High-quality aerial imagery and analysis supporting infrastructure decisions."
+      "desc": "High-quality aerial imagery and analysis supporting infrastructure decisions.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-010",
@@ -139,7 +158,9 @@
       "risk": "Low",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Sensor-based water monitoring with data analysis for fish farmers."
+      "desc": "Sensor-based water monitoring with data analysis for fish farmers.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-011",
@@ -153,7 +174,9 @@
       "risk": "Medium",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Automated analysis of IT system log data for small and medium businesses."
+      "desc": "Automated analysis of IT system log data for small and medium businesses.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-012",
@@ -167,7 +190,9 @@
       "risk": "High",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Digital trust and identity authentication using voice recognition."
+      "desc": "Digital trust and identity authentication using voice recognition.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-013",
@@ -181,7 +206,9 @@
       "risk": "Low",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Students matched to real business challenges sourced from partner firms."
+      "desc": "Students matched to real business challenges sourced from partner firms.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-014",
@@ -195,7 +222,9 @@
       "risk": "Low",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Data engineering, geospatial technologies and analytics delivered as a service."
+      "desc": "Data engineering, geospatial technologies and analytics delivered as a service.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-015",
@@ -209,7 +238,9 @@
       "risk": "Low",
       "src": "AIRM22",
       "status": "verified",
-      "desc": "Labelled crop-type dataset and classification, one of the few open annotated Rwandan datasets."
+      "desc": "Labelled crop-type dataset and classification, one of the few open annotated Rwandan datasets.",
+      "onNationalRecord": false,
+      "origin": "demo"
     },
     {
       "id": "UC-016",
@@ -223,7 +254,9 @@
       "risk": "Medium",
       "src": "ECON22",
       "status": "pending",
-      "desc": "Lighthouse use case LH1 from the 2022 sizing study; contributed as entering proof of concept."
+      "desc": "Lighthouse use case LH1 from the 2022 sizing study; contributed as entering proof of concept.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-017",
@@ -237,7 +270,9 @@
       "risk": "Medium",
       "src": "CONTRIB",
       "status": "pending",
-      "desc": "Lighthouse use case LH4; contributed record, awaiting corroboration from a second source."
+      "desc": "Lighthouse use case LH4; contributed record, awaiting corroboration from a second source.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-101",
@@ -251,7 +286,9 @@
       "risk": "High",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "Integrates data from community health workers to referral hospitals and predicts disease trends up to three months ahead, enabling targeted rather than regional intervention. Contains the only formally resourced model evaluation function in Rwanda."
+      "desc": "Integrates data from community health workers to referral hospitals and predicts disease trends up to three months ahead, enabling targeted rather than regional intervention. Contains the only formally resourced model evaluation function in Rwanda.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-102",
@@ -265,7 +302,9 @@
       "risk": "High",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "USD 50m Gates Foundation and OpenAI programme placing AI triage, documentation, referral and follow-up under human oversight in 1,000 primary care clinics by 2028. Rwanda selected as first launch country."
+      "desc": "USD 50m Gates Foundation and OpenAI programme placing AI triage, documentation, referral and follow-up under human oversight in 1,000 primary care clinics by 2028. Rwanda selected as first launch country.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-103",
@@ -279,7 +318,9 @@
       "risk": "High",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "Capitation analytics across more than 1,000 health facilities on 20 million annual visits, running on the Medallion data pipeline consolidating Ishema, CBHI, RAMA, EjoHeza, Pension and Oracle ERP."
+      "desc": "Capitation analytics across more than 1,000 health facilities on 20 million annual visits, running on the Medallion data pipeline consolidating Ishema, CBHI, RAMA, EjoHeza, Pension and Oracle ERP.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-104",
@@ -293,7 +334,10 @@
       "risk": "Medium",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "Voice advisory answering farmer questions in Kinyarwanda over basic phones via IVR, built on KinyaBERT, KinyaColBERT and Flex-TTS. Handles over 60 percent of technical queries with escalation to human experts; targets 2.5 million farmers."
+      "desc": "Voice advisory answering farmer questions in Kinyarwanda over basic phones via IVR, built on KinyaBERT, KinyaColBERT and Flex-TTS. Handles over 60 percent of technical queries with escalation to human experts; targets 2.5 million farmers.",
+      "onNationalRecord": true,
+      "raiaName": "AI-enabled Agricultural Advisory (Tunga)",
+      "origin": "source-reported"
     },
     {
       "id": "UC-105",
@@ -307,7 +351,9 @@
       "risk": "Medium",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "AI learning companion deploying across eight African countries."
+      "desc": "AI learning companion deploying across eight African countries.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-106",
@@ -321,7 +367,9 @@
       "risk": "Low",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "KinyaBERT (107M and 365M parameters, morphology-aware), KinyaColBERT dense retrieval and Flex-TTS multi-speaker speech synthesis. Released open source in March 2026 — the only genuinely sovereign layer of Rwanda's AI stack."
+      "desc": "KinyaBERT (107M and 365M parameters, morphology-aware), KinyaColBERT dense retrieval and Flex-TTS multi-speaker speech synthesis. Released open source in March 2026, the only genuinely sovereign layer of Rwanda's AI stack.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-107",
@@ -335,7 +383,9 @@
       "risk": "Low",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "USD 17.5m hub scaling proven solutions in health, agriculture and education, then across the continent. First of four planned continental scaling hubs."
+      "desc": "USD 17.5m hub scaling proven solutions in health, agriculture and education, then across the continent. First of four planned continental scaling hubs.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-108",
@@ -349,7 +399,10 @@
       "risk": "Medium",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "Demand forecasting and supply chain optimisation for medical procurement across health facilities."
+      "desc": "Demand forecasting and supply chain optimisation for medical procurement across health facilities.",
+      "onNationalRecord": true,
+      "raiaName": "Stock optimisation in the private sector",
+      "origin": "source-reported"
     },
     {
       "id": "UC-109",
@@ -363,7 +416,9 @@
       "risk": "Medium",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "Retrieval over Rwandan legislation and case law with citation grounding."
+      "desc": "Retrieval over Rwandan legislation and case law with citation grounding.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
     },
     {
       "id": "UC-110",
@@ -377,7 +432,567 @@
       "risk": "Medium",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "desc": "Geopolitical risk modelling; USD 2.6m raised, the largest disclosed domestic AI raise."
+      "desc": "Geopolitical risk modelling; USD 2.6m raised, the largest disclosed domestic AI raise.",
+      "onNationalRecord": false,
+      "origin": "source-reported"
+    },
+    {
+      "id": "UC-R02",
+      "name": "Chidi AI lesson planning and tutoring",
+      "org": "ANTHROPIC",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Lesson planning and tutoring assistance for teachers and learners."
+    },
+    {
+      "id": "UC-R03",
+      "name": "Electric motorcycle battery optimisation",
+      "org": "AMPERSAND",
+      "sector": "TRA",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": false,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Transport & logistics",
+      "raiaStage": "Deployed at scale",
+      "desc": "Battery swap and life optimisation for electric motorcycle fleets."
+    },
+    {
+      "id": "UC-R04",
+      "name": "Student dropout risk prediction",
+      "org": "ATAS",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Early identification of students at risk of dropping out."
+    },
+    {
+      "id": "UC-R05",
+      "name": "AI-supported mathematics tutoring",
+      "org": "MINEDUC",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Adaptive mathematics tutoring for students."
+    },
+    {
+      "id": "UC-R07",
+      "name": "AI-enabled National Telemedicine Service",
+      "org": "MINISTRYOFHE",
+      "sector": "HLT",
+      "stage": "PoC",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "User research",
+      "desc": "A national telemedicine service with AI triage and decision support, addressing primary-care access and a rising non-communicable disease burden."
+    },
+    {
+      "id": "UC-R08",
+      "name": "Clinical support tools for clinicians",
+      "org": "SCALEHUB",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Decision support tooling for clinicians in public facilities."
+    },
+    {
+      "id": "UC-R09",
+      "name": "AI-assisted medical diagnosis",
+      "org": "DOCTORAI",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Diagnostic assistance for clinicians and patients."
+    },
+    {
+      "id": "UC-R10",
+      "name": "Text-to-speech farmer query tool",
+      "org": "ONEACREFUND",
+      "sector": "AGR",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Spoken answers to farmer queries in Kinyarwanda."
+    },
+    {
+      "id": "UC-R11",
+      "name": "Product demand forecasting and tracking",
+      "org": "KASHA",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Private-sector forecasting and tracking of health product demand."
+    },
+    {
+      "id": "UC-R12",
+      "name": "Automated social security contribution declarations",
+      "org": "RSSB",
+      "sector": "PUB",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Public administration",
+      "raiaStage": "Deployed at scale",
+      "desc": "Automated processing of social security contribution declarations."
+    },
+    {
+      "id": "UC-R13",
+      "name": "Paediatric clinical decision support",
+      "org": "SWISSTPH",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Decision support for paediatric care pathways."
+    },
+    {
+      "id": "UC-R14",
+      "name": "Multilingual complaint handling across financial institutions",
+      "org": "BNR",
+      "sector": "FIN",
+      "stage": "Production",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": false,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Finance",
+      "raiaStage": "Scaling",
+      "desc": "Multilingual complaint intake and resolution across financial institutions."
+    },
+    {
+      "id": "UC-R15",
+      "name": "AI pipeline for national statistics access",
+      "org": "NISR",
+      "sector": "PUB",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Public administration",
+      "raiaStage": "Deployed at scale",
+      "desc": "Conversational access to national statistics."
+    },
+    {
+      "id": "UC-R16",
+      "name": "Agricultural price analytics on a trading platform",
+      "org": "AFRIKABAL",
+      "sector": "AGR",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Agriculture",
+      "raiaStage": "Deployed at scale",
+      "desc": "Price intelligence embedded in an agricultural trading platform."
+    },
+    {
+      "id": "UC-R17",
+      "name": "Crop insurance forecasting",
+      "org": "ACREAFRICA",
+      "sector": "AGR",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Forecasting to price and trigger index-based crop insurance."
+    },
+    {
+      "id": "UC-R18",
+      "name": "Automated exam grading",
+      "org": "ATAS",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Automated marking of examination scripts."
+    },
+    {
+      "id": "UC-R19",
+      "name": "AI support for teachers' lesson planning",
+      "org": "MINEDUC",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Lesson planning assistance for the teaching workforce."
+    },
+    {
+      "id": "UC-R20",
+      "name": "Demand forecasting and market intelligence for health commodities",
+      "org": "RWANDAMEDICA",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "An AI forecasting and market intelligence engine that predicts what health facilities will need, flags supply and price risk early, and answers procurement questions in plain language."
+    },
+    {
+      "id": "UC-R21",
+      "name": "AI-enabled ultrasound for pregnancy risk",
+      "org": "MINISTRYOFHE",
+      "sector": "HLT",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "desc": "Imaging AI that lets non-specialist health workers estimate gestational age and flag pregnancy risk where trained sonographers are scarce."
+    },
+    {
+      "id": "UC-R22",
+      "name": "Foundational learning assessment automation",
+      "org": "MINEDUC",
+      "sector": "PUB",
+      "stage": "Production",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Education",
+      "raiaStage": "Scaling",
+      "desc": "A national platform to author, digitise and grade examinations. It compresses a ten-month exam cycle into weeks and returns performance insight while it can still change teaching."
+    },
+    {
+      "id": "UC-R23",
+      "name": "AI-enabled diagnostic tools (ultrasound and others)",
+      "org": "SCALEHUB",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Diagnostic imaging support across modalities."
+    },
+    {
+      "id": "UC-R24",
+      "name": "Building permit AI review",
+      "org": "MININFRA",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Public administration",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Automated first-pass review of building permit applications."
+    },
+    {
+      "id": "UC-R25",
+      "name": "Virtual clinical services",
+      "org": "ZURIHEALTH",
+      "sector": "HLT",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "desc": "Remote consultation and virtual clinical services."
+    },
+    {
+      "id": "UC-R26",
+      "name": "Remote cardiac diagnosis",
+      "org": "TRICOGHEALTH",
+      "sector": "HLT",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "desc": "AI-assisted remote interpretation of cardiac diagnostics."
+    },
+    {
+      "id": "UC-R27",
+      "name": "Precision agricultural mapping, monitoring and yield forecasting",
+      "org": "RWANDASPACEA",
+      "sector": "AGR",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Agriculture",
+      "raiaStage": "Deployed at scale",
+      "desc": "Satellite-based mapping, monitoring and yield forecasting."
+    },
+    {
+      "id": "UC-R28",
+      "name": "AI-driven precision agriculture",
+      "org": "FARMINGO",
+      "sector": "AGR",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Precision inputs and monitoring for smallholder production."
+    },
+    {
+      "id": "UC-R29",
+      "name": "Drone-based land mapping and monitoring",
+      "org": "CHARIS",
+      "sector": "AGR",
+      "stage": "Scaled",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Agriculture",
+      "raiaStage": "Deployed at scale",
+      "desc": "Aerial mapping and monitoring services."
+    },
+    {
+      "id": "UC-R31",
+      "name": "Citizen services AI chatbot",
+      "org": "IREMBO",
+      "sector": "PUB",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Public administration",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Assisted navigation of government e-services."
+    },
+    {
+      "id": "UC-R32",
+      "name": "Horizon 1000: frontline clinical decision support",
+      "org": "MINISTRYOFHE",
+      "sector": "HLT",
+      "stage": "PoC",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Concept",
+      "desc": "Scalable decision support for frontline workers, for consistent high-quality care in the first 1,000 days of life."
+    },
+    {
+      "id": "UC-R33",
+      "name": "AI-enabled digital service delivery",
+      "org": "RSSB",
+      "sector": "PUB",
+      "stage": "Production",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Public administration",
+      "raiaStage": "Scaling",
+      "desc": "AI-supported delivery of social security services."
+    },
+    {
+      "id": "UC-R34",
+      "name": "Auto-transcription of doctor-patient consultations",
+      "org": "SCALEHUB",
+      "sector": "HLT",
+      "stage": "Pilot",
+      "since": 2026,
+      "district": "RW-KG-NYA",
+      "publicSector": true,
+      "risk": "Medium",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "origin": "source-reported",
+      "onNationalRecord": true,
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "desc": "Automatic consultation transcription to cut clinical administrative time."
     }
   ]
 }

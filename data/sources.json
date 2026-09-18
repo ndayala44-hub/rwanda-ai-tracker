@@ -17,7 +17,7 @@
     },
     {
       "id": "ECON22",
-      "name": "The potential of AI in Rwanda — full potential impact sizing",
+      "name": "The potential of AI in Rwanda, full potential impact sizing",
       "org": "C4IR Rwanda (World Economic Forum)",
       "year": 2022,
       "type": "Economic sizing study",
@@ -311,7 +311,7 @@
     },
     {
       "id": "LANDSCAPE26",
-      "name": "Rwanda Artificial Intelligence Landscape Review 2026 — From Policy to Impact",
+      "name": "Rwanda Artificial Intelligence Landscape Review 2026. From Policy to Impact",
       "org": "Aurasoft Ltd (independent)",
       "year": 2026,
       "type": "Independent analysis",
@@ -339,7 +339,7 @@
     },
     {
       "id": "AFGOVIDX",
-      "name": "Africa AI Governance Index (AAIGI) 2026 — Inaugural Report",
+      "name": "Africa AI Governance Index (AAIGI) 2026. Inaugural Report",
       "org": "Africa AI Policy Lab and Lawyers Hub",
       "year": 2026,
       "type": "International index",
@@ -362,7 +362,7 @@
       "note": "Assesses 195 governments across 69 indicators, 14 dimensions and 6 pillars: Policy Capacity, Governance, AI Infrastructure, Public Sector Adoption, Development and Diffusion, Resilience. The 2025 edition uses a revised methodology and is NOT comparable with the 2021 edition.",
       "verification": "verified",
       "verifiedOn": "2026-09-15",
-      "verificationNote": "Publisher and country count confirmed against the Oxford Insights site and the 2025 report PDF. Rwanda's rank of 75 — with Kenya 65, South Africa 67, Mauritius 71 — corroborated by two independent secondary summaries.",
+      "verificationNote": "Publisher and country count confirmed against the Oxford Insights site and the 2025 report PDF. Rwanda's rank of 75, with Kenya 65, South Africa 67, Mauritius 71, corroborated by two independent secondary summaries.",
       "provenanceClass": "international-index"
     },
     {
@@ -406,6 +406,20 @@
       "verifiedOn": "2026-09-15",
       "verificationNote": "Launch date of 31 March 2022 and the 2020 establishment date confirmed against the WEF press release and four independent reports.",
       "provenanceClass": "press-release"
+    },
+    {
+      "id": "RAIA_CATALOGUE",
+      "name": "Rwanda Digital AI Catalogue",
+      "org": "Rwanda Artificial Intelligence Agency (RAIA)",
+      "year": 2026,
+      "type": "Official government publication",
+      "url": "https://ai.gov.rw/",
+      "reliability": 0.82,
+      "provenanceClass": "official-catalogue",
+      "verification": "verified",
+      "verifiedOn": "2026-09-17",
+      "note": "Investment catalogue published by RAIA, comprising a verified national record of AI use cases and eight enablement pillars. It is the largest single contributor to this platform's use case registry, and the registry has been reconciled against it. Figures are official and self-reported: the pages carry footnote markers whose underlying sources, definitions and reference dates are not rendered. Treated as authoritative on institutional structure and on what the state asserts, and as in_review on quantities.",
+      "verificationNote": "Read in full on 17 September 2026: home, the national record, the enablement hub, all eight pillar pages and partners. Page modification dates run 12–16 September 2026. The record's 34 individual entries are rendered client-side and could not be retrieved, so only its published counts are used."
     }
   ]
 }

@@ -17,7 +17,7 @@ function insights(){
     why:worst.why,goto:"readiness"});
   if(ML.binding.length)out.push({kind:"Intervention",tone:"a",
     text:`Rwanda is held at maturity level ${ML.assigned} (${ML.def.n}) by ${ML.binding.length} unmet capability gate${ML.binding.length>1?"s":""}, not by its score.`,
-    why:`Unmet: ${ML.binding.map(b=>b.label).join("; ")}. These are administrative decisions rather than investments — the score band alone would place Rwanda at level ${ML.band}.`,
+    why:`Unmet: ${ML.binding.map(b=>b.label).join("; ")}. These are administrative decisions rather than investments, the score band alone would place Rwanda at level ${ML.band}.`,
     goto:"policy"});
   const hi=ECON2022.sectors.filter(s=>s.shareSectorGDP>=10);
   out.push({kind:"Opportunity",tone:"b",
@@ -27,8 +27,12 @@ function insights(){
   if(L26&&L26.measuredAdoption)out.push({kind:"Adoption signal",tone:"r",
     text:`Measured frontier AI usage ranks ${L26.measuredAdoption.usageRank} of ${L26.measuredAdoption.usageUniverse} globally, at ${L26.measuredAdoption.usageIndex.toFixed(2)}x the level expected for Rwanda's economic size.`,
     why:`${L26.measuredAdoption.whatDrivesIt} ${L26.measuredAdoption.opportunity}`,goto:"adoption"});
+  if(typeof RAIA!=="undefined"&&RAIA.record&&RAIA.record.useCases)out.push({kind:"Gap closing",tone:"g",
+    text:`Rwanda now publishes a national AI record. ${RAIA.record.useCases} verified use cases across ${RAIA.record.institutions} institutions, closing a transparency gap this platform had recorded as open.`,
+    why:"The register indicator moves from 0 to 50 rather than to 100. RAIA's record carries sector and stage, not risk classification, oversight arrangements or routes to redress: Rwanda now publishes what it deploys, not how those systems are governed.",
+    goto:"policy"});
   if(L26&&L26.governanceGaps)out.push({kind:"Cheap to close",tone:"a",
-    text:`${L26.governanceGaps.missing.length} governance instruments are absent — AI legislation, a public register of state AI, evaluation capability, a procurement standard and a model ownership term.`,
+    text:`${L26.governanceGaps.missing.length} governance instruments are absent. AI legislation, a public register of state AI, evaluation capability, a procurement standard and a model ownership term.`,
     why:L26.governanceGaps.closingNote,goto:"policy"});
   const stale=IND.filter(i=>i.stale>0||i.notReported);
   out.push({kind:"Data signal",tone:"a",
@@ -54,7 +58,7 @@ VIEWS.overview=async function(){
       <div class="small muted" style="margin-top:5px">${(d.score/70*100).toFixed(0)}% of the 70.0 reference target · coverage ${pct(d.coverage)}</div>
     </div>`}).join("");
   return vh("National overview","Rwanda's AI ecosystem, measured",
-    "An independent read on where Rwanda stands on AI — readiness, actual adoption, economic opportunity and the evidence behind each figure. Every number opens to its source.",
+    "An independent read on where Rwanda stands on AI, readiness, actual adoption, economic opportunity and the evidence behind each figure. Every number opens to its source.",
     `<button class="btn" data-act="go" data-args="explorer">Explore the data</button>
      <button class="btn pri" data-act="go" data-args="investment">Investment view</button>`)
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(196px,1fr))">
@@ -149,7 +153,7 @@ VIEWS.overview=async function(){
    </div>
 
    <div class="row" style="grid-template-columns:1fr 1fr">
-     ${cardF("Where AI value sits, by sector","2022 full-potential estimate vs registered adoption today — click a bar to filter the platform",
+     ${cardF("Where AI value sits, by sector","2022 full-potential estimate vs registered adoption today, click a bar to filter the platform",
        `<div id="ovSector" style="height:320px"></div>
         <div style="padding:0 15px 13px">${srcLine("ECON22","adoption counts from the live use-case registry")}</div>`)}
      ${cardF("Recent evidence and contributions","Newest first",
@@ -158,7 +162,7 @@ VIEWS.overview=async function(){
            <div style="display:flex;justify-content:space-between;gap:10px">
              <span style="font-size:13px;font-weight:600">${esc(c.kind)} · ${esc(c.target)}</span>
              <span class="tag ${c.state.startsWith("Accepted")?"g":"a"}">${esc(c.state)}</span></div>
-           <div class="small muted" style="margin-top:3px">${esc(c.value)} — ${esc(c.who)}, ${c.when}</div>
+           <div class="small muted" style="margin-top:3px">${esc(c.value)}. ${esc(c.who)}, ${c.when}</div>
            <div class="small muted" style="margin-top:2px">${esc(c.note)}</div></div>`).join("")}
         </div>
         <div style="padding:11px 15px;border-top:1px solid var(--line)">
@@ -193,9 +197,9 @@ MOUNT.overview=async function(){
     yAxis:axis({type:"value",min:0,max:80}),
     series:[
       {name:"AI Readiness",type:"line",smooth:.3,symbolSize:6,data:YEARS.map(y=>+RUNS[y].readiness.score.toFixed(1)),
-        lineStyle:{width:3,color:PAL[0]},itemStyle:{color:PAL[0]},areaStyle:{color:"rgba(14,136,204,.10)"}},
+        lineStyle:{width:3,color:PAL[0]},itemStyle:{color:PAL[0]},areaStyle:{color:"rgba(14,136,204.10)"}},
       {name:"AI Maturity",type:"line",smooth:.3,symbolSize:6,data:YEARS.map(y=>+RUNS[y].maturity.score.toFixed(1)),
-        lineStyle:{width:3,color:PAL[4]},itemStyle:{color:PAL[4]},areaStyle:{color:"rgba(94,75,184,.10)"}},
+        lineStyle:{width:3,color:PAL[4]},itemStyle:{color:PAL[4]},areaStyle:{color:"rgba(94,75,184.10)"}},
       {name:"Readiness reference target",type:"line",data:YEARS.map(()=>70),symbol:"none",lineStyle:{type:"dashed",width:1.3,color:cssVar("--line2")}},
       {name:"Maturity reference target",type:"line",data:YEARS.map(()=>60),symbol:"none",lineStyle:{type:"dotted",width:1.3,color:cssVar("--line2")},
         markLine:{silent:true,symbol:"none",label:{formatter:"viewing "+YEAR,fontSize:10,color:cssVar("--mut"),position:"insideEndTop"},
@@ -221,7 +225,7 @@ function insightDrawer(n){
   openDrawer(i.text,`${i.kind.toUpperCase()} · derived from current platform data`,
     card("Why this is being said","",`<div class="prose">${i.why}</div>`)
     +`<div style="height:12px"></div>`+
-    card("How this was generated","",`<div class="prose">This statement is produced by a rule over the live store — it is not written text. It re-evaluates whenever an observation changes, and it disappears if the condition stops holding. No figure in it is estimated by the platform.</div>
+    card("How this was generated","",`<div class="prose">This statement is produced by a rule over the live store, it is not written text. It re-evaluates whenever an observation changes, and it disappears if the condition stops holding. No figure in it is estimated by the platform.</div>
       <div class="kv"><span class="k">Methodology version</span><span class="v mono">${META.methodology}</span></div>
       <div class="kv"><span class="k">Engine</span><span class="v mono">${META.engine}</span></div>
       <div class="kv"><span class="k">Evaluated</span><span class="v">${META.built}</span></div>`)
@@ -233,7 +237,7 @@ VIEWS.journey=async function(){
   const j=await api.journey();
   const cats=[...new Set(j.map(x=>x.cat))];
   return vh("Context","Rwanda's AI journey",
-    "How Rwanda arrived at its current position — policy, infrastructure, research, investment, adoption and regulation, with the source behind each milestone. Entries marked as contributed are awaiting a second source.")
+    "How Rwanda arrived at its current position, policy, infrastructure, research, investment, adoption and regulation, with the source behind each milestone. Entries marked as contributed are awaiting a second source.")
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
     ${kpi("Milestones tracked",j.length,`${j.filter(x=>x.status==="verified").length} verified · ${j.filter(x=>x.status==="pending").length} pending verification`)}
     ${kpi("First AI deployments","2014",'Zipline and Charis UAS established')}
@@ -268,13 +272,13 @@ VIEWS.journey=async function(){
        ${card("What this timeline shows","",
          `<div class="prose">
           <p>Rwanda's AI activity began with <b>deployment before policy</b>: Zipline, Charis and Babyl were operating years before an AI policy existed. That is unusual, and it is why the country scores better on visible use cases than on the institutions around them.</p>
-          <p>The institutional layer arrived in a tight cluster in <b>2021–2022</b> — data protection law, landscape mapping, economic sizing, the readiness framework and a drafted ethics framework. Most of the measurement in this platform starts there.</p>
+          <p>The institutional layer arrived in a tight cluster in <b>2021–2022</b>, data protection law, landscape mapping, economic sizing, the readiness framework and a drafted ethics framework. Most of the measurement in this platform starts there.</p>
           <p>The unfinished item is the same one the readiness framework flagged: the <b>ethics framework was drafted but not published</b>, and no dedicated public AI budget line was recorded. Those two remain the binding constraints on the maturity level today.</p>
          </div>`)}
        <div style="height:14px"></div>
        ${card("Maturity model used in 2022","Gartner-based, five levels",
          `<div class="prose"><p>The 2022 economic sizing study placed Rwanda in the <b>early "Exploring"</b> phase: conversations happening but not strategically, use cases largely stuck before pilot stage, and adoption constrained by scalable infrastructure, labelled data, talent and regulation.</p></div>
-          ${["Awareness — conversations happening, no pilots","Active — proofs of concept and pilots; regulatory conversations","Operational — AI ecosystem enabled, strategy and data in place","Systematic — AI-powered applications interact across the business ecosystem","Transformational — AI drives socio-economic transformation and new business models"]
+          ${["Awareness, conversations happening, no pilots","Active, proofs of concept and pilots; regulatory conversations","Operational. AI ecosystem enabled, strategy and data in place","Systematic. AI-powered applications interact across the business ecosystem","Transformational. AI drives socio-economic transformation and new business models"]
           .map((s,i)=>`<div class="kv"><span class="k">Level ${i+1}</span><span class="v" style="max-width:72%">${s}</span></div>`).join("")}
           ${srcLine("ECON22")}`)}
      </div>
@@ -289,7 +293,7 @@ MOUNT.journey=async function(){
     yAxis:axis({type:"value",min:1,max:5,name:"maturity stage",nameTextStyle:{color:cssVar("--ec-axis"),fontSize:10}}),
     series:Object.keys(tr.series).map((k,i)=>({name:k,type:"line",smooth:.3,symbolSize:6,
       data:ys.map(y=>tr.series[k][y]),lineStyle:{width:2.6,color:PAL[[0,2,7][i]]},itemStyle:{color:PAL[[0,2,7][i]]},
-      areaStyle:i===0?{color:"rgba(14,136,204,.10)"}:undefined}))},290);
+      areaStyle:i===0?{color:"rgba(14,136,204.10)"}:undefined}))},290);
   const j=await api.journey();
   const cats=[...new Set(j.map(x=>x.cat))];
   const years=[...new Set(j.map(x=>x.y))].sort();

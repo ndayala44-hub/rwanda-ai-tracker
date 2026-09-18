@@ -39,7 +39,7 @@
       "cat": "Ecosystem",
       "src": "WEF_C4IR",
       "status": "verified",
-      "d": "The Centre for the Fourth Industrial Revolution Rwanda is set up in partnership with the World Economic Forum, with a mandate focused on data governance, artificial intelligence and machine learning. It becomes the institutional home for most of the measurement work that follows — the 2021 landscape mapping, the 2022 economic sizing and the readiness framework all originate here."
+      "d": "The Centre for the Fourth Industrial Revolution Rwanda is set up in partnership with the World Economic Forum, with a mandate focused on data governance, artificial intelligence and machine learning. It becomes the institutional home for most of the measurement work that follows, the 2021 landscape mapping, the 2022 economic sizing and the readiness framework all originate here."
     },
     {
       "y": 2020,
@@ -60,7 +60,7 @@
     {
       "y": 2021,
       "t": "Oxford Government AI Readiness position recorded",
-      "d": "Rwanda scores 35.16 and ranks 112 of 172 countries — 10th in Africa, behind South Africa, Kenya and Ghana. Sub-Saharan Africa averages 31.61, the lowest of any region.",
+      "d": "Rwanda scores 35.16 and ranks 112 of 172 countries. 10th in Africa, behind South Africa, Kenya and Ghana. Sub-Saharan Africa averages 31.61, the lowest of any region.",
       "cat": "Benchmark",
       "src": "OXFORD",
       "status": "verified"
@@ -91,7 +91,7 @@
     },
     {
       "y": 2022,
-      "t": "C4IR Rwanda officially launched — Africa's first",
+      "t": "C4IR Rwanda officially launched. Africa's first",
       "cat": "Ecosystem",
       "src": "WEF_C4IR",
       "status": "verified",
@@ -115,7 +115,7 @@
     },
     {
       "y": 2023,
-      "t": "National AI Policy adopted — first in Africa",
+      "t": "National AI Policy adopted, first in Africa",
       "cat": "Policy",
       "src": "LANDSCAPE26",
       "status": "verified",
@@ -151,7 +151,7 @@
       "cat": "Skills",
       "src": "LANDSCAPE26",
       "status": "verified",
-      "d": "Opened September 2026 offering AI and cybersecurity degrees. First graduates in 2029 — until then the binding constraint on delivery is engineers rather than policy."
+      "d": "Opened September 2026 offering AI and cybersecurity degrees. First graduates in 2029, until then the binding constraint on delivery is engineers rather than policy."
     },
     {
       "y": 2026,
@@ -167,7 +167,7 @@
       "cat": "Benchmark",
       "src": "ANTHROPIC_EI",
       "status": "verified",
-      "d": "Rwanda ranks 111 of 121 globally on measured frontier AI usage at 0.20x the level expected for its economic size — first in Africa on governance, near the bottom on observed use."
+      "d": "Rwanda ranks 111 of 121 globally on measured frontier AI usage at 0.20x the level expected for its economic size, first in Africa on governance, near the bottom on observed use."
     },
     {
       "y": 2026,
@@ -176,6 +176,22 @@
       "src": "LANDSCAPE26",
       "status": "verified",
       "d": "Africa's first standalone national AI institution, approved 8 June 2026, succeeding the AI Office in the ICT ministry. Its mandate spans government transformation, research, skilling, ethics and safety, industry growth, commercialisation, investment and international engagement, with the national data centre and a governed data sandbox as instruments."
+    },
+    {
+      "y": 2026,
+      "t": "RAIA publishes the Rwanda Digital AI Catalogue",
+      "cat": "Policy",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "d": "RAIA publishes a national AI investment catalogue setting out eight enablement pillars, governance, policy and responsible AI, compute, data, platforms and intelligence, financing, skills, and innovation and research. Each pillar states what exists today and what still needs to be built, which makes it the first official document to put Rwanda's AI capability gaps on the record."
+    },
+    {
+      "y": 2026,
+      "t": "The verified national record goes live",
+      "cat": "Evidence",
+      "src": "RAIA_CATALOGUE",
+      "status": "verified",
+      "d": "Rwanda publishes a consolidated, filterable inventory of AI use cases: 34 verified entries across 43 institutions plus 10 policy and education enablers, each reviewed against primary documentation and dated. This closes a gap this platform had recorded as open, though as an investment catalogue rather than an accountability register, it carries sector and stage rather than risk classification, oversight arrangements or routes to redress."
     }
   ]
 }

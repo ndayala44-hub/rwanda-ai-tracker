@@ -4,7 +4,7 @@
    scoring engine, then render. The UI code below this point is untouched.
    ======================================================================*/
 async function boot(){
-  // Optional runtime dependencies. Both may legitimately be absent — this file
+  // Optional runtime dependencies. Both may legitimately be absent, this file
   // is designed to work when it is opened straight from disk.
   await loadDeploymentConfig();
   const charts = await ensureCharts();

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "id": "LANDSCAPE26",
-  "title": "Rwanda Artificial Intelligence Landscape Review 2026 — From Policy to Impact",
+  "title": "Rwanda Artificial Intelligence Landscape Review 2026. From Policy to Impact",
   "subtitle": "The rules are built. The use cases are proving. The substrate is missing.",
   "author": "Aurasoft Ltd",
   "authorRole": "Independent AI policy and regulatory analysis, Kigali, Rwanda",
@@ -91,7 +91,7 @@
         "2026": 1.5
       }
     },
-    "reading": "Governance moved from exploring to the threshold of scaling in five years. Public sector adoption reached implementation, with two systems recognised internationally. Compute barely moved: Rwanda has no domestic frontier capacity and is absent from announced regional GPU deployments. The state has internalised the diagnosis — compute and investment are named in the new agency's mandate."
+    "reading": "Governance moved from exploring to the threshold of scaling in five years. Public sector adoption reached implementation, with two systems recognised internationally. Compute barely moved: Rwanda has no domestic frontier capacity and is absent from announced regional GPU deployments. The state has internalised the diagnosis, compute and investment are named in the new agency's mandate."
   },
   "maturityAssessment2026": {
     "scale": "1 to 5",
@@ -204,7 +204,7 @@
     "approved": "2026-06-08",
     "approvedBy": "Cabinet",
     "claim": "Africa's first standalone national AI institution, succeeding the AI Office in the ICT ministry.",
-    "mandate": "Government transformation, research, skilling, ethics and safety, industry growth, commercialisation, investment and international engagement.",
+    "mandate": "Government transformation, research, skilling, ethics and safety, industry growth, commercialisation, investment and international engagement. RAIA's own catalogue states the mandate as AI deployment, research and talent, governance, industry development, international engagement and AI sovereignty.",
     "instruments": "The national data centre, and a governed data sandbox giving researchers, startups and firms secure access to domestic datasets.",
     "design": "Expressly designed to build on existing institutions, not replace them.",
     "constraintsItResolves": [
@@ -406,7 +406,7 @@
     "launchpadSignal": "Math and computer science theory runs at three times the global average, and AI app building at two and a half times. These are construction categories, not consumption categories. Rwandans who do use frontier AI are disproportionately building with it. Raise volume and Rwanda gets builders, not just users."
   },
   "nationalPortfolio": {
-    "caveat": "Rwanda does not publish a consolidated AI project inventory, so this portfolio understates total activity by an unknown margin.",
+    "caveat": "Superseded on 17 September 2026. When this review was written Rwanda published no consolidated AI project inventory. RAIA's national record at ai.gov.rw/record now lists 34 verified use cases across 43 institutions. The two registries use different inclusion criteria, this portfolio lists flagship national initiatives, the record lists verified entries at any stage, so the counts are not directly comparable.",
     "items": [
       {
         "name": "National AI Agency",
@@ -467,7 +467,7 @@
   "sectorDeepDives": {
     "health": {
       "headline": "Health is the most mature AI sector and the largest recipient of external capital, which is also a concentration risk.",
-      "healthIntelligenceCentre": "Operational since April 2025; integrates data from community health workers to referral hospitals. Predicts disease trends up to three months ahead, enabling targeted rather than regional intervention. Four pillars including validation and evaluation — the only formally resourced model evaluation in Rwanda.",
+      "healthIntelligenceCentre": "Operational since April 2025; integrates data from community health workers to referral hospitals. Predicts disease trends up to three months ahead, enabling targeted rather than regional intervention. Four pillars including validation and evaluation, the only formally resourced model evaluation in Rwanda.",
       "horizon1000": "USD 50 million from the Gates Foundation and OpenAI; 1,000 clinics by 2028, Rwanda first. A three-year government MOU with Anthropic covers malaria, maternal mortality and cervical cancer elimination. Both target frontline capability: triage, documentation, referral and follow-up under human oversight.",
       "stats": [
         {
@@ -532,11 +532,11 @@
         "name": "Medallion data pipeline",
         "sources": "Ishema, CBHI, RAMA, EjoHeza, Pension, Oracle ERP",
         "stages": [
-          "Landing — raw ingest",
-          "Bronze — cleaned",
-          "Silver — anonymised",
-          "Gold — business ready",
-          "Platinum — ML and AI features"
+          "Landing, raw ingest",
+          "Bronze, cleaned",
+          "Silver, anonymised",
+          "Gold, business ready",
+          "Platinum. ML and AI features"
         ],
         "outputs": "Executive dashboards, self-service analytics, real-time tracking, and a layer built for ML models and agents",
         "note": "Manual spreadsheets and ad-hoc data requests have been replaced by an automated pipeline consolidating every scheme into one governed store, with anonymisation applied before analytical use."
@@ -558,7 +558,7 @@
           "Policy knowledge base with AI-assisted navigation already in use internally"
         ]
       },
-      "whyItMatters": "RSSB already runs capitation analytics across more than 1,000 health facilities on 20 million annual visits. Financing and eligibility data is more complete and more structured than clinical records, so this is the domain where AI effects are measurable in fiscal terms — which is what the national programme lacks."
+      "whyItMatters": "RSSB already runs capitation analytics across more than 1,000 health facilities on 20 million annual visits. Financing and eligibility data is more complete and more structured than clinical records, so this is the domain where AI effects are measurable in fiscal terms, which is what the national programme lacks."
     }
   },
   "partnerships": {

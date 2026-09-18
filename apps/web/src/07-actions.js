@@ -3,13 +3,13 @@
    Every interactive element declares what it does with data-act / data-args
    instead of an inline handler. Three things follow:
 
-     · a strict Content-Security-Policy becomes possible — there is no inline
+     · a strict Content-Security-Policy becomes possible, there is no inline
        script left to allow;
      · anything clickable is automatically keyboard-operable, because one
        handler applies Enter and Space uniformly;
      · interactions are testable by selector rather than by evaluating a string.
 
-   Args are pipe-separated because they are always short identifiers — an
+   Args are pipe-separated because they are always short identifiers, an
    indicator code, a view key, a dimension id.
    ====================================================================== */
 const ACTIONS = {
@@ -28,6 +28,7 @@ const ACTIONS = {
   organisation:  ([id])   => orgDrawer(id),
   district:      ([code]) => districtDrawer(code),
   policy:        ([i])    => policyDrawer(+i),
+  pillar:        ([slug]) => pillarDrawer(slug),
   lighthouse:    ([id])   => lighthouseDrawer(id),
   benchmark:     ([id])   => benchDrawer(id),
   insight:       ([n])    => insightDrawer(+n),
@@ -49,7 +50,7 @@ const ACTIONS = {
   exSort:        ([key]) => exSort(key),
   showDemoValues: () => { go("explorer").then(() => { EX.origin = "demo"; exRefresh(); }); },
 
-  /* form controls — declared the same way as clicks, so one policy covers both */
+  /* form controls, declared the same way as clicks, so one policy covers both */
   exQuery:       (_a, el) => { EX.q = el.value; exRefresh(); },
   exSet:         ([key], el) => { EX[key] = key === "year" ? +el.value : el.value; exRefresh(); },
   yearPreview:   (_a, el) => { const l = document.getElementById("yearLab"); if (l) l.textContent = el.value; },

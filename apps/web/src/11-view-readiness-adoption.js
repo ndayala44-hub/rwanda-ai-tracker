@@ -19,7 +19,7 @@ VIEWS.readiness=async function(){
   return vh("Measurement","AI readiness and maturity",
     "Two composites built from the same indicator register: readiness measures whether the preconditions exist; maturity measures whether AI is actually deployed, funded and governed. The distance between them is the story.",
     `<button class="btn" data-act="go" data-args="about">Methodology</button><button class="btn" data-act="go" data-args="explorer">All indicators</button>`)
-  +`<div class="banner info"><b>How to read these numbers.</b> The national framework published in 2022 defines the indicators but not a scoring system — no weights, no aggregation rule and no maturity thresholds. Everything below is computed by this platform's declared methodology (${META.methodology}) and is labelled as such. It is an independent computation, not an official government score.
+  +`<div class="banner note"><b>How to read these numbers.</b> The national framework published in 2022 defines the indicators but not a scoring system, no weights, no aggregation rule and no maturity thresholds. Everything below is computed by this platform's declared methodology (${META.methodology}) and is labelled as such. It is an independent computation, not an official government score.
      <span class="src" data-act="go" data-args="about">Read the full methodology</span></div>
    <div class="row" style="grid-template-columns:1fr 1fr 1fr">
      ${card("AI Readiness Index","preconditions",
@@ -49,7 +49,7 @@ VIEWS.readiness=async function(){
         <div class="kv"><span class="k">Score band</span><span class="v mono">L${ML.band}</span></div>
         <div class="kv"><span class="k">Capability gate</span><span class="v mono">L${ML.gate}</span></div>
         ${ML.binding.length?`<div style="margin-top:9px;font-size:12.5px;color:var(--amber)"><b>Held back by:</b> ${ML.binding.map(b=>esc(b.label)).join("; ")}. These are decisions, not investments.</div>`
-          :`<div style="margin-top:9px;font-size:12.5px;color:var(--green)">No unmet capability gate — the level is limited by the score itself.</div>`}
+          :`<div style="margin-top:9px;font-size:12.5px;color:var(--green)">No unmet capability gate, the level is limited by the score itself.</div>`}
         <button class="btn sm" style="margin-top:10px" data-act="ladder">See the full ladder</button>`)}
    </div>
    <div class="row" style="grid-template-columns:1.2fr 1fr">
@@ -60,7 +60,7 @@ VIEWS.readiness=async function(){
      ${cardF("Dimension profile","readiness contribution",`<div id="rdRadar" style="height:330px"></div>`)}
    </div>
    <div class="row" style="grid-template-columns:1.25fr 1fr">
-     ${cardF("Independent expert assessment, 2026","fourteen dimensions, 1 to 5 — analyst judgement, not a computed index",
+     ${cardF("Independent expert assessment, 2026","fourteen dimensions, 1 to 5, analyst judgement, not a computed index",
        `<div id="rdL26" style="height:360px"></div>
         <div style="padding:0 15px 13px" class="small muted">${esc(L26.maturityAssessment2026.note)} ${srcLine("LANDSCAPE26")}</div>`)}
      ${card("Reading the bimodality","national average "+L26.maturityAssessment2026.nationalAverage+" of 5",
@@ -82,7 +82,7 @@ VIEWS.readiness=async function(){
    <div class="row" style="grid-template-columns:1fr 1fr">
      ${cardF("Strongest indicators","top 8 by normalised score",
        strengths.slice(0,8).map(i=>indRow(i)).join(""))}
-     ${cardF("Weakest indicators","bottom 8 — where intervention would move the index",
+     ${cardF("Weakest indicators","bottom 8, where intervention would move the index",
        strengths.slice(-8).reverse().map(i=>indRow(i)).join(""))}
    </div>`;
 };
@@ -120,7 +120,7 @@ MOUNT.readiness=async function(){
     series:[{type:"scatter",data:pts,symbolSize:d=>10+d[2]*9,
       itemStyle:{color:p=>p.data.color,opacity:.78,borderColor:cssVar("--surface"),borderWidth:1},
       emphasis:{focus:"self",itemStyle:{opacity:1}},
-      markArea:{silent:true,itemStyle:{color:"rgba(192,57,43,.07)"},
+      markArea:{silent:true,itemStyle:{color:"rgba(192,57,43.07)"},
         data:[[{xAxis:0,yAxis:20,name:"weak and uncertain"},{xAxis:45,yAxis:60}]],
         label:{color:cssVar("--mut"),fontSize:10,position:"insideBottomLeft"}}}]},340)
    .on("click",p=>indDrawer(p.data.code));
@@ -142,7 +142,7 @@ MOUNT.readiness=async function(){
       splitArea:{areaStyle:{color:["transparent",cssVar("--surface2")]}}},
     series:[{type:"radar",symbolSize:4,data:[
       {name:"Current "+META.cycle,value:DIMS.map(D=>+(RUN.dS[D.id].score||0).toFixed(1)),
-        lineStyle:{width:2.4,color:PAL[0]},itemStyle:{color:PAL[0]},areaStyle:{color:"rgba(14,136,204,.15)"}},
+        lineStyle:{width:2.4,color:PAL[0]},itemStyle:{color:PAL[0]},areaStyle:{color:"rgba(14,136,204.15)"}},
       {name:META.cycle-3,value:DIMS.map(D=>+(RUNS[META.cycle-3].dS[D.id].score||0).toFixed(1)),
         lineStyle:{width:1.5,color:cssVar("--mut"),type:"dashed"},itemStyle:{color:cssVar("--mut")}}]}]},330);
 };
@@ -171,7 +171,7 @@ VIEWS.adoption=async function(){
   const stages=["PoC","Pilot","Production","Scaled"];
   const R=RUN.readiness,M=RUN.maturity;
   return vh("Measurement","AI adoption",
-    "Where AI is actually running in Rwanda — by sector, lifecycle stage and organisation — and how far observed adoption lags the enabling capability already in place.")
+    "Where AI is actually running in Rwanda, by sector, lifecycle stage and organisation, and how far observed adoption lags the enabling capability already in place.")
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
     ${kpi("Registered deployments",verified.length,`${ucs.length-verified.length} contributed records awaiting verification`)}
     ${kpi("In production or scaled",verified.filter(u=>["Production","Scaled"].includes(u.stage)).length,"past pilot stage")}
@@ -206,6 +206,82 @@ VIEWS.adoption=async function(){
         <div style="padding:0 15px 13px" class="small muted">${esc(L26.measuredAdoption.launchpadSignal)}</div>`)}
    </div>
    <div class="row" style="grid-template-columns:1fr">
+     ${card("Where these use cases come from","the registry draws on four sources, reconciled into one view",
+      `<div class="prose">
+        <p>The use case registry is assembled from named sources rather than compiled by this platform alone.
+         <b>RAIA's national record is the largest contributor</b>, supplying ${RECORD.useCases.length} verified
+         entries. This platform's register has been reconciled against it: every entry now carries whether it
+         appears on the national record, and the three deployments common to both have been merged rather than
+         double counted.</p></div>
+       <table class="dt" style="margin:10px 0"><thead><tr><th>Source</th><th class="n">Entries</th><th>What it covers</th><th>Status</th></tr></thead><tbody>
+        <tr data-act="source" data-args="RAIA_CATALOGUE"><td><b>RAIA national record</b><div class="small muted">Rwanda Artificial Intelligence Agency</div></td>
+          <td class="n mono">${USECASES.filter(u=>u.onNationalRecord).length}</td>
+          <td class="small muted">Verified public and private deployments across six sectors, reviewed against primary documentation and dated</td>
+          <td>${qbadge("verified")}</td></tr>
+        <tr data-act="source" data-args="LANDSCAPE26"><td><b>2026 landscape review</b><div class="small muted">Aurasoft Ltd, independent</div></td>
+          <td class="n mono">${USECASES.filter(u=>u.src==="LANDSCAPE26").length}</td>
+          <td class="small muted">National flagship initiatives and the partnership programmes behind them</td>
+          <td>${qbadge("verified")}</td></tr>
+        <tr data-act="source" data-args="AIRM22"><td><b>2022 readiness assessment</b><div class="small muted">MINICT / C4IR / GIZ</div></td>
+          <td class="n mono">${USECASES.filter(u=>u.src==="AIRM22").length}</td>
+          <td class="small muted">Deployments recorded at the time of the national assessment</td>
+          <td>${qbadge("unverified")}</td></tr>
+        <tr data-act="contribute" data-args="Use case"><td><b>Contributed</b><div class="small muted">Open submission</div></td>
+          <td class="n mono">${USECASES.filter(u=>u.src==="CONTRIB").length}</td>
+          <td class="small muted">Submitted by organisations working in the ecosystem, published after review</td>
+          <td>${qbadge("in_review")}</td></tr>
+       </tbody></table>
+       <div class="small muted">${esc(RAIA.record.retrievalNote)}</div>
+       ${srcLine("RAIA_CATALOGUE","reconciled against the platform's own register")}`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+     ${kpi("Deployed at national scale",RECORD.useCases.filter(u=>u.raiaStage==="Deployed at scale").length,
+        "operating, not piloting","var(--green)",
+        "Entries RAIA records as deployed at scale. These are the proven deployments a partner can build on rather than fund from scratch.")}
+     ${kpi("In pilot or scaling",RECORD.useCases.filter(u=>["Pilot/MVP","Scaling"].includes(u.raiaStage)).length,
+        "proven enough to evaluate, not yet national","var(--teal)",
+        "The stage where capital and delivery capacity make the most difference to whether a deployment survives.")}
+     ${kpi("At concept or research",RECORD.useCases.filter(u=>["Concept","User research"].includes(u.raiaStage)).length,
+        "earliest stage on the record","var(--amber)")}
+     ${kpi("Health share of the record",Math.round(100*RECORD.useCases.filter(u=>u.raiaSector==="Health").length/RECORD.useCases.length),
+        `${RECORD.useCases.filter(u=>u.raiaSector==="Health").length} of ${RECORD.useCases.length} entries`,"var(--amber)",
+        "Concentration is a risk as well as a strength: one sector carries a large share of national AI delivery experience.",{suf:"%"})}
+     ${kpi("Institutions delivering",RECORD.institutions.length,
+        `across ${RECORD.taxonomy.sectors.length} sectors`,"var(--txt)")}
+   </div>
+
+   <div class="row" style="grid-template-columns:1.2fr 1fr">
+     ${cardF("The national record by sector and stage",RECORD.useCases.length+" verified entries",
+       `<div id="adRecord" style="height:320px"></div>
+        <div style="padding:0 15px 13px" class="small muted">${esc(RECORD.taxonomy.stageNote)}</div>`)}
+     ${cardF("Who owns the national record","institutions by entries on record",
+       `<div class="scrollbox" style="max-height:320px"><table class="dt"><thead><tr>
+         <th>Institution</th><th>Type</th><th class="n">Entries</th></tr></thead><tbody>
+        ${RECORD.institutions.slice().sort((a,b)=>b.entriesOnRecord-a.entriesOnRecord).map(x=>`<tr>
+          <td><b>${esc(x.name)}</b><div class="small muted">${esc(x.role)}</div></td>
+          <td><span class="tag">${esc(x.type)}</span></td>
+          <td class="n mono">${x.entriesOnRecord}</td></tr>`).join("")}
+       </tbody></table></div>`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:1fr">
+     ${cardF("Every entry on the national record","what is running, who owns it, and how far along it is",
+       `<div class="scrollbox" style="max-height:480px"><table class="dt"><thead><tr>
+         <th>Use case</th><th>Sector</th><th>Owner</th><th>Stage</th></tr></thead><tbody>
+        ${RECORD.useCases.slice().sort((a,b)=>a.raiaSector.localeCompare(b.raiaSector)||a.name.localeCompare(b.name))
+          .map(x=>`<tr><td><b>${esc(x.name)}</b><div class="small muted" style="max-width:640px">${esc(x.description)}</div></td>
+            <td class="small">${esc(x.raiaSector)}</td><td class="small">${esc(x.owner)}</td>
+            <td><span class="tag ${x.raiaStage==="Deployed at scale"?"g":x.raiaStage==="Scaling"?"b":x.raiaStage==="Pilot/MVP"?"a":""}">${esc(x.raiaStage)}</span></td></tr>`).join("")}
+       </tbody></table></div>
+       <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
+        Read stage as readiness for capital. <b>Deployed at scale</b> means a working system with operational
+        history. <b>Scaling</b> and <b>Pilot/MVP</b> are where delivery capacity and financing decide whether a
+        deployment survives. <b>Concept</b> and <b>User research</b> are design-stage. Source: RAIA's national
+        record, reconciled against this platform's register.</div>`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:1fr">
      ${cardF("When each deployment started","every registered use case on one timeline",
        `<div id="adTime" style="height:250px"></div>
         <div style="padding:0 15px 13px" class="small muted">Deployment began years before Rwanda had an AI policy. The cluster after 2019 is when the ecosystem, rather than individual firms, started producing use cases.</div>`)}
@@ -221,11 +297,11 @@ VIEWS.adoption=async function(){
           <td><span class="tag ${u.stage==="Scaled"?"g":u.stage==="Production"?"b":""}">${u.stage}</span></td>
           <td class="n mono">${u.since}</td>
           <td>${u.risk==="High"?'<span class="tag a">High</span>':u.risk}</td>
-          <td class="small">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:"—"}).name)}</td>
+          <td class="small">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:", "}).name)}</td>
           <td>${qbadge(u.status==="verified"?"verified":"in_review")}</td></tr>`).join("")}
        </tbody></table></div>
        <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
-         The registry is the measurement instrument behind six indicators — RWA10, RWA10-SUBd, RWA11-SUBe, RWA11-SUBa, RWA12-SUBa and RWA12-SUBf-C.
+         The registry is the measurement instrument behind six indicators. RWA10, RWA10-SUBd, RWA11-SUBe, RWA11-SUBa, RWA12-SUBa and RWA12-SUBf-C.
          Counts here are what those indicators report. ${srcLine("AIRM22","plus contributed records")}</div>`)}
    </div>`;
 };
@@ -240,6 +316,18 @@ MOUNT.adoption=async function(){
       data:stages.slice().reverse().map((s,i)=>({value:ucs.filter(u=>u.stage===s).length,
         itemStyle:{color:PAL[[1,0,2,3][i]]}})),
       label:{show:true,position:"right",color:cssVar("--ec-axis"),fontSize:11}}]},280);
+  // the national record, by sector and stage
+  const recStages=RECORD.taxonomy.stages, recSectors=RECORD.taxonomy.sectors;
+  ec(document.getElementById("adRecord"),{
+    tooltip:{trigger:"axis",axisPointer:{type:"shadow"}},
+    legend:{top:2,type:"scroll",textStyle:{color:cssVar("--ec-axis"),fontSize:10.5}},
+    grid:{left:130,right:20,top:34,bottom:28},
+    xAxis:axis({type:"value",minInterval:1}),
+    yAxis:axis({type:"category",data:recSectors.slice().reverse(),axisLabel:{fontSize:11,color:cssVar("--txt2")}}),
+    series:recStages.map((st,i)=>({name:st,type:"bar",stack:"r",barWidth:"62%",
+      itemStyle:{color:[cssVar("--line2"),PAL[7],PAL[2],PAL[0],PAL[5]][i]},
+      data:recSectors.slice().reverse().map(sec=>RECORD.useCases.filter(u=>u.raiaSector===sec&&u.raiaStage===st).length)}))},320);
+
   const ua=L26.measuredAdoption;
   ec(document.getElementById("adUse"),{
     tooltip:{trigger:"item",formatter:p=>`<b>${p.name}</b><br>${p.value}% of conversations`},
@@ -295,7 +383,7 @@ MOUNT.adoption=async function(){
 };
 function ucDrawer(id){
   const u=USECASES.find(x=>x.id===id);if(!u)return;
-  const o=ORG[u.org]||{name:u.org,type:"—",role:"—"};
+  const o=ORG[u.org]||{name:u.org,type:", ",role:", "};
   const econ=ECON2022.lighthouse.find(l=>l.sector===u.sector);
   openDrawer(u.name,`USE CASE · ${SECTOR[u.sector].name} · ${u.stage}`,
     card("Record","",`
@@ -303,7 +391,7 @@ function ucDrawer(id){
       <div class="kv"><span class="k">Sector</span><span class="v">${esc(SECTOR[u.sector].name)}</span></div>
       <div class="kv"><span class="k">Lifecycle stage</span><span class="v">${u.stage}</span></div>
       <div class="kv"><span class="k">Operating since</span><span class="v mono">${u.since}</span></div>
-      <div class="kv"><span class="k">District</span><span class="v">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:"—"}).name)}</span></div>
+      <div class="kv"><span class="k">District</span><span class="v">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:", "}).name)}</span></div>
       <div class="kv"><span class="k">Sector type</span><span class="v">${u.publicSector?"Public":"Private"}</span></div>
       <div class="kv"><span class="k">Risk classification</span><span class="v">${u.risk}</span></div>
       <div class="kv"><span class="k">Verification</span><span class="v">${qbadge(u.status==="verified"?"verified":"in_review")}</span></div>

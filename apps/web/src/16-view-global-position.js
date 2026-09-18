@@ -1,8 +1,7 @@
 
 /* ======================= GLOBAL POSITION ================================
    How Rwanda compares across Africa and globally. Every comparison carries
-   its comparability tier, because these indices measure different things —
-   the whole finding on this page is that two of them disagree, and both are
+   its comparability tier, because these indices measure different things, the whole finding on this page is that two of them disagree, and both are
    right.
    ======================================================================*/
 VIEWS.position=async function(){
@@ -14,10 +13,10 @@ VIEWS.position=async function(){
   const govRank=gov.values.slice().sort((a,b)=>b.value-a.value).findIndex(v=>v.iso3==="RWA")+1;
 
   return vh("Comparative position","How Rwanda compares",
-    "Rwanda's standing across the continent and globally — and the gap between the two indices that matter most. One measures the capacity to govern AI, the other the readiness to build it. Rwanda leads on the first and sits mid-table on the second.",
+    "Rwanda's standing across the continent and globally, and the gap between the two indices that matter most. One measures the capacity to govern AI, the other the readiness to build it. Rwanda leads on the first and sits mid-table on the second.",
     `<button class="btn" data-act="go" data-args="readiness">National scores</button>
      <button class="btn" data-act="source" data-args="LANDSCAPE26">About the 2026 review</button>`)
-  +`<div class="banner info"><b>Read these together, not separately.</b> ${esc(L.comparativePosition.reading)}</div>
+  +`<div class="banner note"><b>Read these together, not separately.</b> ${esc(L.comparativePosition.reading)}</div>
 
    <div class="row" style="grid-template-columns:repeat(auto-fit,minmax(196px,1fr))">
      ${kpi("Africa AI governance",gov.values.find(v=>v.iso3==="RWA").value,
@@ -38,16 +37,16 @@ VIEWS.position=async function(){
    </div>
 
    <div class="row" style="grid-template-columns:1fr 1fr">
-     ${cardF("Capacity to govern AI — Africa",gov.name+" "+gov.edition+" · "+gov.scale,
+     ${cardF("Capacity to govern AI. Africa",gov.name+" "+gov.edition+" · "+gov.scale,
        `<div id="gpGov" style="height:300px"></div>
         <div style="padding:0 15px 13px" class="small muted">${esc(gov.reading)} ${srcLine(gov.sourceId)}</div>`)}
-     ${cardF("Readiness to deploy AI — global rank",rdy.name+" "+rdy.edition+" · lower is better",
+     ${cardF("Readiness to deploy AI, global rank",rdy.name+" "+rdy.edition+" · lower is better",
        `<div id="gpRdy" style="height:300px"></div>
         <div style="padding:0 15px 13px" class="small muted">${esc(rdy.reading)} ${srcLine(rdy.sourceId)}</div>`)}
    </div>
 
    <div class="row" style="grid-template-columns:1fr">
-     ${cardF("The same country, four different answers","each index measures a different construct — the tier tells you what may be compared with what",
+     ${cardF("The same country, four different answers","each index measures a different construct, the tier tells you what may be compared with what",
       `<table class="dt"><thead><tr><th>Index</th><th>What it measures</th><th>Rwanda's position</th><th class="n">Value</th><th>Comparability</th></tr></thead><tbody>
        ${B.indexComparison.map(c=>`<tr>
          <td><b>${esc(c.index)}</b></td>
@@ -57,14 +56,14 @@ VIEWS.position=async function(){
          <td><span class="tag ${c.tier==="A"?"g":c.tier==="B"?"a":"r"}" data-tip="${esc(B.tiers[c.tier].detail)}">Tier ${c.tier} · ${esc(B.tiers[c.tier].label)}</span></td></tr>`).join("")}
       </tbody></table>
       <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
-        A governance index and a readiness index disagreeing about the same country is not a contradiction — it is the finding. Rwanda built the rules faster than the substrate beneath them.</div>`)}
+        A governance index and a readiness index disagreeing about the same country is not a contradiction, it is the finding. Rwanda built the rules faster than the substrate beneath them.</div>`)}
    </div>
 
    <div class="row" style="grid-template-columns:1.1fr 1fr">
      ${cardF("The governance–usage gap","first in Africa on the rules, 111th of 121 on observed use",
        `<div id="gpGap" style="height:290px"></div>
         <div style="padding:0 15px 13px" class="small muted">${esc(L.measuredAdoption.whyItMatters)}</div>`)}
-     ${cardF("Where Rwanda sat in 2021","the neighbouring band in that edition — tightly packed",
+     ${cardF("Where Rwanda sat in 2021","the neighbouring band in that edition, tightly packed",
        `<div id="gpOxf" style="height:290px"></div>
         <div style="padding:0 15px 13px" class="small muted">${esc(oxf.reading)}</div>`)}
    </div>
@@ -114,13 +113,13 @@ MOUNT.position=async function(){
   ec(document.getElementById("gpRdy"),{
     tooltip:{trigger:"axis",axisPointer:{type:"shadow"},formatter:ps=>`<b>${ps[0].name}</b><br>rank <b>${ps[0].value}</b> of 195`},
     grid:{left:96,right:44,top:14,bottom:30},
-    xAxis:axis({type:"value",inverse:true,name:"rank of 195 — lower is better",nameTextStyle:{color:cssVar("--ec-axis"),fontSize:10}}),
+    xAxis:axis({type:"value",inverse:true,name:"rank of 195, lower is better",nameTextStyle:{color:cssVar("--ec-axis"),fontSize:10}}),
     yAxis:axis({type:"category",data:rv.map(v=>v.country),axisLabel:{fontSize:11.5,color:cssVar("--txt2")}}),
     series:[{type:"bar",barWidth:"62%",itemStyle:{borderRadius:[4,0,0,4]},
       data:rv.map(v=>({value:v.value,itemStyle:{color:hi(v.iso3)}})),
       label:{show:true,position:"right",formatter:"#{c}",fontSize:10.5,color:cssVar("--ec-axis")}}]},300);
 
-  // Governance percentile against usage percentile — the divergence in one view
+  // Governance percentile against usage percentile, the divergence in one view
   const govPct=100*(gov.values.length-1)/(gov.values.length-1);
   const usePct=100*(121-111)/120;
   ec(document.getElementById("gpGap"),{
@@ -169,7 +168,7 @@ function benchDrawer(id){
       `<div class="prose"><p>${esc(s.measures)}</p><p>${esc(s.reading)}</p></div>
        <div class="kv"><span class="k">Scale</span><span class="v">${esc(s.scale)}</span></div>
        <div class="kv"><span class="k">Scope</span><span class="v">${esc(s.scope)}</span></div>
-       <div class="kv"><span class="k">Comparability</span><span class="v">Tier ${s.tier} — ${esc(BENCH.tiers[s.tier].label)}</span></div>
+       <div class="kv"><span class="k">Comparability</span><span class="v">Tier ${s.tier}. ${esc(BENCH.tiers[s.tier].label)}</span></div>
        <div class="small muted" style="margin-top:8px">${esc(BENCH.tiers[s.tier].detail)}</div>
        ${srcLine(s.sourceId)}`)
     +`<div style="height:12px"></div>`

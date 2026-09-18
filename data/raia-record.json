@@ -1,0 +1,718 @@
+{
+  "version": 1,
+  "sourceId": "RAIA_CATALOGUE",
+  "url": "https://ai.gov.rw/record/",
+  "title": "The verified national record",
+  "description": "Every AI use case running in Rwanda. Each entry reviewed against primary documentation and dated.",
+  "publishedCounts": {
+    "useCases": 34,
+    "institutions": 43,
+    "enablers": 10
+  },
+  "capturedOn": "2026-09-17",
+  "provenanceNote": "Transcribed from the published record on 17 September 2026. The record renders its entries client-side, so they could not be fetched programmatically. Entry names, owners and stages are recorded as displayed; spellings of a few owner names and one institution could not be confirmed and are flagged. 42 of the 43 institutions were captured, one fell between screen captures. Replace this with a machine-readable export when one is available: scripts/ingest_raia_record.py accepts it directly.",
+  "taxonomy": {
+    "sectors": [
+      "Health",
+      "Agriculture",
+      "Education",
+      "Public administration",
+      "Transport & logistics",
+      "Finance"
+    ],
+    "stages": [
+      "Concept",
+      "User research",
+      "Pilot/MVP",
+      "Scaling",
+      "Deployed at scale"
+    ],
+    "stageNote": "RAIA's five-stage lifecycle is finer than this platform's four. Mapping used: Concept and User research → proof of concept; Pilot/MVP → pilot; Scaling → production; Deployed at scale → scaled."
+  },
+  "useCases": [
+    {
+      "name": "AI-enabled Agricultural Advisory (Tunga)",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "owner": "MINAGRI",
+      "description": "A 24/7 Kinyarwanda voice hotline giving farmers pest, disease and agro-climatic advice. It is the proof of concept for a national AI agricultural advisory service.",
+      "sector": "AGR",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Chidi AI lesson planning and tutoring",
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Anthropic",
+      "description": "Lesson planning and tutoring assistance for teachers and learners.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Electric motorcycle battery optimisation",
+      "raiaSector": "Transport & logistics",
+      "raiaStage": "Deployed at scale",
+      "owner": "Ampersand",
+      "description": "Battery swap and life optimisation for electric motorcycle fleets.",
+      "sector": "TRA",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Student dropout risk prediction",
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "owner": "ATAS",
+      "description": "Early identification of students at risk of dropping out.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "AI-supported mathematics tutoring",
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "owner": "MINEDUC",
+      "description": "Adaptive mathematics tutoring for students.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Autonomous medicine drone delivery",
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "owner": "Zipline",
+      "description": "Autonomous drone delivery of blood and medical supplies.",
+      "sector": "HLT",
+      "stage": "Scaled"
+    },
+    {
+      "name": "AI-enabled National Telemedicine Service",
+      "raiaSector": "Health",
+      "raiaStage": "User research",
+      "owner": "Ministry of Health",
+      "description": "A national telemedicine service with AI triage and decision support, addressing primary-care access and a rising non-communicable disease burden.",
+      "sector": "HLT",
+      "stage": "PoC"
+    },
+    {
+      "name": "Clinical support tools for clinicians",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "AI Scaling Hub",
+      "description": "Decision support tooling for clinicians in public facilities.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    },
+    {
+      "name": "AI-assisted medical diagnosis",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Doctor AI",
+      "description": "Diagnostic assistance for clinicians and patients.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Text-to-speech farmer query tool",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "owner": "One Acre Fund",
+      "description": "Spoken answers to farmer queries in Kinyarwanda.",
+      "sector": "AGR",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Product demand forecasting and tracking",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Kasha",
+      "description": "Private-sector forecasting and tracking of health product demand.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Automated social security contribution declarations",
+      "raiaSector": "Public administration",
+      "raiaStage": "Deployed at scale",
+      "owner": "RSSB",
+      "description": "Automated processing of social security contribution declarations.",
+      "sector": "PUB",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Paediatric clinical decision support",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Swiss TPH",
+      "description": "Decision support for paediatric care pathways.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Multilingual complaint handling across financial institutions",
+      "raiaSector": "Finance",
+      "raiaStage": "Scaling",
+      "owner": "National Bank of Rwanda",
+      "description": "Multilingual complaint intake and resolution across financial institutions.",
+      "sector": "FIN",
+      "stage": "Production"
+    },
+    {
+      "name": "AI pipeline for national statistics access",
+      "raiaSector": "Public administration",
+      "raiaStage": "Deployed at scale",
+      "owner": "NISR",
+      "description": "Conversational access to national statistics.",
+      "sector": "PUB",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Agricultural price analytics on a trading platform",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Deployed at scale",
+      "owner": "Afrikabal",
+      "description": "Price intelligence embedded in an agricultural trading platform.",
+      "sector": "AGR",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Crop insurance forecasting",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "owner": "ACRE Africa",
+      "description": "Forecasting to price and trigger index-based crop insurance.",
+      "sector": "AGR",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Automated exam grading",
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "owner": "ATAS",
+      "description": "Automated marking of examination scripts.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "AI support for teachers' lesson planning",
+      "raiaSector": "Education",
+      "raiaStage": "Pilot/MVP",
+      "owner": "MINEDUC",
+      "description": "Lesson planning assistance for the teaching workforce.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Demand forecasting and market intelligence for health commodities",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Rwanda Medical Supply",
+      "description": "An AI forecasting and market intelligence engine that predicts what health facilities will need, flags supply and price risk early, and answers procurement questions in plain language.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    },
+    {
+      "name": "AI-enabled ultrasound for pregnancy risk",
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "owner": "Ministry of Health",
+      "description": "Imaging AI that lets non-specialist health workers estimate gestational age and flag pregnancy risk where trained sonographers are scarce.",
+      "sector": "HLT",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Foundational learning assessment automation",
+      "raiaSector": "Education",
+      "raiaStage": "Scaling",
+      "owner": "MINEDUC",
+      "description": "A national platform to author, digitise and grade examinations. It compresses a ten-month exam cycle into weeks and returns performance insight while it can still change teaching.",
+      "sector": "PUB",
+      "stage": "Production"
+    },
+    {
+      "name": "AI-enabled diagnostic tools (ultrasound and others)",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "AI Scaling Hub",
+      "description": "Diagnostic imaging support across modalities.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Building permit AI review",
+      "raiaSector": "Public administration",
+      "raiaStage": "Pilot/MVP",
+      "owner": "MININFRA",
+      "description": "Automated first-pass review of building permit applications.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Virtual clinical services",
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "owner": "Zuri Health",
+      "description": "Remote consultation and virtual clinical services.",
+      "sector": "HLT",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Remote cardiac diagnosis",
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "owner": "Tricog Health",
+      "description": "AI-assisted remote interpretation of cardiac diagnostics.",
+      "sector": "HLT",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Precision agricultural mapping, monitoring and yield forecasting",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Deployed at scale",
+      "owner": "Rwanda Space Agency",
+      "description": "Satellite-based mapping, monitoring and yield forecasting.",
+      "sector": "AGR",
+      "stage": "Scaled"
+    },
+    {
+      "name": "AI-driven precision agriculture",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Farmingo",
+      "description": "Precision inputs and monitoring for smallholder production.",
+      "sector": "AGR",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Drone-based land mapping and monitoring",
+      "raiaSector": "Agriculture",
+      "raiaStage": "Deployed at scale",
+      "owner": "Charis UAS",
+      "description": "Aerial mapping and monitoring services.",
+      "sector": "AGR",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Stock optimisation in the private sector",
+      "raiaSector": "Health",
+      "raiaStage": "Deployed at scale",
+      "owner": "Viebeg",
+      "description": "Data-driven medical supply stock optimisation for private facilities.",
+      "sector": "HLT",
+      "stage": "Scaled"
+    },
+    {
+      "name": "Citizen services AI chatbot",
+      "raiaSector": "Public administration",
+      "raiaStage": "Pilot/MVP",
+      "owner": "Irembo",
+      "description": "Assisted navigation of government e-services.",
+      "sector": "PUB",
+      "stage": "Pilot"
+    },
+    {
+      "name": "Horizon 1000: frontline clinical decision support",
+      "raiaSector": "Health",
+      "raiaStage": "Concept",
+      "owner": "Ministry of Health",
+      "description": "Scalable decision support for frontline workers, for consistent high-quality care in the first 1,000 days of life.",
+      "sector": "HLT",
+      "stage": "PoC"
+    },
+    {
+      "name": "AI-enabled digital service delivery",
+      "raiaSector": "Public administration",
+      "raiaStage": "Scaling",
+      "owner": "RSSB",
+      "description": "AI-supported delivery of social security services.",
+      "sector": "PUB",
+      "stage": "Production"
+    },
+    {
+      "name": "Auto-transcription of doctor-patient consultations",
+      "raiaSector": "Health",
+      "raiaStage": "Pilot/MVP",
+      "owner": "AI Scaling Hub",
+      "description": "Automatic consultation transcription to cut clinical administrative time.",
+      "sector": "HLT",
+      "stage": "Pilot"
+    }
+  ],
+  "institutions": [
+    {
+      "name": "GIZ",
+      "type": "Development partner",
+      "primarySector": "Agriculture",
+      "role": "Co-funds the Tunga farmer advisory voicebot",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "One Acre Fund",
+      "type": "Development partner",
+      "primarySector": "Agriculture",
+      "role": "Farmer-facing voice query tooling",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "MININFRA",
+      "type": "Government",
+      "primarySector": "Public administration",
+      "role": "Infrastructure permitting and review",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "MIT RAISE",
+      "type": "Education",
+      "primarySector": "Education",
+      "role": "Day of AI teacher programme, reaching 5,000+ teachers",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "JAM-Forte Technologies",
+      "type": "Education",
+      "primarySector": "Education",
+      "role": "Software and AI development",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Anthropic",
+      "type": "Education",
+      "primarySector": "Education",
+      "role": "Chidi AI lesson planning and tutoring",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Ministry of ICT and Innovation",
+      "type": "Government",
+      "primarySector": "Public administration",
+      "role": "Holds the overall AI policy and political mandate",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "National Bank of Rwanda",
+      "type": "Government",
+      "primarySector": "Finance",
+      "role": "Financial consumer protection and complaint handling",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Farmingo",
+      "type": "Startup",
+      "primarySector": "Agriculture",
+      "role": "Precision agriculture for smallholders",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Kasha",
+      "type": "Startup",
+      "primarySector": "Health",
+      "role": "Health product distribution with demand forecasting",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Doctor AI",
+      "type": "Startup",
+      "primarySector": "Health",
+      "role": "AI-assisted medical diagnosis",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "JICA",
+      "type": "Development partner",
+      "primarySector": "Public administration",
+      "role": "Agency set-up, AI talent development, public sector AI",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Zipline",
+      "type": "Private sector",
+      "primarySector": "Transport & logistics",
+      "role": "Autonomous medical delivery at national scale",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Charis UAS",
+      "type": "Startup",
+      "primarySector": "Transport & logistics",
+      "role": "Drone mapping and monitoring",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Swiss TPH",
+      "type": "Development partner",
+      "primarySector": "Health",
+      "role": "Paediatric clinical decision support research",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "AI Scaling Hub",
+      "type": "Development partner",
+      "primarySector": "Health",
+      "role": "Accelerates priority use cases across health, agriculture and education",
+      "entriesOnRecord": 3
+    },
+    {
+      "name": "BCG",
+      "type": "Development partner",
+      "primarySector": "Public administration",
+      "role": "Landscaping and AI readiness to 2030",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "NESA",
+      "type": "Government",
+      "primarySector": "Education",
+      "role": "National examinations and assessment authority",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Rwanda Center for the Fourth Industrial Revolution",
+      "type": "Government",
+      "primarySector": "Public administration",
+      "role": "Convenes the ecosystem and runs the AI Scaling Hub",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "MINAGRI",
+      "type": "Government",
+      "primarySector": "Agriculture",
+      "role": "Owns agricultural sector AI use cases",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "OpenAI",
+      "type": "Development partner",
+      "primarySector": "Public administration",
+      "role": "Anchor AI partner engaged on the national agenda",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Rwanda Artificial Intelligence Agency (RAIA)",
+      "type": "Government",
+      "primarySector": "Public administration",
+      "role": "Coordinates, enables and accelerates responsible AI development and adoption; approved by Cabinet in June 2026",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "eFiche",
+      "type": "Private sector",
+      "primarySector": "Health",
+      "role": "Technology partner on frontline clinical decision support",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "RSSB",
+      "type": "Government",
+      "primarySector": "Public administration",
+      "role": "Social security contributions and digital service delivery",
+      "entriesOnRecord": 2
+    },
+    {
+      "name": "ACRE Africa",
+      "type": "Startup",
+      "primarySector": "Agriculture",
+      "role": "Index-based crop insurance forecasting",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Proto",
+      "type": "Private sector",
+      "primarySector": "Finance",
+      "role": "Multilingual customer experience automation",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "World Bank",
+      "type": "Development partner",
+      "primarySector": "Public administration",
+      "role": "Anchor financing partner across the AI roadmap",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Dawa Health",
+      "type": "Startup",
+      "primarySector": "Health",
+      "role": "Virtual maternal and primary care",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Viebeg",
+      "type": "Startup",
+      "primarySector": "Health",
+      "role": "Medical supply stock optimisation",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Afrikabal",
+      "type": "Startup",
+      "primarySector": "Agriculture",
+      "role": "Agricultural trading platform with price analytics",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "MINEDUC",
+      "type": "Government",
+      "primarySector": "Education",
+      "role": "Owns education sector AI use cases",
+      "entriesOnRecord": 4
+    },
+    {
+      "name": "NISR",
+      "type": "Government",
+      "primarySector": "Public administration",
+      "role": "National statistics access and dissemination",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Irembo",
+      "type": "Private sector",
+      "primarySector": "Public administration",
+      "role": "Government service delivery platform",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Rwanda Medical Supply",
+      "type": "Government",
+      "primarySector": "Health",
+      "role": "National medical supply forecasting and distribution",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "UNDP",
+      "type": "Development partner",
+      "primarySector": "Public administration",
+      "role": "Over USD 1m since January 2026 for upskilling, applications and a responsible AI ecosystem",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "ATAS",
+      "type": "Startup",
+      "primarySector": "Education",
+      "role": "Dropout risk prediction and automated grading",
+      "entriesOnRecord": 2
+    },
+    {
+      "name": "Zuri Health",
+      "type": "Startup",
+      "primarySector": "Health",
+      "role": "Virtual clinical services",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Tricog Health",
+      "type": "Startup",
+      "primarySector": "Health",
+      "role": "Remote cardiac diagnostics",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Ampersand",
+      "type": "Startup",
+      "primarySector": "Transport & logistics",
+      "role": "Electric motorcycle energy optimisation",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Rwanda Space Agency",
+      "type": "Government",
+      "primarySector": "Agriculture",
+      "role": "Earth observation for agricultural monitoring",
+      "entriesOnRecord": 1
+    },
+    {
+      "name": "Ministry of Health",
+      "type": "Government",
+      "primarySector": "Health",
+      "role": "Owns health sector AI use cases",
+      "entriesOnRecord": 4
+    },
+    {
+      "name": "FAO",
+      "type": "Development partner",
+      "primarySector": "Agriculture",
+      "role": "Agricultural advisory content and expertise",
+      "entriesOnRecord": 1
+    }
+  ],
+  "enablers": [
+    {
+      "id": "EN-01",
+      "name": "National Artificial Intelligence Policy",
+      "kind": "Policy & law",
+      "owner": "Ministry of ICT and Innovation",
+      "dated": "April 2023",
+      "description": "The founding document. Sets Rwanda's ambition for AI, the priority sectors, and the governance arrangements that everything in this record sits under."
+    },
+    {
+      "id": "EN-02",
+      "name": "AI Readiness and Maturity Framework for Rwanda",
+      "kind": "Policy & law",
+      "owner": "Ministry of ICT and Innovation",
+      "dated": "November 2023",
+      "description": "How readiness is measured across institutions, and what each maturity level requires before an institution can deploy."
+    },
+    {
+      "id": "EN-03",
+      "name": "National Data Sharing Policy",
+      "kind": "Policy & law",
+      "owner": "Ministry of ICT and Innovation",
+      "dated": "September 2025",
+      "description": "The rules for moving data between institutions. Most AI work in the record depends on this being resolved."
+    },
+    {
+      "id": "EN-04",
+      "name": "National Broadband Policy and Strategy",
+      "kind": "Policy & law",
+      "owner": "Ministry of ICT and Innovation",
+      "dated": "October 2022",
+      "description": "The connectivity floor that AI services depend on, and the targets against which coverage is tracked."
+    },
+    {
+      "id": "EN-05",
+      "name": "AI Playbook for Small States",
+      "kind": "Policy & law",
+      "owner": "Ministry of ICT and Innovation",
+      "dated": "September 2025",
+      "description": "Rwanda's playbook for how a small state builds AI capability without the budget of a large one."
+    },
+    {
+      "id": "EN-06",
+      "name": "Law on the Protection of Personal Data and Privacy",
+      "kind": "Policy & law",
+      "owner": "Government of Rwanda",
+      "dated": "Law No 058/2021 of 13/10/2021",
+      "description": "The binding legal constraint on any AI system in Rwanda that touches personal data."
+    },
+    {
+      "id": "EN-10",
+      "name": "Carnegie Mellon University Africa",
+      "kind": "Education & research",
+      "owner": "CMU-Africa, Kigali Innovation City",
+      "dated": "Since 2011",
+      "description": "The region's deepest concentration of graduate AI engineering training, and the pipeline most Rwandan AI teams recruit from."
+    },
+    {
+      "id": "EN-11",
+      "name": "University of Rwanda",
+      "kind": "Education & research",
+      "owner": "College of Science and Technology",
+      "dated": "National university",
+      "description": "The national pipeline. Trains the largest share of Rwandan computer science, data science and engineering graduates."
+    },
+    {
+      "id": "EN-12",
+      "name": "African Institute for Mathematical Sciences, Rwanda",
+      "kind": "Education & research",
+      "owner": "AIMS Rwanda",
+      "dated": "Since 2016",
+      "description": "Pan-African mathematical sciences institute with a dedicated machine intelligence stream."
+    },
+    {
+      "id": "EN-13",
+      "name": "Rwanda Coding Academy",
+      "kind": "Education & research",
+      "owner": "Ministry of Education",
+      "dated": "Since 2019",
+      "description": "Selective secondary school in software programming and embedded systems. The earliest point in the national pipeline."
+    }
+  ]
+}

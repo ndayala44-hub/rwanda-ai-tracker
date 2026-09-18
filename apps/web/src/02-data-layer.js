@@ -9,11 +9,11 @@ let SOURCES={}, ORGS=[], ORG={}, SECTORS=[], SECTOR={}, DISTRICTS=[], PROVINCES=
 let DIMS=[], OUTPUTS=[], LADDER=[], TARGETS={readiness:70,maturity:60};
 let INDICATOR_DEFS=[], OBSERVATIONS=[], IND=[], BYCODE={};
 let JOURNEY=[], POLICIES=[], GLOSSARY=[], USECASES=[], CONTRIBUTIONS=[];
-let ECON2022={}, L26={}, BENCH={}, ROADMAP={items:[],proposedComposites:[],externalIndicesToIngest:[]};
+let ECON2022={}, L26={}, BENCH={}, RAIA={pillars:[],nationalTargets:[],sectorLadder:{sectors:[]},record:{}}, RECORD={useCases:[],institutions:[],enablers:[],taxonomy:{}}, ROADMAP={items:[],proposedComposites:[],externalIndicesToIngest:[]};
 let YEARS=[];
 
-/* Indicator records are assembled from two files — definitions and the
-   observation series — so a new observation never requires touching a
+/* Indicator records are assembled from two files, definitions and the
+   observation series, so a new observation never requires touching a
    definition, and a definition change never rewrites history. */
 function buildIndicators(){
   const byInd={};
@@ -39,7 +39,7 @@ function buildIndicators(){
       geoLevel:d.geographicScope||"National", updateFrequency:d.updateFrequency||"annual",
       // Provenance travels with every observation. Dropping origin here made the
       // Data Explorer report every value as a demo value and silently broke the
-      // data quality index — caught by the cross-engine parity test.
+      // data quality index, caught by the cross-engine parity test.
       obs:obs.map(o=>({year:o.year,value:o.value,collected:o.collectedOn,period:o.period,
                        origin:o.origin||"demo",verification:o.verification,sourceId:o.sourceId,
                        note:o.note||null})),
@@ -47,8 +47,8 @@ function buildIndicators(){
       verification: current?current.verification:"not_reported",
       declaredAbsent,
       weight:1, relWeight:d.relevance,
-      lastUpdated: latest?(latest.collectedOn||latest.year+"-12-31"):"—",
-      contributor: (SOURCES[d.sourceId]||{}).org || "—"
+      lastUpdated: latest?(latest.collectedOn||latest.year+"-12-31"):", ",
+      contributor: (SOURCES[d.sourceId]||{}).org || ", "
     };
   });
   BYCODE=Object.fromEntries(IND.map(i=>[i.code,i]));
@@ -85,6 +85,8 @@ function applyDataset(ds){
   USECASES=ds.useCases.items; CONTRIBUTIONS=ds.contributions.items;
   ECON2022=ds.economicSizing2022; L26=ds.landscape2026; BENCH=ds.benchmarks||{series:[],indexComparison:[]};
   ROADMAP=ds.proposedIndicators||ROADMAP;
+  RAIA=ds.raiaPortfolio||RAIA;
+  RECORD=ds.raiaRecord||RECORD;
   YEARS=[];for(let y=META.firstYear;y<=META.cycle;y++)YEARS.push(y);
   buildIndicators();
   META.provenance=computeProvenance();
@@ -97,13 +99,13 @@ async function loadDataset(){
     geography:keys.geography,framework:keys.framework,indicators:keys.indicators,observations:keys.observations,
     journey:keys.journey,policies:keys.policies,glossary:keys.glossary,useCases:keys.useCases,
     contributions:keys.contributions,economicSizing2022:keys.economicSizing2022,landscape2026:keys.landscape2026,
-    benchmarks:keys.benchmarks,proposedIndicators:keys.proposedIndicators});
+    benchmarks:keys.benchmarks,proposedIndicators:keys.proposedIndicators,raiaPortfolio:keys.raiaPortfolio,raiaRecord:keys.raiaRecord});
   if(META.apiBase!==null&&META.apiBase!==undefined){
     try{
       const r=await fetch(META.apiBase.replace(/\/$/,"")+"/api/bootstrap");
       if(r.ok){const j=await r.json();META.dataOrigin="api";return bundle(j)}
-      console.warn("API responded",r.status,"— falling back to the published snapshot");
-    }catch(e){console.warn("API unreachable:",e.message,"— falling back to the published snapshot")}
+      console.warn("API responded",r.status,",  falling back to the published snapshot");
+    }catch(e){console.warn("API unreachable:",e.message,",  falling back to the published snapshot")}
   }
   try{
     const r=await fetch(META.snapshotUrl);

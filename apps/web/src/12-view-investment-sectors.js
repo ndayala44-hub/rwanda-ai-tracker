@@ -4,7 +4,7 @@ function opportunityMatrix(){
   const maxUC=Math.max.apply(null,SECTORS.map(s=>USECASES.filter(u=>u.sector===s.id&&u.status==="verified").length))||1;
   return ECON2022.sectors.filter(s=>s.sector!=="OTH").map(s=>{
     const uc=USECASES.filter(u=>u.sector===s.sector&&u.status==="verified").length;
-    const opportunity=s.shareSectorGDP;                 // % of sector GDP — 2022 estimate
+    const opportunity=s.shareSectorGDP;                 // % of sector GDP. 2022 estimate
     const gap=100*(1-uc/maxUC);                         // adoption gap proxy
     const priority=(opportunity/27)*0.5+(gap/100)*0.5;
     return {id:s.sector,name:SECTOR[s.sector].name,valueMn:s.valueMn,opportunity,gap,uc,priority,driver:s.driver};
@@ -16,13 +16,13 @@ VIEWS.investment=async function(){
   const invInd=["RWA11-SUBc","RWA11-SUBd","RWA11-SUBe","OXF12a","OXF12b","TOR109","TOR108","TOR111"].map(c=>BYCODE[c]).filter(Boolean);
   const enablerTotal=econ.enablerInitiatives.reduce((s,e)=>s+e.costK,0);
   return vh("Opportunity","AI investment and economic opportunity",
-    "Where the evidence points to unmet demand — sized opportunity from the 2022 national study, set against what is actually being deployed and funded today.",
+    "Where the evidence points to unmet demand, sized opportunity from the 2022 national study, set against what is actually being deployed and funded today.",
     `<button class="btn" data-act="source" data-args="ECON22">About the sizing study</button>`)
-  +`<div class="banner hist"><b>Historical evidence, clearly separated.</b> All monetary figures on this page come from the <b>Rwanda AI Economic Sizing Report, 2022</b>. They are <b>full-potential estimates</b> — the value if today's AI applications were adopted across the economy — not current statistics, not forecasts and not targets. Adoption and indicator figures shown beside them are current platform measurements. The two are never combined into one number.</div>
+  +`<div class="banner hist"><b>Historical evidence, clearly separated.</b> All monetary figures on this page come from the <b>Rwanda AI Economic Sizing Report, 2022</b>. They are <b>full-potential estimates</b>, the value if today's AI applications were adopted across the economy, not current statistics, not forecasts and not targets. Adoption and indicator figures shown beside them are current platform measurements. The two are never combined into one number.</div>
    <div class="row" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
      ${kpi("Full AI potential","$"+econ.headline.totalMn+"m",`~${econ.headline.shareOfGDP}% of GDP · ${qbadge("historical")}`,"var(--teal)",econ.headline.definition)}
      ${kpi("Largest sector opportunity","$"+mtx[0].valueMn+"m",esc(ECON2022.sectors[0].sector==="AGR"?"Agriculture":mtx[0].name)+" ranks first by value","var(--teal)")}
-     ${kpi("Highest intensity","27%",'Healthcare — AI potential as a share of sector GDP',"var(--teal)")}
+     ${kpi("Highest intensity","27%",'Healthcare. AI potential as a share of sector GDP',"var(--teal)")}
      ${kpi("Lighthouse use cases",econ.lighthouse.length,`$${econ.lighthouse.reduce((s,l)=>s+l.lowMn,0)}m–$${econ.lighthouse.reduce((s,l)=>s+l.highMn,0)}m combined`,"var(--teal)")}
      ${kpi("Ecosystem enabler cost","$"+enablerTotal+"K",`indicative first-year cost of ${econ.enablerInitiatives.length} initiatives`,"var(--teal)")}
      ${kpi("Current AI investment tracked",rawFmt(BYCODE["RWA11-SUBc"],RUN.iS["RWA11-SUBc"].raw)+" USDm",
@@ -35,13 +35,13 @@ VIEWS.investment=async function(){
         <div style="padding:0 15px 13px">${srcLine("ECON22")}</div>`)}
      ${cardF("Opportunity and gap matrix","priority = high sized opportunity × low observed adoption",
        `<div id="invMatrix" style="height:360px"></div>
-        <div style="padding:0 15px 13px" class="small muted">Vertical axis is the 2022 AI potential as a share of that sector's GDP. Horizontal axis is an adoption-gap proxy built from the live use-case registry — it is a proxy, not a measured adoption rate. Top-right is the priority quadrant.</div>`)}
+        <div style="padding:0 15px 13px" class="small muted">Vertical axis is the 2022 AI potential as a share of that sector's GDP. Horizontal axis is an adoption-gap proxy built from the live use-case registry, it is a proxy, not a measured adoption rate. Top-right is the priority quadrant.</div>`)}
    </div>
 
    <div class="row" style="grid-template-columns:1.3fr 1fr">
-     ${cardF("The 589m, by share","area is proportional to sized value — click a tile to filter",
+     ${cardF("The 589m, by share","area is proportional to sized value, click a tile to filter",
        `<div id="invTree" style="height:330px"></div>
-        <div style="padding:0 15px 13px" class="small muted">${qbadge("historical")} 2022 full-potential estimate. Tile colour shows intensity — potential as a share of that sector's own GDP.</div>`)}
+        <div style="padding:0 15px 13px" class="small muted">${qbadge("historical")} 2022 full-potential estimate. Tile colour shows intensity, potential as a share of that sector's own GDP.</div>`)}
      ${cardF("Lighthouse value ranges","the five use cases screened for early implementation",
        `<div id="invLH" style="height:330px"></div>
         <div style="padding:0 15px 13px" class="small muted">Bars show the published low–high range. Together they account for $${ECON2022.lighthouse.reduce((a,l)=>a+l.lowMn,0)}m–$${ECON2022.lighthouse.reduce((a,l)=>a+l.highMn,0)}m of the ${ECON2022.headline.totalMn}m total.</div>`)}
@@ -78,7 +78,7 @@ VIEWS.investment=async function(){
    </div>
 
    <div class="row" style="grid-template-columns:1.25fr 1fr">
-     ${cardF("Partnership commitments since 2025","disclosed, AI-specific — current, not a 2022 estimate",
+     ${cardF("Partnership commitments since 2025","disclosed, AI-specific, current, not a 2022 estimate",
       `<table class="dt"><thead><tr><th>Partner</th><th>Vehicle</th><th class="n">Committed</th><th>What it buys</th></tr></thead><tbody>
        ${L26.partnerships.items.map(p=>`<tr>
          <td><b>${esc(p.partner)}</b><div class="small muted">${esc(p.marker)}</div></td>
@@ -126,7 +126,7 @@ MOUNT.investment=async function(){
   ec(document.getElementById("invSector"),{
     tooltip:{trigger:"axis",axisPointer:{type:"shadow"},formatter:ps=>{
       const s=secs[ps[0].dataIndex];
-      return `<b>${SECTOR[s.sector].name}</b><br>Full potential: <b>$${s.valueMn}m</b><br>Share of sector GDP: <b>${s.shareSectorGDP}%</b><br>Driver: ${s.driver}<br><span style="font-size:11px;color:${cssVar("--mut")}">Rwanda AI Economic Sizing Report, 2022 — estimate</span>`}},
+      return `<b>${SECTOR[s.sector].name}</b><br>Full potential: <b>$${s.valueMn}m</b><br>Share of sector GDP: <b>${s.shareSectorGDP}%</b><br>Driver: ${s.driver}<br><span style="font-size:11px;color:${cssVar("--mut")}">Rwanda AI Economic Sizing Report, 2022, estimate</span>`}},
     legend:{top:4,textStyle:{color:cssVar("--ec-axis"),fontSize:11}},
     grid:{left:110,right:52,top:38,bottom:26},
     xAxis:[axis({type:"value",name:"$m",nameTextStyle:{color:cssVar("--ec-axis")}}),
@@ -164,12 +164,12 @@ MOUNT.investment=async function(){
       return `<b>${m.name}</b><br>2022 potential: <b>$${m.valueMn}m</b> (${m.opportunity}% of sector GDP)<br>Registered use cases: <b>${m.uc}</b><br>Adoption gap proxy: <b>${m.gap.toFixed(0)}%</b>`}},
     grid:{left:54,right:26,top:22,bottom:44},
     xAxis:axis({type:"value",name:"adoption gap (proxy) →",min:0,max:105,nameLocation:"middle",nameGap:26,nameTextStyle:{color:cssVar("--ec-axis")}}),
-    yAxis:axis({type:"value",name:"opportunity — % of sector GDP →",min:0,max:30,nameLocation:"middle",nameGap:36,nameTextStyle:{color:cssVar("--ec-axis")}}),
+    yAxis:axis({type:"value",name:"opportunity. % of sector GDP →",min:0,max:30,nameLocation:"middle",nameGap:36,nameTextStyle:{color:cssVar("--ec-axis")}}),
     series:[{type:"scatter",data:mtx.map(m=>({value:[+m.gap.toFixed(1),m.opportunity],name:m.name})),
       symbolSize:d=>Math.max(11,Math.sqrt(mtx.find(m=>m.opportunity===d[1]).valueMn)*2.1),
       itemStyle:{color:p=>p.value[0]>55&&p.value[1]>7?PAL[3]:PAL[0],opacity:.85},
       label:{show:true,position:"top",formatter:p=>p.name,color:cssVar("--ec-axis"),fontSize:10},
-      markArea:{silent:true,itemStyle:{color:"rgba(210,96,58,.07)"},
+      markArea:{silent:true,itemStyle:{color:"rgba(210,96,58.07)"},
         data:[[{xAxis:55,yAxis:7,name:"Priority quadrant"},{xAxis:105,yAxis:30}]],
         label:{color:cssVar("--mut"),fontSize:10,position:"insideTopRight"}}}]},360)
    .on("click",p=>{const m=mtx[p.dataIndex];if(m)setFilter("sector",m.id)});
@@ -220,18 +220,38 @@ VIEWS.sectors=async function(){
        ${rows.filter(r=>!FILTER.sector||r.S.id===FILTER.sector).map(r=>`<tr class="clickable" data-act="sector" data-args="${r.S.id}">
          <td><b>${r.S.icon} ${esc(r.S.name)}</b></td>
          <td class="n mono">${r.e?"$"+r.e.valueMn+"m":unavailable("Not sized")}</td>
-         <td class="n mono">${r.e?r.e.shareSectorGDP+"%":"—"}</td>
+         <td class="n mono">${r.e?r.e.shareSectorGDP+"%":", "}</td>
          <td class="n mono">${r.uc.length||'<span class="unavail">0</span>'}</td>
          <td class="n mono">${r.uc.filter(u=>["Production","Scaled"].includes(u.stage)).length}</td>
          <td>${r.soc?Object.entries(r.soc).map(([k,v])=>`<span class="tag ${v===3?"g":v===2?"b":""}" title="${esc(econ.socialDimensions.find(d=>d.id===k).name)}">${k} ${"●".repeat(v)}</span>`).join(" "):unavailable("Not graded")}</td>
-         <td class="small muted">${r.e?esc(r.e.driver):"—"}</td></tr>`).join("")}
+         <td class="small muted">${r.e?esc(r.e.driver):", "}</td></tr>`).join("")}
       </tbody></table>
       <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
-        Energy and tourism appear in the sector list because they matter to Rwanda's economy, but neither was sized in the 2022 study and neither has a registered AI deployment yet — so both are shown as unmeasured rather than estimated.
+        Energy and tourism appear in the sector list because they matter to Rwanda's economy, but neither was sized in the 2022 study and neither has a registered AI deployment yet, so both are shown as unmeasured rather than estimated.
         ${srcLine("ECON22","social grading from the same study")}</div>`)}
    </div>
    <div class="row" style="grid-template-columns:1fr">
-     ${cardF("Opportunity, adoption and social impact together","one row per sector — the three things a sector decision needs",
+     ${card("Sector AI-readiness, on RAIA's own ladder","Data → Consolidation → Intelligence → AI",
+      `<div class="prose"><p>${esc(RAIA.sectorLadder.note)}</p></div>
+       <div style="margin-top:12px">
+       ${RAIA.sectorLadder.sectors.map(x=>{
+         const S=SECTOR[x.sector];if(!S)return"";
+         return `<div style="margin-bottom:14px" ${x.sector?`data-act="sector" data-args="${x.sector}"`:""}>
+           <div style="display:flex;justify-content:space-between;gap:10px;align-items:baseline">
+             <b style="font-size:13.5px">${esc(S.name)}</b>
+             <span class="small muted">stage ${x.stage} of 4</span></div>
+           <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:6px">
+            ${RAIA.sectorLadder.stages.map((st,n)=>`<div style="text-align:center">
+              <div style="height:6px;border-radius:3px;background:${n<x.stage?PAL[0]:"var(--chip)"}"></div>
+              <div class="small ${n<x.stage?"":"muted"}" style="margin-top:4px;font-size:10.5px">${esc(st)}</div></div>`).join("")}</div>
+           <div class="small muted" style="margin-top:5px">${esc(x.detail)}</div></div>`}).join("")}
+       </div>
+       <div class="small muted">Sectors absent from this list are not on RAIA's published sector journey.
+        ${srcLine("RAIA_CATALOGUE")}</div>`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:1fr">
+     ${cardF("Opportunity, adoption and social impact together","one row per sector, the three things a sector decision needs",
        `<div id="secCombo" style="height:330px"></div>
         <div style="padding:0 15px 13px" class="small muted">Bars are the 2022 sized opportunity; the line is intensity as a share of sector GDP; dots are registered deployments today. Click a bar to filter.</div>`)}
    </div>
@@ -300,14 +320,14 @@ function sectorDrawer(id){
 /* 2026 landscape deep-dives, rendered inside the existing sector drawer. */
 function sectorDeepDive(id){
   const dd=L26.sectorDeepDives||{};
-  if(id==="HLT"&&dd.health)return card("2026 landscape review — health","the most mature AI sector",
+  if(id==="HLT"&&dd.health)return card("2026 landscape review, health","the most mature AI sector",
     `<div class="prose"><p><b>${esc(dd.health.headline)}</b></p>
       <p><b>National Health Intelligence Centre.</b> ${esc(dd.health.healthIntelligenceCentre)}</p>
       <p><b>Horizon 1000 and the Anthropic MOU.</b> ${esc(dd.health.horizon1000)}</p></div>
      ${dd.health.stats.map(s=>`<div class="kv"><span class="k">${esc(s.label)}</span><span class="v mono">${esc(s.value)}</span></div>`).join("")}
      <div class="small" style="margin-top:10px;color:var(--amber)"><b>The precedent that should govern procurement.</b> ${esc(dd.health.precedent)}</div>
      ${srcLine("LANDSCAPE26")}`);
-  if(id==="AGR"&&dd.agriculture)return card("2026 landscape review — agriculture","voice advisory in Kinyarwanda",
+  if(id==="AGR"&&dd.agriculture)return card("2026 landscape review, agriculture","voice advisory in Kinyarwanda",
     `<div class="prose"><p><b>${esc(dd.agriculture.headline)}</b></p><p>${esc(dd.agriculture.problem)}</p></div>
      <b class="small">Architecture</b>
      ${dd.agriculture.architecture.map(a=>`<div class="kv"><span class="k mono">${esc(a.component)}</span><span class="v" style="max-width:66%">${esc(a.detail)}</span></div>`).join("")}
@@ -316,7 +336,7 @@ function sectorDeepDive(id){
      <div class="small" style="margin-top:10px;color:var(--green)">${esc(dd.agriculture.sovereignty)}</div>
      ${srcLine("LANDSCAPE26")}`);
   if(id==="FIN"&&dd.socialProtection){const sp=dd.socialProtection;
-    return card("2026 landscape review — social protection","the most AI-ready institution in Rwanda",
+    return card("2026 landscape review, social protection","the most AI-ready institution in Rwanda",
     `<div class="prose"><p><b>${esc(sp.headline)}</b></p><p>${esc(sp.pipeline.note)}</p></div>
      <div class="mono small" style="background:var(--surface2);border:1px solid var(--line);border-radius:8px;padding:11px;margin:9px 0;line-height:1.9">
        <b>${esc(sp.pipeline.name)}</b><br>${esc(sp.pipeline.sources)}<br>${sp.pipeline.stages.map(esc).join(" → ")}<br>

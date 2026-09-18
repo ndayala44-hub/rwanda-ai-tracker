@@ -101,7 +101,7 @@ async function renderEX(){
         <td class="small">${esc(I.unit)}</td>
         <td class="small">${EVIDENCE_LABEL[I.evidenceType]}</td>
         <td class="small">${I.geoLevel}</td><td class="small mono">${EX.year}</td>
-        <td class="small mono">${(I.obs.find(o=>o.year===EX.year)||{}).collected||"—"}</td>
+        <td class="small mono">${(I.obs.find(o=>o.year===EX.year)||{}).collected||", "}</td>
         <td class="small"><span class="src" data-act="source" data-args="${I.sourceId}">${esc(SRC(I.sourceId).org)}</span></td>
         <td class="small muted">${esc(I.contributor)}</td>
         <td class="small mono">${pct(s.confidence)}</td>
@@ -118,7 +118,7 @@ async function renderEX(){
         <td><b class="mono" style="color:var(--brand)">${I.code}</b><div style="font-size:12.5px">${esc(I.name)}</div></td>
         <td><span class="tag" style="color:${DIMS.find(d=>d.id===I.dim).color}">${I.dim}</span></td>
         <td class="n mono">${s.raw===null?unavailable("not reported"):rawFmt(I,s.raw)+' <span class="muted small">'+esc(I.unit)+"</span>"}</td>
-        <td class="n"><b style="color:${scColor(s.score)}">${s.assessed?fmt(s.score):"—"}</b></td>
+        <td class="n"><b style="color:${scColor(s.score)}">${s.assessed?fmt(s.score):", "}</b></td>
         <td class="n">${deltaHtml(s.score,p.score)}</td>
         <td class="n">${spark(YEARS.map(y=>RUNS[y].iS[I.code].score||0),64,18)}</td>
         <td class="n mono muted">${rawFmt(I,I.target)}</td>
@@ -126,7 +126,7 @@ async function renderEX(){
         <td class="small">${EVIDENCE_LABEL[I.evidenceType]}</td>
         <td>${(()=>{const o=I.obs.find(x=>x.year===EX.year);const org=o?(o.origin||"demo"):null;
           return org==="source-reported"?'<span class="qbadge q-verified">Source</span>'
-               : org==="demo"?'<span class="qbadge q-modelled">Demo</span>':'<span class="small muted">—</span>'})()}</td>
+               : org==="demo"?'<span class="qbadge q-modelled">Demo</span>':'<span class="small muted">, </span>'})()}</td>
         <td>${qbadge(I.verification)}</td>
         <td class="small"><span class="src" data-act="source" data-args="${I.sourceId}">${esc(SRC(I.sourceId).org)}</span></td></tr>`}).join("")}
   </tbody></table></div>`;
@@ -144,7 +144,7 @@ async function exportCSV(){
 async function exportJSON(){
   const rows=await exRows(),run=RUNS[EX.year];
   const payload={platform:META.platform,generated:new Date().toISOString(),methodology:META.methodology,
-    reportingYear:EX.year,licence:"Open — attribute Rwanda AI Tracker and the underlying source",
+    reportingYear:EX.year,licence:"Open, attribute Rwanda AI Tracker and the underlying source",
     observations:rows.map(I=>{const s=run.iS[I.code];return {code:I.code,name:I.name,dimension:I.dim,output:I.output,
       year:EX.year,value:s.raw,unit:I.unit,score:s.assessed?+s.score.toFixed(2):null,target:I.target,
       confidence:+s.confidence.toFixed(3),evidenceType:I.evidenceType,verification:I.verification,
@@ -166,6 +166,9 @@ VIEWS.sources=async function(){
     "Every figure on this platform resolves to a source. This is the full register: who produced it, when, how reliable it is, and how many indicators depend on it.")
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
      ${kpi("Sources registered",sources.length,"across government, international bodies, academia and industry")}
+     ${kpi("Use cases from the national record",USECASES.filter(u=>u.onNationalRecord).length,
+        `of ${USECASES.length} in the registry`,"var(--teal)",
+        "RAIA's national record is the largest single contributor to the use case registry. This platform's register has been reconciled against it, so no deployment is counted twice.")}
      ${kpi("Indicators with a named source",IND.length,"100% of tracked indicators")}
      ${kpi("Third-party sourced",IND.filter(i=>i.evidenceType==="third-party").length,"independently published and comparable")}
      ${kpi("Estimated or contributed",IND.filter(i=>["estimated"].includes(i.evidenceType)).length,"lowest-confidence tier","var(--amber)")}
@@ -180,7 +183,7 @@ VIEWS.sources=async function(){
        ${sources.map(s=>`<tr class="clickable" data-act="source" data-args="${s.id}">
          <td><b>${esc(s.name)}</b><div class="small muted">${esc(s.note)}</div></td>
          <td>${esc(s.org)}</td><td><span class="tag">${esc(s.provenanceClass||s.type)}</span></td>
-         <td class="n mono">${s.year||"—"}</td>
+         <td class="n mono">${s.year||", "}</td>
          <td class="n"><div class="bar" style="width:70px;display:inline-block"><i style="width:${(s.reliability*100).toFixed(0)}%;background:${s.reliability>.85?"var(--green)":s.reliability>.7?"var(--teal)":"var(--amber)"}"></i></div>
            <span class="mono small"> ${(s.reliability*100).toFixed(0)}</span></td>
          <td class="n mono">${count(s.id)||""}</td>
@@ -217,7 +220,7 @@ function sourceDrawer(id){
     card("About this source","",
       `<div class="prose"><p>${esc(s.note)}</p></div>
        <div class="kv"><span class="k">Publishing organisation</span><span class="v">${esc(s.org)}</span></div>
-       <div class="kv"><span class="k">Reference year</span><span class="v mono">${s.year||"—"}</span></div>
+       <div class="kv"><span class="k">Reference year</span><span class="v mono">${s.year||", "}</span></div>
        <div class="kv"><span class="k">Type</span><span class="v">${esc(s.type)}</span></div>
        <div class="kv"><span class="k">Reliability weighting</span><span class="v mono">${(s.reliability*100).toFixed(0)} / 100</span></div>
        <div class="kv"><span class="k">Indicators depending on it</span><span class="v mono">${inds.length}</span></div>

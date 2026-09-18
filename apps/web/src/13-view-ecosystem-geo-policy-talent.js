@@ -5,7 +5,7 @@ VIEWS.ecosystem=async function(){
   const types=[...new Set(orgs.map(o=>o.type))];
   const ucByOrg=id=>USECASES.filter(u=>u.org===id).length;
   return vh("Ecosystem","Rwanda's AI ecosystem",
-    "The organisations that build, fund, regulate, teach and deploy AI in Rwanda. The register is open — anyone can propose an addition, and every entry shows where it came from.",
+    "The organisations that build, fund, regulate, teach and deploy AI in Rwanda. The register is open, anyone can propose an addition, and every entry shows where it came from.",
     `<button class="btn pri" data-act="contribute" data-args="Organisation">Add an organisation</button>`)
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
      ${types.slice(0,6).map(t=>kpi(t,orgs.filter(o=>o.type===t).length,"")).join("")}
@@ -21,7 +21,24 @@ VIEWS.ecosystem=async function(){
        </tbody></table></div>`)}
    </div>
    <div class="row" style="grid-template-columns:1fr">
-     ${card("Where Rwandan firms are actually building","2026 landscape review — the deployment base",
+     ${cardF("Partners named by RAIA","the state's own view of who is active, by enablement pillar",
+      `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;padding:15px">
+       ${RAIA.pillars.map((P,n)=>{
+         const orgs=ORGS.filter(o=>(o.activityAreas||[]).includes(P.slug));
+         if(!orgs.length)return"";
+         return `<div style="border-left:3px solid ${PAL[n%PAL.length]};padding-left:12px">
+           <b style="font-size:13px">${esc(P.name)}</b>
+           <div style="margin-top:6px;display:flex;flex-wrap:wrap;gap:6px">
+            ${orgs.map(o=>`<span class="tag" data-act="organisation" data-args="${o.id}">${esc(o.name)}</span>`).join("")}</div>
+          </div>`}).join("")}</div>
+       <div style="padding:0 15px 13px" class="small muted">
+        Where this list and the platform's own register differ is informative in both directions: organisations the
+        state names but we had not recorded, and organisations we track that the state does not list.
+        ${srcLine("RAIA_CATALOGUE")}</div>`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:1fr">
+     ${card("Where Rwandan firms are actually building","2026 landscape review, the deployment base",
       `<div class="prose"><p><b>${esc(L26.deploymentBase.headline)}</b></p></div>
        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:12px 0">
        ${L26.deploymentBase.clusters.map((c,i)=>`<div class="card lift" style="box-shadow:none">
@@ -75,14 +92,14 @@ function orgDrawer(id){
 let GEO_STATE={loaded:false,geojson:null,metric:"usecases",attempted:false,level:"district",selected:null};
 
 /* ---------------------------------------------------------------------------
-   RwandaMap — an adapter of knowbee/react-rwanda-map (MIT, Igwaneza Bruce).
+   RwandaMap, an adapter of knowbee/react-rwanda-map (MIT, Igwaneza Bruce).
    The library's contract is preserved: selectedColor, defaultColor,
    strokeColor, nameColor, height, scale, position and an onSelect callback,
    with hover tooltips and click-to-select.
    Two deliberate departures:
      · it renders from GeoJSON supplied at runtime rather than from baked-in
        paths, because this platform must not ship approximated national
-       borders — see the note rendered beneath the map;
+       borders, see the note rendered beneath the map;
      · it supports district level as well as province level, because every
        record in this platform is districted and the library is province-only.
    --------------------------------------------------------------------------- */
@@ -95,7 +112,7 @@ function RwandaMap(el, opts){
     label:"value", onSelect:()=>{}
   }, opts||{});
 
-  const max = Math.max(1, ...o.values.map(v=>v.value||0));
+  const max = Math.max(1..o.values.map(v=>v.value||0));
   const mapName = "rwanda-"+o.level;
   echarts.registerMap(mapName, o.geojson);
 
@@ -131,23 +148,23 @@ VIEWS.geo=async function(){
   const districts=await api.districts();
   const stat=d=>({usecases:USECASES.filter(u=>u.district===d.code&&u.status==="verified").length,
                   orgs:ORGS.filter(o=>o.district===d.name).length});
-  const rows=districts.map(d=>({d,...stat(d)})).sort((a,b)=>(b.usecases+b.orgs)-(a.usecases+a.orgs));
+  const rows=districts.map(d=>({d, ...stat(d)})).sort((a,b)=>(b.usecases+b.orgs)-(a.usecases+a.orgs));
   const withAny=rows.filter(r=>r.usecases+r.orgs>0).length;
   return vh("Geography","Geographic intelligence",
-    "Rwanda's 30 districts, with the ecosystem assets and AI deployments recorded in each. National indicators are national — this layer never disaggregates them into district scores that were never measured.",
+    "Rwanda's 30 districts, with the ecosystem assets and AI deployments recorded in each. National indicators are national, this layer never disaggregates them into district scores that were never measured.",
     `<div class="seg"><button class="${GEO_STATE.level==="district"?"on":""}" data-act="geoLevel" data-args="district">Districts</button>
        <button class="${GEO_STATE.level==="province"?"on":""}" data-act="geoLevel" data-args="province">Provinces</button></div>
      <select class="sel" data-act="geoMetric" data-on="change">
        <option value="usecases">Registered AI use cases</option>
        <option value="orgs">Ecosystem organisations</option></select>
      <button class="btn" data-act="loadGeoFile">Load boundary file</button>
-     <input type="file" id="geoFile" accept=".geojson,.json" style="display:none" data-act="geoFile" data-on="change">`)
+     <input type="file" id="geoFile" accept=".geojson.json" style="display:none" data-act="geoFile" data-on="change">`)
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
      ${kpi("Districts",districts.length,`across ${PROVINCES.length} provinces`)}
      ${kpi("Districts with recorded activity",withAny,`${districts.length-withAny} have no recorded AI activity yet`)}
      ${kpi("District-level indicators","0 of "+IND.length,"the national framework has no subnational indicator","var(--amber)",
        "Every indicator in the national framework is defined at national level. Producing district scores would mean inventing variation that was never measured.")}
-     ${kpi("Concentration",rows[0]?Math.round(100*(rows[0].usecases+rows[0].orgs)/rows.reduce((s,r)=>s+r.usecases+r.orgs,0))+"%":"—",
+     ${kpi("Concentration",rows[0]?Math.round(100*(rows[0].usecases+rows[0].orgs)/rows.reduce((s,r)=>s+r.usecases+r.orgs,0))+"%":", ",
        rows[0]?"of recorded activity is in "+rows[0].d.name:"","var(--amber)")}
    </div>
    <div class="row" style="grid-template-columns:1.3fr 1fr">
@@ -177,7 +194,7 @@ VIEWS.geo=async function(){
      ${card("Why there are no district readiness scores","a deliberate limit, not a missing feature",
        `<div class="prose">
          <p>All ${META.registry.main} indicators in the national main set are defined and collected at national level. There are only two ways to produce a district score from them: disaggregate national values, which fabricates variation nobody measured; or substitute a different indicator set, which would no longer be the national framework.</p>
-         <p>So this layer shows what genuinely exists at district level — where deployments and institutions are — and marks everything else unavailable. A proper subnational layer is buildable from indicators that do exist by district (connectivity, electrification, schools, registered firms), and would be published separately and labelled as context, never folded into the national index.</p>
+         <p>So this layer shows what genuinely exists at district level, where deployments and institutions are, and marks everything else unavailable. A proper subnational layer is buildable from indicators that do exist by district (connectivity, electrification, schools, registered firms), and would be published separately and labelled as context, never folded into the national index.</p>
          <p><b>Boundary data.</b> Official administrative boundaries are not bundled with this build. The map requests ${esc(GEO_CONFIG.boundarySources.join(" then "))} at load, and you can load a file directly with the button above. Expected: ${esc(GEO_CONFIG.expected)}, joined on ${esc(GEO_CONFIG.joinKey)}. Until a boundary file resolves, the map plots district centroids rather than drawing an approximate outline of a real country's borders.</p>
         </div>`)}
    </div>`;
@@ -226,7 +243,7 @@ MOUNT.geo=async function(){
         label:{show:true,position:"right",formatter:p=>p.data.v>0?p.data.name:"",color:cssVar("--ec-axis"),fontSize:10}}]},460)
       .on("click",p=>{if(p.data&&p.data.code)districtDrawer(p.data.code)});
     note.innerHTML=`<span class="tag a">Boundary file not loaded</span>
-      <span class="small muted">Plotting district centroids — every point is clickable. The map will not draw an approximated national or district boundary, because an approximate border is worse than none.
+      <span class="small muted">Plotting district centroids, every point is clickable. The map will not draw an approximated national or district boundary, because an approximate border is worse than none.
       Supply official GeoJSON at <span class="mono">${esc(GEO_CONFIG.boundarySources[0])}</span> or use <b>Load boundary file</b> above; the choropleth then renders immediately. Expected: ${esc(GEO_CONFIG.expected)}.</span>
       <div class="small muted" style="margin-top:6px">Map component adapted from
         <span class="src" data-act="mapCredit">react-rwanda-map</span> (MIT, Igwaneza Bruce).</div>`;
@@ -236,14 +253,14 @@ function mapCreditDrawer(){
   openDrawer("Rwanda map component","ATTRIBUTION AND ADAPTATION",
     card("Origin","",
       `<div class="prose"><p>The map component follows <b>react-rwanda-map</b> by Igwaneza Bruce (MIT licence), an interactive SVG map of Rwanda for React applications.</p>
-        <p>Its prop contract is preserved here — <span class="mono">selectedColor</span>, <span class="mono">defaultColor</span>, <span class="mono">strokeColor</span>, <span class="mono">nameColor</span>, <span class="mono">height</span>, <span class="mono">scale</span>, <span class="mono">position</span> and an <span class="mono">onSelect</span> callback — along with hover tooltips and click-to-select, rendered in this platform's design tokens rather than the library's Tailwind classes.</p></div>
+        <p>Its prop contract is preserved here. <span class="mono">selectedColor</span>, <span class="mono">defaultColor</span>, <span class="mono">strokeColor</span>, <span class="mono">nameColor</span>, <span class="mono">height</span>, <span class="mono">scale</span>, <span class="mono">position</span> and an <span class="mono">onSelect</span> callback, along with hover tooltips and click-to-select, rendered in this platform's design tokens rather than the library's Tailwind classes.</p></div>
        <div class="kv"><span class="k">Upstream</span><span class="v"><a class="src" href="https://github.com/knowbee/react-rwanda-map" target="_blank" rel="noopener">github.com/knowbee/react-rwanda-map ↗</a></span></div>
        <div class="kv"><span class="k">Licence</span><span class="v">MIT</span></div>
        <div class="kv"><span class="k">Author</span><span class="v">Igwaneza Bruce</span></div>`)
     +`<div style="height:12px"></div>`
     +card("Two deliberate departures","",
       `<div class="prose">
-        <p><b>District level, not only province level.</b> The library renders Rwanda's five provinces. Every record in this platform — use cases, organisations, assets — is held at district level, so the adapter renders all 30 districts and aggregates to provinces on demand.</p>
+        <p><b>District level, not only province level.</b> The library renders Rwanda's five provinces. Every record in this platform, use cases, organisations, assets, is held at district level, so the adapter renders all 30 districts and aggregates to provinces on demand.</p>
         <p><b>Geometry loaded at runtime, not bundled.</b> The library ships its province paths inside the package. This platform loads official GeoJSON from <span class="mono">${esc(GEO_CONFIG.boundarySources.join("</span> or <span class='mono'>"))}</span>, or from a file you supply. That is a consequence of a rule the platform applies to itself: it will not ship approximated borders for a real country. Drop in the official NISR or RCMRD level-2 file and the choropleth renders on the next paint.</p>
        </div>`));
 }
@@ -270,7 +287,7 @@ function loadGeoFile(inp){
   const rd=new FileReader();
   rd.onload=()=>{try{const j=JSON.parse(rd.result);
     if(!j.type||!(j.features||j.geometries))throw new Error("Not a GeoJSON FeatureCollection");
-    GEO_STATE.geojson=j;GEO_STATE.loaded=true;toast("Boundaries loaded — "+(j.features?j.features.length:0)+" features");MOUNT.geo();
+    GEO_STATE.geojson=j;GEO_STATE.loaded=true;toast("Boundaries loaded. "+(j.features?j.features.length:0)+" features");MOUNT.geo();
   }catch(e){toast("Could not read that file: "+e.message)}};
   rd.readAsText(f);
 }
@@ -316,11 +333,11 @@ VIEWS.policy=async function(){
              return `<div class="kv" style="cursor:pointer" data-act="indicator" data-args="${g[0]}">
                <span class="k">${ok?'<span style="color:var(--green)">✔</span>':'<span style="color:var(--red)">✗</span>'} ${esc(g[1])}</span>
                <span class="v mono">${I?rawFmt(I,RUN.iS[g[0]].raw):""} · ${I?esc(ORG[I.owner].name.split(" ")[0]):""}</span></div>`}).join("")}
-           <div class="small" style="margin-top:10px;color:var(--amber)">${gates.filter(g=>!gateOK(g[0],RUN)&&["binary","ordinal"].includes((BYCODE[g[0]]||{}).method)).length} of the unmet gates are administrative decisions rather than investments — they can move inside one budget cycle.</div>
+           <div class="small" style="margin-top:10px;color:var(--amber)">${gates.filter(g=>!gateOK(g[0],RUN)&&["binary","ordinal"].includes((BYCODE[g[0]]||{}).method)).length} of the unmet gates are administrative decisions rather than investments, they can move inside one budget cycle.</div>
          </div></div>`)}
    </div>
    <div class="row" style="grid-template-columns:1fr 1fr">
-     ${card("What exists","2026 landscape review — trust, ethics and sovereignty",
+     ${card("What exists","2026 landscape review, trust, ethics and sovereignty",
       `<div class="prose"><p>${esc(L26.governanceGaps.headline)}</p></div>
        ${L26.governanceGaps.exists.map(x=>`<div class="kv"><span class="k">
          <span style="color:var(--green)">✔</span> <b>${esc(x.item)}</b>
@@ -332,6 +349,53 @@ VIEWS.policy=async function(){
          <span class="v"><span class="tag ${x.cost==="lowest"?"g":x.cost==="low"?"a":""}">${esc(x.cost)} cost</span></span></div>`).join("")}
        <div class="small" style="margin-top:10px;color:var(--brand)">${esc(L26.governanceGaps.closingNote)}</div>
        ${srcLine("LANDSCAPE26")}`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:1fr">
+     ${card("What the government's own catalogue says is still missing","RAIA's national AI portfolio, September 2026",
+      `<div class="prose"><p>RAIA publishes eight enablement pillars, and each one separates <b>what exists today</b>
+        from <b>what still needs to be built</b>. That second list is unusual and useful: it is the institution
+        responsible for closing a gap stating on the record that the gap is open.</p>
+        <p>Three instruments this platform scores at zero are confirmed absent by that document. An absence
+        corroborated by the body accountable for filling it is about as strong as evidence of absence gets.</p></div>
+       ${["L26-AIEVAL","L26-AILAW","L26-AIPROC"].map(c=>{const I=BYCODE[c];if(!I)return"";
+         return `<div class="kv" data-act="indicator" data-args="${c}"><span class="k">
+           <span style="color:var(--red)">✗</span> <b>${esc(I.name)}</b>
+           <div class="small muted" style="max-width:640px;margin-top:3px">${esc(I.note||"")}</div></span>
+           <span class="v"><span class="qbadge q-verified">corroborated</span></span></div>`}).join("")}
+       <hr class="sep">
+       <div class="prose"><p><b>One gap has partly closed.</b> This platform recorded no public register of state AI
+         systems. RAIA's national record now lists <b>${RAIA.record.useCases} verified use cases across
+         ${RAIA.record.institutions} institutions</b>, each reviewed against primary documentation and dated. The
+         indicator moves from 0 to 50 rather than to 100: the record carries sector and stage, not risk
+         classification, oversight arrangements or routes to redress. Rwanda now publishes what it deploys, not how
+         those systems are governed.</p></div>
+       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+         <button class="btn sm" data-act="indicator" data-args="L26-AIREG">See the register indicator</button>
+         <a class="btn sm" href="${esc(RAIA.record.url)}" target="_blank" rel="noopener">Open the national record ↗</a></div>
+       ${srcLine("RAIA_CATALOGUE")}`)}
+   </div>
+
+   <div class="row" style="grid-template-columns:1fr">
+     ${cardF("The eight national enablement pillars","RAIA's portfolio, mapped to this platform's indicators",
+      `<table class="dt"><thead><tr><th>Pillar</th><th>Ambition</th><th class="n">Indicators here</th>
+        <th class="n">Score</th><th class="n">Stated gaps</th></tr></thead><tbody>
+       ${RAIA.pillars.map(P=>{
+         const inds=IND.filter(i=>i.raiaPillar===P.slug);
+         const sc=inds.filter(i=>RUN.iS[i.code].assessed);
+         const avg=sc.length?sc.reduce((a,i)=>a+RUN.iS[i.code].score,0)/sc.length:null;
+         return `<tr data-act="pillar" data-args="${P.slug}"><td><b>${String(P.n).padStart(2,"0")} ${esc(P.name)}</b>
+           <div class="small muted">${esc(P.strapline)}</div></td>
+           <td class="small">${P.markers.map(m=>`<span class="tag">${esc(m)}</span>`).join(" ")}</td>
+           <td class="n mono">${inds.length||'<span class="unavail">0</span>'}</td>
+           <td class="n">${avg!==null?`<b style="color:${scColor(avg)}">${fmt(avg)}</b>`:unavailable("no indicator")}</td>
+           <td class="n mono">${P.needs.length}</td></tr>`}).join("")}
+      </tbody></table>
+      <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
+        The framework behind this platform predates RAIA's portfolio, so the two are held side by side rather than
+        merged. Where a pillar shows few indicators. <b>Platforms &amp; Intelligence</b> has
+        ${IND.filter(i=>i.raiaPillar==="platforms-intelligence").length}, it is a measurement gap on this platform,
+        not an absence of national activity.</div>`)}
    </div>
 
    <div class="row" style="grid-template-columns:1.1fr 1fr">
@@ -358,7 +422,7 @@ VIEWS.policy=async function(){
        ${pol.map((p,i)=>`<tr class="clickable" data-act="policy" data-args="${i}">
          <td><b>${esc(p.n)}</b><div class="small muted">${esc(p.d.slice(0,96))}…</div></td>
          <td><span class="tag">${esc(p.cat)}</span></td><td>${esc(p.owner)}</td>
-         <td class="n mono">${p.year||"—"}</td>
+         <td class="n mono">${p.year||", "}</td>
          <td>${p.status.includes("In force")?'<span class="tag g">'+esc(p.status)+'</span>':p.status.includes("Not")?'<span class="tag r">'+esc(p.status)+'</span>':'<span class="tag a">'+esc(p.status)+'</span>'}</td>
          <td class="small"><span class="src" data-act="source" data-args="${p.src}">${esc(SRC(p.src).org)}</span></td></tr>`).join("")}
       </tbody></table>`)}
@@ -373,12 +437,33 @@ VIEWS.policy=async function(){
         </div>${srcLine("AIRM22")}`)}
    </div>`;
 };
+function pillarDrawer(slug){
+  const P=RAIA.pillars.find(x=>x.slug===slug);if(!P)return;
+  const inds=IND.filter(i=>i.raiaPillar===slug);
+  openDrawer(P.name,`NATIONAL ENABLEMENT PILLAR ${String(P.n).padStart(2,"0")} OF 8`,
+    card(P.strapline,"",
+      `<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">${P.markers.map(m=>`<span class="tag b">${esc(m)}</span>`).join("")}</div>
+       <b class="small" style="display:block;margin-top:8px;color:var(--green)">What exists today</b>
+       <ul class="prose" style="margin-top:5px">${P.exists.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+       <b class="small" style="display:block;margin-top:10px;color:var(--amber)">What still needs to be built</b>
+       <ul class="prose" style="margin-top:5px">${P.needs.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+       ${srcLine("RAIA_CATALOGUE")}`)
+    +`<div style="height:12px"></div>`
+    +(inds.length?cardF("Indicators this platform tracks against the pillar",inds.length+" indicators",
+        inds.map(i=>indRow(i)).join(""))
+      :card("Indicators tracked here","",
+        `<div class="empty"><div class="big">Not yet measured</div>
+          This platform holds no indicator against this pillar. That is a gap in the measurement framework rather
+          than a statement about national activity.</div>`)),
+    `<b data-act="go" data-args="policy">Policy &amp; regulation</b> › <b>${esc(P.name)}</b>`);
+}
+
 function policyDrawer(i){
   const p=POLICIES[i];
   openDrawer(p.n,`POLICY INSTRUMENT · ${p.cat}`,
     card("Summary","",`<div class="prose"><p>${esc(p.d)}</p></div>
       <div class="kv"><span class="k">Owner</span><span class="v">${esc(p.owner)}</span></div>
-      <div class="kv"><span class="k">Year</span><span class="v mono">${p.year||"—"}</span></div>
+      <div class="kv"><span class="k">Year</span><span class="v mono">${p.year||", "}</span></div>
       <div class="kv"><span class="k">Status</span><span class="v">${esc(p.status)}</span></div>
       ${p.url?`<div class="kv"><span class="k">Reference</span><span class="v"><a class="src" href="${p.url}" target="_blank" rel="noopener">${esc(p.url)}</a></span></div>`:""}
       ${srcLine(p.src)}`),
@@ -390,7 +475,7 @@ VIEWS.talent=async function(){
   const inds=IND.filter(i=>i.dim==="D1");
   const d=RUN.dS.D1;
   return vh("Capability","AI talent and skills",
-    "The workforce and education pipeline behind Rwanda's AI ambitions — where it is growing, where it is thin, and how confident the measurement is.")
+    "The workforce and education pipeline behind Rwanda's AI ambitions, where it is growing, where it is thin, and how confident the measurement is.")
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
      ${kpi("Skills dimension score",fmt(d.score),`${deltaHtml(d.score,PREV.dS.D1.score," pts")} · coverage ${pct(d.coverage)}`,scColor(d.score))}
      ${kpi("Professionals trained",rawFmt(BYCODE["RWA1-SUB1"],RUN.iS["RWA1-SUB1"].raw),qbadge(BYCODE["RWA1-SUB1"].verification))}
@@ -402,11 +487,33 @@ VIEWS.talent=async function(){
      ${cardF("Talent pipeline over time","normalised scores, all skills indicators",`<div id="tlChart" style="height:320px"></div>`)}
      ${card("The pipeline problem","evidence from the 2022 assessment",
        `<div class="prose">
-         <p>The first-round assessment found <b>science graduates per capita declining from 2016 to 2019</b>, with STEM graduates down 44% by tally and 48% per capita over the same period — a steeper real decline once 2.5% annual population growth is accounted for.</p>
+         <p>The first-round assessment found <b>science graduates per capita declining from 2016 to 2019</b>, with STEM graduates down 44% by tally and 48% per capita over the same period, a steeper real decline once 2.5% annual population growth is accounted for.</p>
          <p>Against that, <b>AI postgraduates numbered 45 in 2022</b>, about 0.5% of 2019 STEM graduates, which the assessment read as limited awareness of AI opportunities among students.</p>
          <p>The encouraging counter-signal is informal: GitHub commits rose <b>over 400% between 2018 and 2019</b> and kept climbing, and AI papers co-authored with Rwandan researchers more than doubled from 63 to 143 between 2019 and 2020. Capability is forming outside the formal education system faster than inside it.</p>
         </div>${srcLine("AIRM22")}`)}
    </div>
+   <div class="row" style="grid-template-columns:1fr">
+     ${card("How many officials have been trained in AI? Three sources, three answers",
+       "an unresolved definitional conflict, published rather than resolved",
+      `<div class="prose"><p>This is the clearest example on the platform of why a number without a definition is
+        not a measurement. Three credible sources report the same apparent quantity and differ by more than three
+        orders of magnitude.</p></div>
+       <table class="dt" style="margin:10px 0"><thead><tr><th>Source</th><th class="n">Figure</th><th>What it appears to count</th><th class="n">Year</th></tr></thead><tbody>
+        <tr data-act="indicator" data-args="RAIA-OFFICIALS-AI"><td><b>RAIA national AI catalogue</b></td>
+          <td class="n mono">134,000+</td><td class="small muted">Government officials reached by AI training of unstated depth</td><td class="n mono">2026</td></tr>
+        <tr data-act="indicator" data-args="RWA8"><td><b>2022 national readiness assessment</b></td>
+          <td class="n mono">41</td><td class="small muted">Civil servants completing AI policy or regulatory training</td><td class="n mono">2022</td></tr>
+        <tr data-act="source" data-args="LANDSCAPE26"><td><b>2026 independent landscape review</b></td>
+          <td class="n mono">50</td><td class="small muted">Civil servants across 24 institutions, national AI literacy programme</td><td class="n mono">2026</td></tr>
+       </tbody></table>
+       <div class="prose"><p>Almost certainly these measure different things: a short awareness or digital-literacy
+         module counted per head, against a structured policy or technical programme. All three may be accurate.</p>
+        <p><b>The platform publishes all three rather than choosing between them.</b> Adopting the largest figure
+         would flatter the skills dimension on an undefined basis; adopting the smallest would ignore an official
+         source. Neither is measurement. What is needed is a published definition of what "trained in AI" counts, and that is a request worth making of RAIA.</p></div>
+       ${srcLine("RAIA_CATALOGUE","cross-checked against the 2022 assessment and the 2026 review")}`)}
+   </div>
+
    <div class="row" style="grid-template-columns:1fr 1.2fr">
      ${cardF("Learning outcomes against the attainment scale","World Bank harmonised test score",
       `<div id="tlHCI" style="height:250px"></div>
@@ -446,20 +553,20 @@ VIEWS.research=async function(){
   const codes=["RWA2-SUBb-CIT","STAN13","TOR82","RWA2.2-COL","STAN10","TOR88","TOR92","TOR32","RWA2-SUBb-FND","TOR109"];
   const inds=codes.map(c=>BYCODE[c]).filter(Boolean);
   return vh("Capability","Research and innovation",
-    "Research output, collaboration and open-source activity — the leading indicators of whether Rwanda can build AI rather than only buy it.")
+    "Research output, collaboration and open-source activity, the leading indicators of whether Rwanda can build AI rather than only buy it.")
   +`<div class="row" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
      ${kpi("AI paper citations",rawFmt(BYCODE["RWA2-SUBb-CIT"],RUN.iS["RWA2-SUBb-CIT"].raw),qbadge("verified")+" Scimago")}
      ${kpi("Researchers (AI/STEM)",rawFmt(BYCODE["TOR82"],RUN.iS["TOR82"].raw),"UNESCO UIS")}
      ${kpi("International collaborations",rawFmt(BYCODE["RWA2.2-COL"],RUN.iS["RWA2.2-COL"].raw),"co-authored programmes, OECD")}
      ${kpi("R&D intensity",rawFmt(BYCODE["TOR109"],RUN.iS["TOR109"].raw)+"%","of GDP · UNESCO","var(--amber)",
        "The 2022 study noted ~0.7% of GDP, with the AI share unknown.")}
-     ${kpi("Open-source AI commits",rawFmt(BYCODE["TOR92"],RUN.iS["TOR92"].raw),"GitHub — proxy measure")}
+     ${kpi("Open-source AI commits",rawFmt(BYCODE["TOR92"],RUN.iS["TOR92"].raw),"GitHub, proxy measure")}
    </div>
    <div class="row" style="grid-template-columns:1fr 1fr">
      ${cardF("Research and open-source trajectory","",`<div id="rsChart" style="height:320px"></div>`)}
      ${card("Reading these numbers carefully","",
        `<div class="prose">
-         <p>Research indicators here are <b>third-party sourced and well covered</b> — Scimago, UNESCO and OECD all publish Rwanda. That makes them among the most reliable measurements on the platform, and also the least controllable by any single Rwandan institution.</p>
+         <p>Research indicators here are <b>third-party sourced and well covered</b>. Scimago, UNESCO and OECD all publish Rwanda. That makes them among the most reliable measurements on the platform, and also the least controllable by any single Rwandan institution.</p>
          <p>GitHub activity is a <b>proxy, not a measurement</b> of AI skill. It captures all software development, country attribution is imperfect, and the 2022 assessment found only 68 commits and between one and three collaborators on actual open-source AI packages between 2019 and 2022. Treat the trend, not the level.</p>
          <p>R&D intensity is the number that should worry policymakers most: around 0.7% of GDP against 3.45% in the United States and 2.4% in China, with the AI-attributable share unknown because no one measures it.</p>
         </div>${srcLine("AIRM22","R&D comparison from the same assessment")}`)}

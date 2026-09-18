@@ -1,5 +1,5 @@
 /* ============================================================================
-   RWANDA AI TRACKER — application configuration
+   RWANDA AI TRACKER, application configuration
    ----------------------------------------------------------------------------
    The UI is unchanged. What changed underneath it: nothing on screen is a
    literal any more. Everything resolves through DATA_SOURCES below, in order:
@@ -8,8 +8,8 @@
      3. the embedded dataset  (so the single file still opens offline)
    ==========================================================================*/
 /* Where to look for the backend when nothing else says.
-   On localhost the API runs on its own port; anywhere else — a Vercel
-   deployment, a reverse proxy, a container — it is served from the same origin,
+   On localhost the API runs on its own port; anywhere else, a Vercel
+   deployment, a reverse proxy, a container, it is served from the same origin,
    so "" is correct and needs no configuration. Opened straight from disk this
    resolves to "" too, the fetch fails harmlessly, and the page falls back to
    the published snapshot and then to its embedded dataset. */
@@ -29,14 +29,14 @@ const META = {
   /* The dashboard is served BY the FastAPI backend in normal operation. The
      resolution order below still degrades gracefully: if the API is down or the
      file is opened straight from disk, the published snapshot and then the
-     embedded dataset keep it usable — and the status bar names which one is in
+     embedded dataset keep it usable, and the status bar names which one is in
      use, so a stale view can never masquerade as a live one. */
-  /* An empty string is a legitimate value — it means "same origin", which is
+  /* An empty string is a legitimate value, it means "same origin", which is
      how the reverse-proxy deployment is configured. Testing truthiness here
      silently sent that deployment to localhost instead. */
   /* Three valid shapes:
        "https://…" or ""   an API to use, "" meaning same origin
-       false               no API at all — a static deployment. Skips the
+       false               no API at all, a static deployment. Skips the
                            request entirely rather than failing one per load
        undefined           fall back to DEFAULT_API_BASE                     */
   apiBase: QS.get("api")

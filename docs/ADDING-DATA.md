@@ -99,6 +99,29 @@ is told it must be `0` or `1`. Accepted writes recompute the scores in memory an
 trail. **They do not persist**: the file remains the source of truth, so an accepted write should be
 committed to `data/observations.json`. That is deliberate — it keeps Git as the provenance record.
 
+## Ingesting RAIA's national record
+
+The record at `ai.gov.rw/record` renders its 34 entries client-side, so they cannot be fetched from the page
+source. The connector takes an export instead:
+
+```bash
+npm run ingest:raia -- record.json          # dry run, prints the reconciliation
+npm run ingest:raia -- record.json --write  # add the entries RAIA lists and we do not
+```
+
+It accepts JSON or CSV with any subset of `name, sector, stage, institution, description, date, status`,
+maps RAIA's sector and stage labels onto ours, and reports three columns: probable matches, entries only in
+RAIA's record, and entries only on this platform. **Matches are proposed, never applied** — two registers
+naming the same deployment differently is a judgement for a person, not a string comparison.
+
+Three ways to obtain the export, easiest first:
+
+1. Open the record in a desktop browser, DevTools → Network → reload, and save the response carrying the
+   entries.
+2. Ask RAIA for a machine-readable copy. A register that describes itself as verified is a reasonable thing
+   to ask this of, and it is the only route that stays current.
+3. Copy the visible entries into a CSV.
+
 ## Adding a comparator country or index
 
 Append to `data/benchmarks.json`. A series needs an `id`, a `name`, an `edition`, a `scale`, a `sourceId`,

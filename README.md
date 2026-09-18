@@ -61,6 +61,7 @@ rwanda-ai-tracker/
 | [docs/METHODOLOGY.md](docs/METHODOLOGY.md) | Normalisation, weighting, aggregation, coverage, confidence, maturity gates |
 | [docs/ADDING-DATA.md](docs/ADDING-DATA.md) | Adding an indicator, an observation, a source or a connector |
 | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) | Configuration, Docker, static hosting, security posture |
+| [docs/ANNOUNCEMENT.md](docs/ANNOUNCEMENT.md) | Ready-to-post copy for sharing the platform publicly |
 | [docs/HOSTING.md](docs/HOSTING.md) | **Deploy it publicly** — GitHub Pages, Cloudflare, Netlify, Vercel, Render, Fly.io, Hugging Face |
 | [docs/VERCEL.md](docs/VERCEL.md) | The Vercel walkthrough in detail |
 | [docs/FRONTEND.md](docs/FRONTEND.md) | Module order, build, adding a view, frontend conventions |
@@ -94,11 +95,12 @@ every score, chart, table, drawer and export. No frontend rebuild, no component 
 |---|---|
 | **AI Readiness and Maturity Framework for Rwanda, 2022** (MINICT / C4IR / GIZ FAIR Forward) | The six-dimension framework, 14 policy outputs and the original 73-indicator register |
 | **Rwanda AI Economic Sizing Report, 2022** (C4IR) | USD 589m full-potential estimate, sector split, five lighthouse use cases, social impact grading, enabler costings |
+| **Rwanda Digital AI Catalogue, 2026** (RAIA, ai.gov.rw) | Eight enablement pillars with what exists and what is still missing; the verified national record — 34 use cases, 42 of 43 institutions, 10 policy and education enablers — plus the partner map and national targets |
 | **Rwanda AI Landscape Review 2026** (Aurasoft Ltd, independent) | 19 new indicators, the 2026 national portfolio, partnership architecture, the constraint stack, governance gaps, the 2026–2030 agenda |
 | **WEF press release, March 2022** | Confirms C4IR Rwanda was set up in 2020 and officially launched 31 March 2022 — Africa's first |
 | World Bank · UNESCO · ITU · ODIN · UNCTAD · OECD · Scimago · Speedtest · Anthropic Economic Index | Third-party comparable series, ingested with attribution |
 
-**92 indicators · 610 observations · 29 registered sources · 27 use cases · 53 organisations · 4 comparator indices.**
+**98 indicators · 614 observations · 30 registered sources · 58 use cases (34 on the national record) · 105 organisations · 4 comparator indices · 8 national enablement pillars.**
 
 ### How much of this is real
 

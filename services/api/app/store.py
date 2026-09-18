@@ -36,6 +36,8 @@ FILES: dict[str, str] = {
     "landscape2026": "landscape-2026.json",
     "benchmarks": "benchmarks.json",
     "proposedIndicators": "proposed-indicators.json",
+    "raiaPortfolio": "raia-portfolio.json",
+    "raiaRecord": "raia-record.json",
 }
 
 

@@ -289,3 +289,93 @@ test("a static deployment can switch the API off entirely", () => {
   (0, eval)(code + ";globalThis.__m = META;");
   assert.equal(globalThis.__m.apiBase, null, "false must disable the API, not fall back to a default");
 });
+
+test("no banner carries the help-badge class", () => {
+  // `.info` is a 15px round badge. A banner that also matches it collapses to
+  // 15px wide and overlaps the page heading — visible only in a browser, so it
+  // is asserted here instead.
+  const html = read(join(ROOT, "apps/web/index.html"), "utf8");
+  const collisions = html.match(/class="banner[^"]*\binfo\b[^"]*"/g) || [];
+  assert.deepEqual(collisions, [], `banner/info class collision: ${collisions.join(", ")}`);
+});
+
+test("the methodology version in the data matches what the interface publishes", () => {
+  const framework = JSON.parse(read(join(ROOT, "data/framework.json"), "utf8"));
+  const html = read(join(ROOT, "apps/web/index.html"), "utf8");
+  assert.match(framework.methodologyVersion, /^v\d+\.\d+$/);
+  assert.ok(html.includes(`["${framework.methodologyVersion}"`),
+    `the About page has no row for ${framework.methodologyVersion}`);
+});
+
+test("the RAIA catalogue is ingested and the register correction is recorded", () => {
+  const raia = JSON.parse(read(join(ROOT, "data/raia-portfolio.json"), "utf8"));
+  assert.equal(raia.pillars.length, 8);
+  assert.equal(raia.record.useCases, 34);
+  assert.ok(raia.pillars.every(p => p.exists.length && p.needs.length),
+    "every pillar must carry both what exists and what is still missing");
+
+  const indicators = JSON.parse(read(join(ROOT, "data/indicators.json"), "utf8")).items;
+  const reg = indicators.find(i => i.code === "L26-AIREG");
+  assert.equal(reg.normalisation, "ordinal", "the register indicator is no longer a yes/no");
+  assert.match(reg.note, /Raised from 0 to 50/);
+
+  // The three corroborated absences must still read zero — an official source
+  // confirming a gap must never be mistaken for the gap being filled.
+  const obs = JSON.parse(read(join(ROOT, "data/observations.json"), "utf8")).items;
+  for (const code of ["L26-AIEVAL", "L26-AILAW", "L26-AIPROC"]) {
+    const o = obs.find(x => x.indicator === code && x.year === 2026);
+    assert.equal(o.value, 0, `${code} should still be absent`);
+    assert.equal(indicators.find(i => i.code === code).corroboratedBy, "RAIA_CATALOGUE");
+  }
+});
+
+test("conflicting figures for the same quantity are all retained", () => {
+  // 134,000 / 41 / 50 officials trained. Adopting any one of them silently
+  // would be the worst available outcome.
+  const indicators = JSON.parse(read(join(ROOT, "data/indicators.json"), "utf8")).items;
+  const raia = indicators.find(i => i.code === "RAIA-OFFICIALS-AI");
+  const legacy = indicators.find(i => i.code === "RWA8");
+  assert.ok(raia && legacy, "both indicators must survive");
+  assert.match(raia.note, /Held separately from RWA8/);
+  assert.notEqual(raia.definition, legacy.definition);
+});
+
+test("the national record is ingested with its provenance intact", () => {
+  const rec = JSON.parse(read(join(ROOT, "data/raia-record.json"), "utf8"));
+  assert.equal(rec.useCases.length, 34);
+  assert.equal(rec.enablers.length, 10);
+  assert.ok(rec.provenanceNote.includes("Transcribed"),
+    "a transcription must say so — it is not a machine-readable export");
+  assert.ok(rec.useCases.every(u => u.name && u.owner && u.raiaStage && u.sector && u.stage),
+    "every entry needs both RAIA's taxonomy and the mapped one");
+
+  const uc = JSON.parse(read(join(ROOT, "data/use-cases.json"), "utf8")).items;
+  assert.equal(uc.filter(u => u.onNationalRecord).length, 34,
+    "all 34 record entries should be flagged, including the three merged duplicates");
+  assert.ok(uc.some(u => u.onNationalRecord === false),
+    "entries held only by this platform must stay distinguishable");
+});
+
+test("the headline count is not mistaken for the indicator it does not define", () => {
+  // RWA10 counts public-sector solutions in production. RAIA's 34 covers all
+  // sectors and all stages, so adopting it wholesale would inflate the score.
+  const obs = JSON.parse(read(join(ROOT, "data/observations.json"), "utf8")).items;
+  const o = obs.find(x => x.indicator === "RWA10" && x.year === 2026);
+  assert.ok(o.value < 34, `RWA10 should be a subset of the record's 34, got ${o.value}`);
+  assert.match(o.note, /not the figure this indicator defines/);
+});
+
+test("RAIA is presented as a contributing data source, not a rival register", () => {
+  const sources = JSON.parse(read(join(ROOT, "data/sources.json"), "utf8")).items;
+  const raia = sources.find(s => s.id === "RAIA_CATALOGUE");
+  assert.match(raia.note, /largest single contributor/);
+  assert.match(raia.note, /reconciled against it/);
+});
+
+test("the copy carries no em dashes", () => {
+  // They render inconsistently across the fonts and platforms this is read on.
+  const src = ["11-view-readiness-adoption.js", "13-view-ecosystem-geo-policy-talent.js",
+               "15-view-about-admin-drawers.js", "shell.html"]
+    .map(f => read(join(ROOT, "apps/web/src", f), "utf8")).join("");
+  assert.equal((src.match(/—/g) || []).length, 0);
+});

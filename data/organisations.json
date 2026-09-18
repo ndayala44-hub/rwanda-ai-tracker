@@ -6,7 +6,9 @@
       "name": "Ministry of ICT and Innovation",
       "type": "Government",
       "role": "AI policy and digital transformation",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "C4IR",
@@ -21,7 +23,12 @@
       "name": "National Institute of Statistics of Rwanda",
       "type": "Government",
       "role": "Official statistics",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "activityAreas": [
+        "platforms-intelligence"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "RISA",
@@ -49,7 +56,9 @@
       "name": "Ministry of Education",
       "type": "Government",
       "role": "Skills and higher education",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "onNationalRecord": true,
+      "entriesOnRecord": 4
     },
     {
       "id": "MINECOFIN",
@@ -77,7 +86,9 @@
       "name": "Rwanda Social Security Board",
       "type": "Government",
       "role": "Social security; lighthouse use-case owner",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "onNationalRecord": true,
+      "entriesOnRecord": 2
     },
     {
       "id": "RRA",
@@ -95,7 +106,7 @@
     },
     {
       "id": "UR",
-      "name": "University of Rwanda — African Centre of Excellence in Data Science",
+      "name": "University of Rwanda. African Centre of Excellence in Data Science",
       "type": "Academia",
       "role": "Research and postgraduate training",
       "district": "Kigali City"
@@ -147,7 +158,9 @@
       "name": "GIZ FAIR Forward",
       "type": "Development partner",
       "role": "AI for All programme",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "BABYL",
@@ -161,7 +174,9 @@
       "name": "Zipline",
       "type": "Company",
       "role": "Autonomous medical delivery",
-      "district": "Muhanga"
+      "district": "Muhanga",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "INSIGHTIV",
@@ -189,7 +204,9 @@
       "name": "Charis UAS",
       "type": "Company",
       "role": "Drone and geospatial imagery analysis",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "AQUASAFI",
@@ -238,7 +255,9 @@
       "name": "National Bank of Rwanda",
       "type": "Government",
       "role": "Fraud detection and cash management",
-      "district": "Kigali City"
+      "district": "Kigali City",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "RNP",
@@ -277,7 +296,9 @@
       "type": "Ecosystem",
       "role": "First of four planned continental scaling hubs; USD 17.5m",
       "district": "Kigali City",
-      "sourceId": "LANDSCAPE26"
+      "sourceId": "LANDSCAPE26",
+      "onNationalRecord": true,
+      "entriesOnRecord": 3
     },
     {
       "id": "KINLP",
@@ -293,7 +314,9 @@
       "type": "Startup",
       "role": "AI-driven medical procurement and supply chain",
       "district": "Kigali City",
-      "sourceId": "LANDSCAPE26"
+      "sourceId": "LANDSCAPE26",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "ISTLEGAL",
@@ -357,7 +380,13 @@
       "type": "Development partner",
       "role": "Three-year government MOU: public-sector developer workflows, 2,000 educator licences, health goals",
       "district": "Kigali City",
-      "sourceId": "LANDSCAPE26"
+      "sourceId": "LANDSCAPE26",
+      "activityAreas": [
+        "use-cases",
+        "skills-delivery"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "GATES",
@@ -365,7 +394,11 @@
       "type": "Development partner",
       "role": "Horizon 1000 (USD 50m with OpenAI) and the AI Scaling Hub (USD 17.5m with C4IR)",
       "district": "Kigali City",
-      "sourceId": "LANDSCAPE26"
+      "sourceId": "LANDSCAPE26",
+      "activityAreas": [
+        "use-cases",
+        "skills-delivery"
+      ]
     },
     {
       "id": "OPENAI",
@@ -373,7 +406,13 @@
       "type": "Development partner",
       "role": "Horizon 1000 primary care deployment partner",
       "district": "Kigali City",
-      "sourceId": "LANDSCAPE26"
+      "sourceId": "LANDSCAPE26",
+      "activityAreas": [
+        "use-cases",
+        "skills-delivery"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     },
     {
       "id": "IDRC",
@@ -389,7 +428,576 @@
       "type": "Government",
       "role": "Agricultural extension and the Tunga voice advisory service",
       "district": "Kigali City",
-      "sourceId": "LANDSCAPE26"
+      "sourceId": "LANDSCAPE26",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "RAIA",
+      "name": "Rwanda Artificial Intelligence Agency",
+      "type": "Government",
+      "role": "National AI delivery engine; mandate spans deployment, research and talent, governance, industry development, international engagement and AI sovereignty",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "governance"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "WORLDBANK",
+      "name": "World Bank Group",
+      "type": "Development partner",
+      "role": "Governance, data and financing partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "governance",
+        "data",
+        "financing-partnerships"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "JICA",
+      "name": "JICA",
+      "type": "Development partner",
+      "role": "Governance and compute partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "governance",
+        "compute"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "SMARTAFRICA",
+      "name": "Smart Africa",
+      "type": "Development partner",
+      "role": "Continental digital transformation alliance; governance partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "governance"
+      ]
+    },
+    {
+      "id": "UNICEF",
+      "name": "UNICEF",
+      "type": "Development partner",
+      "role": "Governance, skills and innovation partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "governance",
+        "skills-delivery",
+        "innovation-research"
+      ]
+    },
+    {
+      "id": "GPAI",
+      "name": "Global Partnership on AI",
+      "type": "International body",
+      "role": "Policy partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "policy-responsible-ai"
+      ]
+    },
+    {
+      "id": "MCF",
+      "name": "Mastercard Foundation",
+      "type": "Development partner",
+      "role": "Policy partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "policy-responsible-ai"
+      ]
+    },
+    {
+      "id": "HORUS",
+      "name": "Horus Labs",
+      "type": "Startup",
+      "role": "Compute partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "compute"
+      ]
+    },
+    {
+      "id": "BSC",
+      "name": "BSC",
+      "type": "Industry",
+      "role": "Compute partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "compute"
+      ]
+    },
+    {
+      "id": "MTN",
+      "name": "MTN Rwanda",
+      "type": "Industry",
+      "role": "Connectivity and compute partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "compute"
+      ]
+    },
+    {
+      "id": "LIQUID",
+      "name": "Liquid Home",
+      "type": "Industry",
+      "role": "Connectivity and compute partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "compute"
+      ]
+    },
+    {
+      "id": "UNDP",
+      "name": "UNDP",
+      "type": "Development partner",
+      "role": "Compute and innovation partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "compute",
+        "innovation-research"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "CENFRI",
+      "name": "Cenfri",
+      "type": "Research institute",
+      "role": "Data partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "data"
+      ]
+    },
+    {
+      "id": "AIIB",
+      "name": "Asian Infrastructure Investment Bank",
+      "type": "Development partner",
+      "role": "Data and financing partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "data",
+        "financing-partnerships"
+      ]
+    },
+    {
+      "id": "MICROSOFT",
+      "name": "Microsoft",
+      "type": "Industry",
+      "role": "Data partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "data"
+      ]
+    },
+    {
+      "id": "SAND",
+      "name": "Sand Technologies",
+      "type": "Industry",
+      "role": "Data and platforms partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "data",
+        "platforms-intelligence"
+      ]
+    },
+    {
+      "id": "IREMBO",
+      "name": "Irembo",
+      "type": "Industry",
+      "role": "Government service delivery platform; platforms partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "platforms-intelligence"
+      ],
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "AFDB",
+      "name": "African Development Bank",
+      "type": "Development partner",
+      "role": "Financing and use-case partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "financing-partnerships"
+      ]
+    },
+    {
+      "id": "GGGI",
+      "name": "Global Green Growth Institute",
+      "type": "Development partner",
+      "role": "Financing partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "financing-partnerships"
+      ]
+    },
+    {
+      "id": "WEF",
+      "name": "World Economic Forum",
+      "type": "International body",
+      "role": "Financing and partnership convenor; C4IR network host",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "financing-partnerships"
+      ]
+    },
+    {
+      "id": "GOOGLE",
+      "name": "Google",
+      "type": "Industry",
+      "role": "Skills and innovation partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "skills-delivery",
+        "innovation-research"
+      ]
+    },
+    {
+      "id": "ORACLE",
+      "name": "Oracle",
+      "type": "Industry",
+      "role": "Skills partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "skills-delivery"
+      ]
+    },
+    {
+      "id": "AIMS",
+      "name": "African Institute for Mathematical Sciences",
+      "type": "Academia",
+      "role": "Skills partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "skills-delivery"
+      ]
+    },
+    {
+      "id": "AISCA",
+      "name": "AISCA",
+      "type": "Ecosystem",
+      "role": "Skills partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "skills-delivery"
+      ]
+    },
+    {
+      "id": "FCDO",
+      "name": "FCDO",
+      "type": "Development partner",
+      "role": "Skills partner; co-funder of the TAIRI Lab",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "skills-delivery"
+      ]
+    },
+    {
+      "id": "EPFL",
+      "name": "EPFL",
+      "type": "Academia",
+      "role": "Skills and use-case partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "skills-delivery"
+      ]
+    },
+    {
+      "id": "NORRSKEN",
+      "name": "Norrsken",
+      "type": "Ecosystem",
+      "role": "Innovation hub partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "innovation-research"
+      ]
+    },
+    {
+      "id": "GLOBALFUND",
+      "name": "The Global Fund",
+      "type": "Development partner",
+      "role": "Use-case partner",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "activityAreas": [
+        "use-cases"
+      ]
+    },
+    {
+      "id": "ONEACREFUND",
+      "name": "One Acre Fund",
+      "type": "Development partner",
+      "role": "Farmer-facing voice query tooling",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "MININFRA",
+      "name": "MININFRA",
+      "type": "Government",
+      "role": "Infrastructure permitting and review",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "MITRAISE",
+      "name": "MIT RAISE",
+      "type": "Academia",
+      "role": "Day of AI teacher programme, reaching 5,000+ teachers",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "JAMFORTETECH",
+      "name": "JAM-Forte Technologies",
+      "type": "Academia",
+      "role": "Software and AI development",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "FARMINGO",
+      "name": "Farmingo",
+      "type": "Startup",
+      "role": "Precision agriculture for smallholders",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "KASHA",
+      "name": "Kasha",
+      "type": "Startup",
+      "role": "Health product distribution with demand forecasting",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "DOCTORAI",
+      "name": "Doctor AI",
+      "type": "Startup",
+      "role": "AI-assisted medical diagnosis",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "SWISSTPH",
+      "name": "Swiss TPH",
+      "type": "Development partner",
+      "role": "Paediatric clinical decision support research",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "BCG",
+      "name": "BCG",
+      "type": "Development partner",
+      "role": "Landscaping and AI readiness to 2030",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "NESA",
+      "name": "NESA",
+      "type": "Government",
+      "role": "National examinations and assessment authority",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "RWANDACENTER",
+      "name": "Rwanda Center for the Fourth Industrial Revolution",
+      "type": "Government",
+      "role": "Convenes the ecosystem and runs the AI Scaling Hub",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "EFICHE",
+      "name": "eFiche",
+      "type": "Industry",
+      "role": "Technology partner on frontline clinical decision support",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "ACREAFRICA",
+      "name": "ACRE Africa",
+      "type": "Startup",
+      "role": "Index-based crop insurance forecasting",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "PROTO",
+      "name": "Proto",
+      "type": "Industry",
+      "role": "Multilingual customer experience automation",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "DAWAHEALTH",
+      "name": "Dawa Health",
+      "type": "Startup",
+      "role": "Virtual maternal and primary care",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "AFRIKABAL",
+      "name": "Afrikabal",
+      "type": "Startup",
+      "role": "Agricultural trading platform with price analytics",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "RWANDAMEDICA",
+      "name": "Rwanda Medical Supply",
+      "type": "Government",
+      "role": "National medical supply forecasting and distribution",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "ATAS",
+      "name": "ATAS",
+      "type": "Startup",
+      "role": "Dropout risk prediction and automated grading",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 2
+    },
+    {
+      "id": "ZURIHEALTH",
+      "name": "Zuri Health",
+      "type": "Startup",
+      "role": "Virtual clinical services",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "TRICOGHEALTH",
+      "name": "Tricog Health",
+      "type": "Startup",
+      "role": "Remote cardiac diagnostics",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "AMPERSAND",
+      "name": "Ampersand",
+      "type": "Startup",
+      "role": "Electric motorcycle energy optimisation",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "RWANDASPACEA",
+      "name": "Rwanda Space Agency",
+      "type": "Government",
+      "role": "Earth observation for agricultural monitoring",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
+    },
+    {
+      "id": "MINISTRYOFHE",
+      "name": "Ministry of Health",
+      "type": "Government",
+      "role": "Owns health sector AI use cases",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 4
+    },
+    {
+      "id": "FAO",
+      "name": "FAO",
+      "type": "Development partner",
+      "role": "Agricultural advisory content and expertise",
+      "district": "Kigali City",
+      "sourceId": "RAIA_CATALOGUE",
+      "onNationalRecord": true,
+      "entriesOnRecord": 1
     }
   ]
 }

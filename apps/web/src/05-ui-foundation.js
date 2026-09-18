@@ -1,11 +1,11 @@
 
 /* ============================ UI FOUNDATION ============================== */
 const $=s=>document.querySelector(s);
-const fmt=(v,d)=>v===null||v===undefined||isNaN(v)?"—":Number(v).toLocaleString("en-US",{minimumFractionDigits:d===undefined?1:d,maximumFractionDigits:d===undefined?1:d});
-const pct=v=>v===null||v===undefined?"—":(v*100).toFixed(0)+"%";
+const fmt=(v,d)=>v===null||v===undefined||isNaN(v)?", ":Number(v).toLocaleString("en-US",{minimumFractionDigits:d===undefined?1:d,maximumFractionDigits:d===undefined?1:d});
+const pct=v=>v===null||v===undefined?", ":(v*100).toFixed(0)+"%";
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function rawFmt(I,v){
-  if(v===null||v===undefined)return "—";
+  if(v===null||v===undefined)return ", ";
   if(I.method==="binary")return v>=1?"Yes":"No";
   if(I.method==="ordinal")return v>=100?"In force":v>=50?"Drafted / pending":"Not in place";
   if(I.unit==="rank")return "#"+Math.round(v)+" of 172";
@@ -15,7 +15,7 @@ function rawFmt(I,v){
 const scColor=s=>s===null?"var(--dim)":s>=70?"var(--green)":s>=50?"var(--teal)":s>=35?"var(--amber)":"var(--red)";
 const confLabel=c=>c>=.8?"High":c>=.65?"Medium-high":c>=.5?"Medium":c>=.35?"Medium-low":"Low";
 function deltaHtml(a,b,suf){
-  if(a===null||b===null||a===undefined||b===undefined)return '<span class="delta flat">—</span>';
+  if(a===null||b===null||a===undefined||b===undefined)return '<span class="delta flat">, </span>';
   const d=a-b,c=d>.05?"up":d<-.05?"down":"flat";
   return `<span class="delta ${c}">${d>0?"▲":d<0?"▼":"■"} ${Math.abs(d).toFixed(1)}${suf||""}</span>`;
 }
@@ -50,7 +50,7 @@ function toggleTheme(){
   // so they are rebuilt rather than restyled.
   killCharts();go(VIEW);
 }
-/* language — the dictionary is real but partial; coverage is stated honestly */
+/* language, the dictionary is real but partial; coverage is stated honestly */
 const I18N={rw:{"Overview":"Incamake","Rwanda AI Journey":"Urugendo rwa AI mu Rwanda","AI Readiness & Maturity":"Ubushobozi n'Ubukure bwa AI",
  "AI Adoption":"Ikoreshwa rya AI","Investment & Economic Opportunity":"Ishoramari n'Amahirwe y'Ubukungu","AI Ecosystem":"Urwego rwa AI",
  "Sectors":"Inzego","Geographic Intelligence":"Amakuru y'Uturere","Global Position":"Umwanya ku Isi","Policy & Regulation":"Politiki n'Amabwiriza",
@@ -60,7 +60,7 @@ const I18N={rw:{"Overview":"Incamake","Rwanda AI Journey":"Urugendo rwa AI mu Rw
 let LANG="en";
 function t(s){return LANG==="rw"&&I18N.rw[s]?I18N.rw[s]:s}
 function setLang(l){LANG=l;$("#langbtn").textContent=l.toUpperCase();
-  if(l==="rw")toast("Kinyarwanda navigation enabled. Body content is English-only in this build — translation coverage is "+Math.round(Object.keys(I18N.rw).length/45*100)+"%.");
+  if(l==="rw")toast("Kinyarwanda navigation enabled. Body content is English-only in this build, translation coverage is "+Math.round(Object.keys(I18N.rw).length/45*100)+"%.");
   renderNav();renderFooter();go(VIEW);}
 
 /* charts */
@@ -86,7 +86,7 @@ function ec(el,opt,h){
     backgroundColor:"transparent",animationDuration:400,
     textStyle:{color:cssVar("--ec-axis"),fontFamily:"Inter, Segoe UI, sans-serif",fontSize:11},
     tooltip:{backgroundColor:cssVar("--ec-tip"),borderColor:cssVar("--ec-tipline"),borderWidth:1,
-      textStyle:{color:cssVar("--txt"),fontSize:12},extraCssText:"box-shadow:0 8px 26px rgba(0,0,0,.14);border-radius:8px"}
+      textStyle:{color:cssVar("--txt"),fontSize:12},extraCssText:"box-shadow:0 8px 26px rgba(0,0,0.14);border-radius:8px"}
   },opt));
   CHARTS.push(c);return c;
 }
@@ -141,7 +141,7 @@ function vh(eyebrow,title,sub,tools){
     ${sub?`<p>${sub}</p>`:""}</div><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${tools||""}</div></div></div>`;
 }
 /* Every data table gets a caption and column scope. The caption is visually
-   hidden — it exists for screen readers, which otherwise meet an unlabelled
+   hidden, it exists for screen readers, which otherwise meet an unlabelled
    grid of numbers. */
 function dtable(caption,headers,rows,opts){
   opts=opts||{};
@@ -181,7 +181,7 @@ function sparkArea(vals,color){
 }
 function srcLine(sid,extra){
   const s=SRC(sid);if(!s)return "";
-  return `<div class="prov" style="margin-top:8px">Source: <span class="src" data-act="source" data-args="${sid}">${esc(s.name)} — ${esc(s.org)}${s.year?", "+s.year:""}</span>${extra?" · "+extra:""}</div>`;
+  return `<div class="prov" style="margin-top:8px">Source: <span class="src" data-act="source" data-args="${sid}">${esc(s.name)}. ${esc(s.org)}${s.year?", "+s.year:""}</span>${extra?" · "+extra:""}</div>`;
 }
 
 /* ------------------------------------------------------------ navigation */
@@ -206,22 +206,22 @@ function renderNav(){
 }
 function renderFresh(){
   const cov=(RUN.readiness.coverage+RUN.maturity.coverage)/2;
-  const pend=CONTRIBUTIONS.filter(c=>c.state!=="Accepted — correction queued").length;
+  const pend=CONTRIBUTIONS.filter(c=>c.state!=="Accepted, correction queued").length;
   $("#freshbar").innerHTML=`
    <span><span class="dot g pulse"></span>Platform live</span>
    <span class="scrub">Reporting year
      <input type="range" id="yearSlider" min="${META.firstYear}" max="${META.cycle}" step="1" value="${YEAR}"
        data-act="yearPreview" data-on="input" data-act="setYearFromInput" data-on="change"
        data-tip="Move the whole platform to another reporting year. Every score, chart and table re-computes for that year.">
-     <b id="yearLab">${YEAR}</b><span id="yearHist">${YEAR===META.cycle?'<span class="tag g">Latest cycle</span>':`<span class="histbadge">Viewing ${YEAR} — historical</span>`}</span></span>
+     <b id="yearLab">${YEAR}</b><span id="yearHist">${YEAR===META.cycle?'<span class="tag g">Latest cycle</span>':`<span class="histbadge">Viewing ${YEAR}, historical</span>`}</span></span>
    <span>Indicators <b>${IND.length}</b> of ${META.registry.main}</span>
    <span>Coverage <b>${pct(cov)}</b></span>
    <span>Confidence <b>${confLabel((RUN.readiness.confidence+RUN.maturity.confidence)/2)}</b></span>
    <span>Sources <b>${Object.keys(SOURCES).length}</b></span>
    <span>In review <b>${pend}</b></span>
-   <span data-tip="${META.dataOrigin==="api"?"Served live by the FastAPI backend at "+META.apiBase+". Edit a value in the data layer and it appears here on the next load.":META.dataOrigin==="snapshot"?"The API was not reachable, so this is the published snapshot at "+META.snapshotUrl+". Figures are as at the last build.":"Neither the API nor a snapshot was reachable — running on the dataset embedded in this file."}">
+   <span data-tip="${META.dataOrigin==="api"?"Served live by the FastAPI backend at "+META.apiBase+". Edit a value in the data layer and it appears here on the next load.":META.dataOrigin==="snapshot"?"The API was not reachable, so this is the published snapshot at "+META.snapshotUrl+". Figures are as at the last build.":"Neither the API nor a snapshot was reachable, running on the dataset embedded in this file."}">
      Backend <b>${META.dataOrigin==="api"?"FastAPI · live":META.dataOrigin==="snapshot"?"snapshot":"offline"}</b></span>
-   ${META.provenance?`<span data-tip="${(META.provenance.observations.byOrigin["source-reported"]||0)} of ${META.provenance.observations.total} observations are reported by a named source. The remainder are demo values, labelled everywhere they appear, and excluded from nothing — they are simply marked so you know which is which.">
+   ${META.provenance?`<span data-tip="${(META.provenance.observations.byOrigin["source-reported"]||0)} of ${META.provenance.observations.total} observations are reported by a named source. The remainder are demo values, labelled everywhere they appear, and excluded from nothing, they are simply marked so you know which is which.">
      Source-reported <b>${(META.provenance.observations.sourceReportedShare*100).toFixed(0)}%</b></span>`:""}
    <span style="margin-left:auto" class="muted">Independent, multi-source · not a government publication</span>`;
 }
@@ -246,7 +246,7 @@ const VIEWS={},MOUNT={};
    The view, reporting year, cross-filters and any open indicator live in the
    URL. Without this a policymaker cannot send a colleague "the 2023 view of D5
    filtered to agriculture", cannot bookmark it, and the back button does
-   nothing — on a platform whose output is citations in policy papers.
+   nothing, on a platform whose output is citations in policy papers.
    Shape:  #/readiness?year=2023&sector=AGR&indicator=RWA10
    -------------------------------------------------------------------------*/
 let SUPPRESS_ROUTE=false;

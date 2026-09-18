@@ -4,7 +4,7 @@
 let DB={};
 function bindDB(){
   DB={META,SOURCES,ORGS,ORG,SECTORS,SECTOR,DISTRICTS,PROVINCES,GEO_CONFIG,ECON2022,L26,
-    DIMS,OUTPUTS,IND,BYCODE,JOURNEY,POLICIES,GLOSSARY,USECASES,CONTRIBUTIONS,LADDER,BENCH,ROADMAP,
+    DIMS,OUTPUTS,IND,BYCODE,JOURNEY,POLICIES,GLOSSARY,USECASES,CONTRIBUTIONS,LADDER,BENCH,ROADMAP,RAIA,RECORD,
     RUNS,RUN,PREV,ML,TARGETS,YEARS,YEAR};
 }
 const AUDIT=[];
@@ -48,6 +48,8 @@ const api=(function(){
     async landscape(){return (await remote("/api/landscape/2026"))||L26},
     async benchmarks(){return (await remote("/api/benchmarks"))||BENCH},
     async roadmap(){return (await remote("/api/proposed-indicators"))||ROADMAP},
+    async raia(){return (await remote("/api/raia-portfolio"))||RAIA},
+    async record(){return (await remote("/api/raia-record"))||RECORD},
     async useCases(f){let r=(await remote("/api/use-cases"))||USECASES;
       if(f&&f.sector)r=r.filter(u=>u.sector===f.sector);
       if(f&&f.district)r=r.filter(u=>u.district===f.district);
@@ -62,7 +64,7 @@ const api=(function(){
     async contributions(){return (await remote("/api/contributions"))||CONTRIBUTIONS},
     async glossary(){return GLOSSARY},
     async audit(){return AUDIT},
-    /* writes — admin only, RBAC enforced */
+    /* writes, admin only, RBAC enforced */
     async updateObservation(code,year,value,reason){
       requireRole(["Data Administrator","Platform Administrator"]);
       const I=BYCODE[code],o=I.obs.find(o=>o.year===year);
@@ -73,7 +75,7 @@ const api=(function(){
       if(rec)rec.value=value;else OBSERVATIONS.push({indicator:code,period:String(year),year,value,
         collectedOn:new Date().toISOString().slice(0,10),sourceId:I.sourceId,verification:"in_review",staleCycles:0});
       I.verification="in_review";I.notReported=false;I.lastUpdated=new Date().toISOString().slice(0,10);
-      recompute();logAudit("OBSERVATION_UPDATED",code+"/"+year,before,value+(reason?" — "+reason:""));
+      recompute();logAudit("OBSERVATION_UPDATED",code+"/"+year,before,value+(reason?". "+reason:""));
       return {ok:true};
     },
     async setVerification(code,state){
@@ -83,7 +85,7 @@ const api=(function(){
     },
     async addContribution(rec){
       CONTRIBUTIONS.unshift(Object.assign({id:"C-"+(1043+CONTRIBUTIONS.length),when:new Date().toISOString().slice(0,10),
-        state:"Awaiting review",reviewer:"—"},rec));
+        state:"Awaiting review",reviewer:", "},rec));
       logAudit("CONTRIBUTION_SUBMITTED",rec.target||"new",null,rec.value);return {ok:true};
     },
     async loadDataset(json){

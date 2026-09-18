@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "sourceId": "RAIA_CATALOGUE",
+  "publisher": "Rwanda Artificial Intelligence Agency (RAIA)",
+  "url": "https://ai.gov.rw/",
+  "readOn": "2026-09-17",
+  "note": "RAIA's national AI opportunity portfolio, as published. Each pillar states what exists today and what still needs to be built. That second list is unusual and valuable: it is the responsible institution stating on the record what is absent, which is the strongest available corroboration for an indicator scored zero.",
+  "nationalGoals": [
+    {
+      "n": 1,
+      "name": "AI-enabled development",
+      "detail": "AI in health, education, agriculture and other sectors"
+    },
+    {
+      "n": 2,
+      "name": "AI-enabled workforce and society",
+      "detail": "Skills and education"
+    },
+    {
+      "n": 3,
+      "name": "Competitive AI industry",
+      "detail": "Net exporter of AI expertise"
+    }
+  ],
+  "anchoring": "AI sits inside Vision 2050 and NST2. It is national policy rather than a standalone programme.",
+  "sectorLadder": {
+    "stages": [
+      "Data",
+      "Consolidation",
+      "Intelligence",
+      "AI"
+    ],
+    "note": "RAIA's four-stage sector progression. Health is named as the working proof; agriculture, education and energy & climate are the sectors to replicate it in.",
+    "sectors": [
+      {
+        "sector": "HLT",
+        "stage": 4,
+        "detail": "The working model: consolidated, interoperable sector data feeding a live intelligence layer"
+      },
+      {
+        "sector": "AGR",
+        "stage": 2,
+        "detail": "Named for replication of the health model"
+      },
+      {
+        "sector": "PUB",
+        "stage": 2,
+        "detail": "Education named for replication of the health model"
+      },
+      {
+        "sector": "ENE",
+        "stage": 2,
+        "detail": "Energy and climate named for replication of the health model"
+      }
+    ]
+  },
+  "pillars": [
+    {
+      "n": 1,
+      "slug": "governance",
+      "name": "Governance",
+      "strapline": "RAIA, the national AI delivery engine",
+      "dimensions": [
+        "D4",
+        "D6"
+      ],
+      "markers": [
+        "RAIA",
+        "One counterpart",
+        "Delivery engine"
+      ],
+      "exists": [
+        "RAIA established as a dedicated institution",
+        "A national AI agenda embedded in Vision 2050 and NST2",
+        "Government actively investing in AI infrastructure and institutional capability"
+      ],
+      "needs": [
+        "Deep institutional and programme-delivery capacity inside RAIA",
+        "Coordination mechanisms across ministries, sectors and development partners",
+        "Investment facilitation capability",
+        "Sustained international partnerships"
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "policy-responsible-ai",
+      "name": "Policy & Responsible AI",
+      "strapline": "The trust layer: assurance, testing, cybersecurity",
+      "dimensions": [
+        "D6"
+      ],
+      "markers": [
+        "Trust layer",
+        "Assurance & testing",
+        "Cybersecurity"
+      ],
+      "exists": [
+        "Rwanda's data protection and cybersecurity legal framework",
+        "RAIA's governance mandate covering responsible AI",
+        "Responsible AI positioned as a design principle rather than an afterthought"
+      ],
+      "needs": [
+        "Model assurance and AI testing and evaluation capability: tools and institutions that verify AI systems before and during deployment",
+        "Practical, sector-usable responsible-AI rules and guidance",
+        "Cybersecurity capability scaled to an AI-enabled government",
+        "Institutional capacity to operate all of the above continuously"
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "compute",
+      "name": "Compute",
+      "strapline": "Sovereign and commercial GPU infrastructure",
+      "dimensions": [
+        "D2"
+      ],
+      "markers": [
+        "Sovereign GPUs",
+        "24–48+ by 2028",
+        "3× cloud utilisation"
+      ],
+      "exists": [
+        "Data-centre infrastructure in operation and expanding",
+        "Cloud infrastructure serving government and enterprise workloads",
+        "Growing compute demand from government use cases, universities and startups"
+      ],
+      "needs": [
+        "Expanded sovereign GPU capacity with high utilisation discipline",
+        "Compute-access programmes for startups, universities and government teams",
+        "Commercial AI compute facilities and cloud services",
+        "Financing and offtake structures that make compute investment bankable"
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "data",
+      "name": "Data",
+      "strapline": "AI-ready datasets and Kinyarwanda AI data",
+      "dimensions": [
+        "D3"
+      ],
+      "markers": [
+        "100+ AI-ready datasets",
+        "Kinyarwanda AI data",
+        "National Data Hub"
+      ],
+      "exists": [
+        "Health as the working model: consolidated, interoperable sector data feeding a live intelligence layer",
+        "Near-universal digital ID providing the identity rail for trusted data services",
+        "Government datasets across sectors at varying maturity, awaiting transformation into AI-ready form"
+      ],
+      "needs": [
+        "The National Data Hub itself: discovery, access and responsible-reuse infrastructure",
+        "Sector data exchanges replicating the health model in agriculture, education and energy",
+        "Systematic dataset digitisation, documentation and AI-readiness pipelines",
+        "Kinyarwanda text and speech corpora at model-training quality and scale",
+        "Data governance capability across institutions"
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "platforms-intelligence",
+      "name": "Platforms & Intelligence",
+      "strapline": "Shared intelligence platforms for every sector",
+      "dimensions": [
+        "D2",
+        "D4"
+      ],
+      "markers": [
+        "Stack level 3",
+        "Shared services",
+        "Health as proof"
+      ],
+      "exists": [
+        "Health's intelligence layer as the working demonstration",
+        "Consolidated data environments emerging under the national data agenda",
+        "Government demand: every sector specifies an intelligence layer as stage 3 of its journey"
+      ],
+      "needs": [
+        "Replication of the health intelligence model in agriculture, education and energy & climate",
+        "Shared platform services: analytics infrastructure, model hosting and deployment, decision-support tooling",
+        "A national intelligence capability aggregating across sector layers",
+        "Platform operating models: who runs shared platforms and how sectors and private innovators access them"
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "financing-partnerships",
+      "name": "Financing & Partnerships",
+      "strapline": "From pilot to scale: capital for every layer",
+      "dimensions": [
+        "D5"
+      ],
+      "markers": [
+        "Outcome-based fund $3–6M",
+        "Blended finance",
+        "30+ use-case pipeline"
+      ],
+      "exists": [
+        "A national portfolio of 30+ AI use cases generating a deal pipeline",
+        "Government acting as an active market participant",
+        "Development partners and philanthropies already engaged"
+      ],
+      "needs": [
+        "The outcome-based fund: capitalisation, governance and payment-verification machinery",
+        "Blended-finance structures matching capital to the right layers of the stack",
+        "Co-investment vehicles and PPP frameworks for AI infrastructure",
+        "Scale-up capital pathways for solutions that have proven out"
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "skills-delivery",
+      "name": "Skills & Delivery",
+      "strapline": "1 Million Coders and an AI-ready public workforce",
+      "dimensions": [
+        "D1"
+      ],
+      "markers": [
+        "1 Million Coders",
+        "134,000+ officials trained",
+        "50,000+ STEM graduates 2024"
+      ],
+      "exists": [
+        "More than 134,000 government officials trained in AI",
+        "More than 50,000 STEM graduates in 2024",
+        "Universities and training providers active across the ecosystem",
+        "A young, growing, increasingly AI-ready workforce"
+      ],
+      "needs": [
+        "Coding and AI training programmes at national scale",
+        "Apprenticeship pipelines connecting training to employment",
+        "Deep technical tracks from developer training through to research and PhD programmes",
+        "Continuous reskilling as AI reshapes public- and private-sector roles"
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "innovation-research",
+      "name": "Innovation & Research",
+      "strapline": "Rwanda-based AI capability and IP",
+      "dimensions": [
+        "D1",
+        "D5"
+      ],
+      "markers": [
+        "8+ applied AI projects",
+        "10+ funded researchers",
+        "Local IP"
+      ],
+      "exists": [
+        "Universities and research institutions active in the AI ecosystem",
+        "A startup community building on Rwanda's digital rails",
+        "Government-driven use cases creating applied-research problems with real deployment paths",
+        "RAIA's mandate covering research and talent"
+      ],
+      "needs": [
+        "Funded research programmes and AI labs with critical mass",
+        "Commercialisation pathways from university research to companies and products",
+        "Startup financing across stages",
+        "Innovation hubs connecting researchers, founders, government and capital"
+      ]
+    }
+  ],
+  "nationalTargets": [
+    {
+      "name": "1 Million Coders",
+      "pillar": "skills-delivery",
+      "value": "1,000,000",
+      "status": "ambition"
+    },
+    {
+      "name": "AI-ready public datasets",
+      "pillar": "data",
+      "value": "100+",
+      "status": "ambition",
+      "indicator": "RAIA-DATASETS"
+    },
+    {
+      "name": "Sovereign GPUs by 2028",
+      "pillar": "compute",
+      "value": "24–48+",
+      "status": "ambition",
+      "indicator": "RAIA-GPU"
+    },
+    {
+      "name": "Cloud utilisation improvement",
+      "pillar": "compute",
+      "value": "3×",
+      "status": "ambition"
+    },
+    {
+      "name": "National Data Hub",
+      "pillar": "data",
+      "value": "to be built",
+      "status": "ambition"
+    },
+    {
+      "name": "Outcome-based fund",
+      "pillar": "financing-partnerships",
+      "value": "USD 3–6m",
+      "status": "ambition"
+    },
+    {
+      "name": "Use-case pipeline",
+      "pillar": "financing-partnerships",
+      "value": "30+",
+      "status": "current"
+    }
+  ],
+  "record": {
+    "useCases": 34,
+    "institutions": 43,
+    "enablers": 10,
+    "url": "https://ai.gov.rw/record/",
+    "description": "Every AI use case running in Rwanda. Each entry reviewed against primary documentation and dated.",
+    "capturedOn": "2026-09-17",
+    "retrievalNote": "Entries transcribed from the published record on 17 September 2026 and reconciled against this platform's own registry. 42 of 43 institutions were captured. Replace with a machine-readable export when one is available, scripts/ingest_raia_record.py accepts it directly.",
+    "overlapWithPlatform": 3,
+    "overlapNote": "Only three entries are common to both registers. The two use almost entirely different names for Rwandan AI deployments, and cover different ground: the national record is public-sector weighted and current, this platform's earlier register carried private-sector and historical deployments."
+  },
+  "investorArchetypes": [
+    "Technology companies",
+    "Venture capital & private equity",
+    "Development finance institutions",
+    "Philanthropies & foundations",
+    "Strategic investors"
+  ],
+  "participationModels": [
+    {
+      "n": 1,
+      "name": "Build the foundations",
+      "detail": "Digitisation, data infrastructure, compute, platforms, connectivity"
+    },
+    {
+      "n": 2,
+      "name": "Build AI readiness in a sector",
+      "detail": "Data → Consolidation → Intelligence → AI"
+    },
+    {
+      "n": 3,
+      "name": "Build AI applications",
+      "detail": "Models, startups, sector-specific applications, commercial products"
+    },
+    {
+      "n": 4,
+      "name": "Scale proven AI",
+      "detail": "Growth capital, deployment financing, public-private partnerships"
+    },
+    {
+      "n": 5,
+      "name": "Build the ecosystem",
+      "detail": "Talent, research, innovation, governance, AI safety, Kinyarwanda AI"
+    }
+  ]
+}

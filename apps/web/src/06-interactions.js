@@ -10,7 +10,7 @@ function setYear(y,rerender){
   const sl=document.getElementById("yearSlider");if(sl&&+sl.value!==YEAR)sl.value=YEAR;
   const hb=document.getElementById("yearHist");
   if(hb)hb.innerHTML=YEAR===META.cycle?'<span class="tag g">Latest cycle</span>'
-    :`<span class="histbadge">Viewing ${YEAR} — historical</span>`;
+    :`<span class="histbadge">Viewing ${YEAR}, historical</span>`;
   if(rerender!==false)go(VIEW);
 }
 function setFilter(k,v){
@@ -187,8 +187,8 @@ function histogram(el,scores){
 }
 
 /* ==================== CHARTS AS TABLES ==================================
-   Every chart carries a text alternative. This is the accessibility fix — a
-   canvas is invisible to a screen reader — but it also serves two other
+   Every chart carries a text alternative. This is the accessibility fix, a
+   canvas is invisible to a screen reader, but it also serves two other
    audiences the platform names: analysts who want the numbers, and users on
    the low-bandwidth connections that 34% smartphone ownership implies.
    ======================================================================= */

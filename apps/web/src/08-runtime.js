@@ -3,9 +3,9 @@
    The dashboard is a single portable file. Anything it loads from outside
    itself is therefore optional and every failure is tolerated:
 
-     · app-config.js  — deployment settings. Absent when the file is opened
+     · app-config.js, deployment settings. Absent when the file is opened
                         from disk, which is fine: the defaults apply.
-     · echarts        — the charting library. Tried locally first, then from
+     · echarts, the charting library. Tried locally first, then from
                         the CDN. If neither resolves the dashboard renders
                         every chart as its table alternative instead.
 
@@ -48,7 +48,7 @@ async function ensureCharts() {
   if (typeof echarts !== "undefined") return "already-loaded";
   if (await loadScript("./vendor/echarts.min.js")) return "vendored";
   if (await loadScript(ECHARTS_CDN)) return "cdn";
-  console.warn("Charting library unavailable — figures will be rendered as tables.");
+  console.warn("Charting library unavailable, figures will be rendered as tables.");
   return "unavailable";
 }
 

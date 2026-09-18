@@ -213,7 +213,9 @@ _KEYS = {"sources": "sources", "organisations": "organisations", "sectors": "sec
          "geography": "geography", "use-cases": "useCases", "policies": "policies",
          "journey": "journey", "glossary": "glossary", "contributions": "contributions",
          "economic-sizing": "economicSizing2022", "benchmarks": "benchmarks",
-         "proposed-indicators": "proposedIndicators"}
+         "proposed-indicators": "proposedIndicators",
+         "raia-portfolio": "raiaPortfolio",
+         "raia-record": "raiaRecord"}
 for _key in _KEYS:
     _dataset_route(_key, "reference")
 

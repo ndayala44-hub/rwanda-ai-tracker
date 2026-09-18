@@ -6,11 +6,11 @@
   "headline": {
     "totalMn": 589,
     "shareOfGDP": 6,
-    "definition": "Full potential of today's AI and advanced-analytics applications if adopted across the economy — not a forecast, not value captured today, and not a target.",
+    "definition": "Full potential of today's AI and advanced-analytics applications if adopted across the economy, not a forecast, not value captured today, and not a target.",
     "method": "Bottom-up, use-case-driven 'micro to macro' sizing: select use cases per sector, adjust benchmark impact to the Rwandan context, size at organisation level against a baseline, scale to sector and economy."
   },
   "redistributionMn": 295,
-  "redistributionNote": "A further ~USD 295m of company-level benefit was estimated to come at the expense of other firms — it shifts market share without adding to national output, and is excluded from the 589m figure.",
+  "redistributionNote": "A further ~USD 295m of company-level benefit was estimated to come at the expense of other firms, it shifts market share without adding to national output, and is excluded from the 589m figure.",
   "sectors": [
     {
       "sector": "AGR",
@@ -126,7 +126,7 @@
       "lowMn": 3,
       "highMn": 7,
       "owner": "Rwanda Social Security Board",
-      "mechanism": "Risk-score claims to reduce incorrect payments — wrong decision, wrong amount, or inconsistent with plan.",
+      "mechanism": "Risk-score claims to reduce incorrect payments, wrong decision, wrong amount, or inconsistent with plan.",
       "benchmark": "Reduce improper payments by 5–10%",
       "context": "Applied to ~USD 98m of social benefit payouts (2019 RSSB annual report), of which roughly 70% were medical, CBHI and maternity payouts excluding pensions.",
       "social": "Reinforced integrity of the social security system; funds freed for legitimate claims."
@@ -165,7 +165,7 @@
     {
       "id": "SOC",
       "name": "Socio-environment",
-      "desc": "Improve citizen safety and government efficiency through preventive, targeted intervention — for example better placement of schools and social services."
+      "desc": "Improve citizen safety and government efficiency through preventive, targeted intervention, for example better placement of schools and social services."
     },
     {
       "id": "HLT",
@@ -248,7 +248,7 @@
       "ENV": 1
     }
   },
-  "socialGradeNote": "Each sized use case was graded 1 (low) to 3 (high) on five qualitative dimensions and averaged to a sector grade. Only use cases with a sized financial value were graded — high-social-value cases without a financial estimate are absent.",
+  "socialGradeNote": "Each sized use case was graded 1 (low) to 3 (high) on five qualitative dimensions and averaged to a sector grade. Only use cases with a sized financial value were graded, high-social-value cases without a financial estimate are absent.",
   "enablerInitiatives": [
     {
       "id": "EI-A",
@@ -326,7 +326,7 @@
   ],
   "caveats": [
     "A full-potential exercise, not a view of what can be captured in any given period.",
-    "An order-of-magnitude sizing to support directional prioritisation — not a business case for any specific investment.",
+    "An order-of-magnitude sizing to support directional prioritisation, not a business case for any specific investment.",
     "Measures the potential of the technology available in 2022; it makes no assumption about later technologies, including generative AI.",
     "Excludes the cost of capture and the investment required to realise the value.",
     "Redeployment of freed resources is assumed but does not happen automatically; it requires reskilling and may lag."

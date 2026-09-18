@@ -32,7 +32,7 @@
       "value": "AI credit scoring for informal traders",
       "note": "Portfolio company; pilot with two microfinance institutions.",
       "state": "Awaiting evidence",
-      "reviewer": "—"
+      "reviewer": ", "
     },
     {
       "id": "C-1036",
@@ -42,7 +42,7 @@
       "target": "TOR51",
       "value": "Download speed methodology",
       "note": "Flags that fixed and mobile medians are being conflated in the published series.",
-      "state": "Accepted — correction queued",
+      "state": "Accepted, correction queued",
       "reviewer": "RURA"
     },
     {
@@ -50,7 +50,7 @@
       "when": "2026-08-27",
       "who": "Development partner",
       "kind": "Source",
-      "target": "—",
+      "target": ", ",
       "value": "Skills gap assessment 2026",
       "note": "Offers microdata under a data-sharing agreement.",
       "state": "In review",

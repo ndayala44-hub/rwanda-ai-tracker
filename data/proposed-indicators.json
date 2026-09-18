@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "The measurement roadmap: indicators this platform argues should exist but for which no observation is yet available. They are deliberately NOT part of methodology v1.3 and do not enter any score — declaring a gap is not the same as filling it. Promote one by moving its definition into indicators.json and supplying an observation.",
+  "note": "The measurement roadmap: indicators this platform argues should exist but for which no observation is yet available. They are deliberately NOT part of methodology v1.3 and do not enter any score, declaring a gap is not the same as filling it. Promote one by moving its definition into indicators.json and supplying an observation.",
   "items": [
     {
       "domain": "Compute & energy",
@@ -494,7 +494,7 @@
     {
       "index": "AI Preparedness Index",
       "publisher": "IMF",
-      "why": "Digital infrastructure, human capital, innovation and regulation — the closest methodological peer to this framework, covering roughly 174 economies.",
+      "why": "Digital infrastructure, human capital, innovation and regulation, the closest methodological peer to this framework, covering roughly 174 economies.",
       "effort": "low"
     },
     {
@@ -518,7 +518,7 @@
     {
       "index": "Mobile Connectivity Index",
       "publisher": "GSMA",
-      "why": "Infrastructure, affordability, readiness and content — the demand-side gap.",
+      "why": "Infrastructure, affordability, readiness and content, the demand-side gap.",
       "effort": "low"
     },
     {
@@ -554,7 +554,7 @@
     {
       "index": "Hugging Face Hub",
       "publisher": "Hugging Face",
-      "why": "Models and datasets by language — the sovereignty layer, fully automatable.",
+      "why": "Models and datasets by language, the sovereignty layer, fully automatable.",
       "effort": "low"
     }
   ]

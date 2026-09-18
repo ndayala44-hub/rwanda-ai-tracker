@@ -28,9 +28,9 @@ FILES = {"sources": "sources.json", "framework": "framework.json",
 #   node --input-type=module -e "$(cat scripts/parity-snapshot.mjs)"
 # Do not hand-edit these to make the test pass — if they move, find out why.
 EXPECTED = {
-    "readiness": 47.16, "maturity": 41.05, "coverage": 0.931, "level": 2,
-    "dimensions": {"D1": 51.98, "D2": 55.82, "D3": 62.75, "D4": 46.87, "D5": 29.86, "D6": 21.69},
-    "dataQuality": {"D1": 52.58, "D2": 57.76, "D3": 58.12, "D4": 67.92, "D5": 54.36, "D6": 65.75},
+    "readiness": 46.64, "maturity": 40.48, "coverage": 0.891, "level": 2,
+    "dimensions": {"D1": 51.45, "D2": 54.58, "D3": 54.91, "D4": 50.82, "D5": 27.7, "D6": 25.26},
+    "dataQuality": {"D1": 53.18, "D2": 58.05, "D3": 56.11, "D4": 72.52, "D5": 57.11, "D6": 65.75},
 }
 TOLERANCE = 0.01
 

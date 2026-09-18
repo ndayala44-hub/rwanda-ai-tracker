@@ -25,7 +25,9 @@ export const FILES = {
   economicSizing2022: "economic-sizing-2022.json",
   landscape2026: "landscape-2026.json",
   benchmarks: "benchmarks.json",
-  proposedIndicators: "proposed-indicators.json"
+  proposedIndicators: "proposed-indicators.json",
+  raiaPortfolio: "raia-portfolio.json",
+  raiaRecord: "raia-record.json"
 } as const;
 
 export type DatasetKey = keyof typeof FILES;

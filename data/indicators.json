@@ -23,8 +23,9 @@
       "geographicScope": "National",
       "updateFrequency": "annual",
       "definition": "Individuals resident in Rwanda who completed a recognised training programme in data science, machine learning or applied AI during the reference year.",
-      "methodology": "Compiled from provider and programme reporting. Boundary conditions — minimum contact hours, deduplication of repeat attendees — are not standardised across providers, which is why the indicator carries an estimated evidence type.",
-      "universe": null
+      "methodology": "Compiled from provider and programme reporting. Boundary conditions, minimum contact hours, deduplication of repeat attendees, are not standardised across providers, which is why the indicator carries an estimated evidence type.",
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA1-SUB2",
@@ -49,7 +50,8 @@
       "updateFrequency": "annual",
       "definition": "Jobs created during the reference year whose stated requirements include data or AI skills.",
       "methodology": "Derived from labour-market and platform postings. Counts advertised roles rather than filled positions.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA1-SUB6",
@@ -74,7 +76,8 @@
       "updateFrequency": "annual",
       "definition": "Firms operating in Rwanda that report using data or AI-related skills in their operations.",
       "methodology": "Self-reported through industry surveys and member returns. Definitions of 'using AI' vary by respondent.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA1-SUB5",
@@ -99,7 +102,8 @@
       "updateFrequency": "annual",
       "definition": "AI-focused meetups and community events held in Rwanda during the reference year.",
       "methodology": "Event listings and organiser returns. A proxy for the informal learning sector outside universities.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "TOR36",
@@ -124,7 +128,8 @@
       "updateFrequency": "annual",
       "definition": "Science graduates per head of population.",
       "methodology": "UNESCO UIS graduate counts divided by the NISR mid-year population estimate. Used as a proxy for the pipeline feeding technical fields.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA2-SUBb-CIT",
@@ -149,7 +154,8 @@
       "updateFrequency": "annual",
       "definition": "Citations accruing to AI-related papers with at least one Rwanda-affiliated author.",
       "methodology": "Scimago country and subject-area extraction. Citation counts lag publication by two to three years.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "innovation-research"
     },
     {
       "code": "STAN13",
@@ -174,7 +180,8 @@
       "updateFrequency": "annual",
       "definition": "Deep-learning papers with at least one Rwanda-affiliated author.",
       "methodology": "Bibliometric extraction on subject classification. Preprints and conference papers are included.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "innovation-research"
     },
     {
       "code": "RWA2-SUBb-FND",
@@ -199,7 +206,8 @@
       "updateFrequency": "annual",
       "definition": "Research funding secured by Rwandan institutions specifically for AI and data-science work.",
       "methodology": "Institutional reporting. Multi-year grants are recognised in the year of award, not spread across the term.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "innovation-research"
     },
     {
       "code": "RWA2-SUBf",
@@ -224,7 +232,8 @@
       "updateFrequency": "annual",
       "definition": "Students graduating from postgraduate AI and data-science programmes in the reference year.",
       "methodology": "Higher-education administrative records across the institutions offering such programmes.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "TOR82",
@@ -249,7 +258,8 @@
       "updateFrequency": "annual",
       "definition": "Researchers working in AI, or in STEM where an AI-specific figure is unavailable.",
       "methodology": "UNESCO UIS researcher headcount. The AI-specific share is not separately published.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "innovation-research"
     },
     {
       "code": "RWA4.2",
@@ -274,7 +284,8 @@
       "updateFrequency": "annual",
       "definition": "Universities offering a degree programme in AI or data science.",
       "methodology": "Count of accredited programmes. Short courses and certificates are excluded.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA2.2-COL",
@@ -299,7 +310,8 @@
       "updateFrequency": "annual",
       "definition": "Active collaboration programmes between Rwandan and foreign universities involving AI or data science.",
       "methodology": "Includes co-authored research programmes, MOOCs, exchange programmes and satellite campuses, as tracked by OECD collaboration data.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA2.2-SCH",
@@ -324,7 +336,8 @@
       "updateFrequency": "annual",
       "definition": "Primary and secondary schools offering formal AI or technology instruction.",
       "methodology": "Ministry administrative records. The 2022 assessment found only one school meeting the definition, and noted that teaching may occur without being reported.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "OXF20",
@@ -349,7 +362,8 @@
       "updateFrequency": "annual",
       "definition": "Students graduating from STEM programmes per head of population.",
       "methodology": "UNESCO UIS graduate counts over the NISR population estimate.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "TOR32",
@@ -374,7 +388,8 @@
       "updateFrequency": "annual",
       "definition": "Downloads of R statistical packages attributed to Rwanda.",
       "methodology": "Cranlogs download counts. A proxy for applied analytics activity; attribution by IP is imperfect.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "STAN10",
@@ -399,7 +414,8 @@
       "updateFrequency": "annual",
       "definition": "Patent applications with an AI classification filed by Rwandan applicants.",
       "methodology": "Registrar General and WIPO filings under AI-related classification codes.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA4.1",
@@ -424,7 +440,8 @@
       "updateFrequency": "annual",
       "definition": "International students enrolled in Rwandan university programmes that include AI content.",
       "methodology": "Institutional enrolment records.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "TOR88",
@@ -449,7 +466,8 @@
       "updateFrequency": "annual",
       "definition": "Distinct contributors from Rwanda to open-source AI packages.",
       "methodology": "GitHub public activity filtered to AI package repositories. Country attribution relies on self-declared profile location.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "innovation-research"
     },
     {
       "code": "TOR92",
@@ -474,7 +492,8 @@
       "updateFrequency": "annual",
       "definition": "Commits from Rwanda to open-source AI packages during the reference year.",
       "methodology": "GitHub public activity. Captures all contribution types, so it overstates AI-specific work and understates private contribution.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "innovation-research"
     },
     {
       "code": "TOR96",
@@ -499,7 +518,8 @@
       "updateFrequency": "annual",
       "definition": "Average commits per Rwandan contributor to open-source AI packages.",
       "methodology": "TOR92 divided by TOR88. Sensitive to small numbers of contributors.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "TOR61",
@@ -524,7 +544,8 @@
       "updateFrequency": "annual",
       "definition": "Working days to process an entry visa for a skilled worker.",
       "methodology": "Immigration service published service standard. Lower is better, so the goalposts are inverted.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "RWA5",
@@ -549,7 +570,8 @@
       "updateFrequency": "annual",
       "definition": "Percentage change in the cost of a fixed basket of cloud infrastructure resources, in Rwandan francs.",
       "methodology": "A fixed IaaS or storage basket priced across authorised vendors. Falling cost scores higher, so the goalposts are inverted.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA5-SUBa",
@@ -574,7 +596,8 @@
       "updateFrequency": "annual",
       "definition": "International cloud service providers registered and authorised to store and process data in Rwanda.",
       "methodology": "RURA authorisation register. The 2022 assessment recorded zero; authorisation is a precondition for regulated workloads.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA5-SUBb",
@@ -599,7 +622,8 @@
       "updateFrequency": "annual",
       "definition": "Firms using an authorised cloud service.",
       "methodology": "Regulatory returns from authorised providers.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "TOR51",
@@ -624,7 +648,8 @@
       "updateFrequency": "annual",
       "definition": "Median fixed broadband download speed.",
       "methodology": "Ookla Speedtest Global Index monthly median for Rwanda.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "TOR47",
@@ -649,7 +674,8 @@
       "updateFrequency": "annual",
       "definition": "Share of the population with access to electricity.",
       "methodology": "World Bank development indicators.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "OXF31",
@@ -674,7 +700,8 @@
       "updateFrequency": "annual",
       "definition": "Internet users as a share of the adult population.",
       "methodology": "World Bank and GSMA connectivity data. The 2022 assessment recorded 27 percent against a world average of 63 percent.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA5-4G",
@@ -698,8 +725,9 @@
       "geographicScope": "National",
       "updateFrequency": "annual",
       "definition": "Share of the population covered by a 4G mobile signal.",
-      "methodology": "Regulatory coverage returns. Coverage is not the same as use — see mobile internet use.",
-      "universe": null
+      "methodology": "Regulatory coverage returns. Coverage is not the same as use, see mobile internet use.",
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "OXF3",
@@ -724,7 +752,8 @@
       "updateFrequency": "annual",
       "definition": "ITU Global Cybersecurity Index score.",
       "methodology": "Published composite covering legal, technical, organisational, capacity-building and cooperation measures. Ingested as published and never recomputed.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA6",
@@ -749,7 +778,8 @@
       "updateFrequency": "annual",
       "definition": "Stage reached in preparing a blueprint for a continental AI-ready hyperscale data centre.",
       "methodology": "Three-state ordinal: not in place, drafted, in force.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA6-SUBa",
@@ -774,7 +804,8 @@
       "updateFrequency": "annual",
       "definition": "Data centres or local compute facilities established and operating in Rwanda.",
       "methodology": "Includes the national data centre and commercial facilities. Counts facilities, not capacity.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA6-SUBb",
@@ -799,7 +830,8 @@
       "updateFrequency": "annual",
       "definition": "Firms providing products or services in the cloud computing value chain.",
       "methodology": "Company register filtered to relevant activity classifications.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "RWA6-SUBc",
@@ -824,7 +856,8 @@
       "updateFrequency": "annual",
       "definition": "People employed in the cloud computing value chain.",
       "methodology": "Employer returns and industry estimates.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "NEW-GPU",
@@ -844,12 +877,13 @@
       "origin": "NEW",
       "capabilityGate": null,
       "evidenceType": "estimated",
-      "note": "Proposed v1.2 addition — not in the 2022 framework.",
+      "note": "Proposed v1.2 addition, not in the 2022 framework.",
       "geographicScope": "National",
       "updateFrequency": "annual",
       "definition": "Accelerated compute capacity, in PFLOP/s, available to Rwandan researchers and firms.",
       "methodology": "Declared capacity of national and institutional GPU resources. Proposed in methodology v1.2; the 2026 landscape review records no domestic frontier capacity.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "OXF28",
@@ -874,7 +908,8 @@
       "updateFrequency": "annual",
       "definition": "Open Data Inventory score for the coverage and openness of official statistics.",
       "methodology": "Published by Open Data Watch. Ingested as published.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "OXF29",
@@ -899,7 +934,8 @@
       "updateFrequency": "annual",
       "definition": "World Bank statistical capacity score.",
       "methodology": "Composite of statistical methodology, data sources and periodicity. The 2022 assessment recorded 73, above the sub-Saharan African average.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "RWA7-SUBa",
@@ -924,7 +960,8 @@
       "updateFrequency": "annual",
       "definition": "Stage reached in publishing frameworks and protocols for data collection, storage, processing and sharing.",
       "methodology": "Three-state ordinal: not in place, drafted, in force.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "RWA7-SUBc",
@@ -949,7 +986,8 @@
       "updateFrequency": "annual",
       "definition": "Datasets discoverable and accessible through the national data-sharing platform.",
       "methodology": "Platform catalogue count. Availability is not the same as usability for model training.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "RWA7-SUBf",
@@ -974,7 +1012,8 @@
       "updateFrequency": "annual",
       "definition": "Rwanda-specific annotated datasets released for public use.",
       "methodology": "Counts released, documented and licensed datasets. The 2022 assessment recorded two.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "RWA7-SUBe",
@@ -999,7 +1038,8 @@
       "updateFrequency": "annual",
       "definition": "Annotated datasets in active use for model training or evaluation.",
       "methodology": "A subset of released datasets, confirmed as used by at least one project.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "TOR118",
@@ -1024,7 +1064,8 @@
       "updateFrequency": "annual",
       "definition": "Whether government has a dedicated body responsible for AI.",
       "methodology": "Binary. Satisfied by an office or agency with an explicit AI mandate.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "OXF1",
@@ -1049,7 +1090,8 @@
       "updateFrequency": "annual",
       "definition": "Whether a national AI policy or strategy is formally in force.",
       "methodology": "Binary. Rwanda adopted the first national AI policy in Africa in 2023.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "TOR111",
@@ -1074,7 +1116,8 @@
       "updateFrequency": "annual",
       "definition": "Whether a dedicated public spending line for AI exists in the budget.",
       "methodology": "Binary, assessed against published budget documents.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "OXF2",
@@ -1099,7 +1142,8 @@
       "updateFrequency": "annual",
       "definition": "Level of data protection regulation in force.",
       "methodology": "UNCTAD cyberlaw tracker, mapped to an ordinal scale. Rwanda's law became enforceable in 2023.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "RWA8",
@@ -1124,7 +1168,8 @@
       "updateFrequency": "annual",
       "definition": "Civil servants who have completed AI policy or regulatory training.",
       "methodology": "Programme records, prioritising regulators, policymakers and legislators.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "RWA8-SUBa",
@@ -1149,7 +1194,8 @@
       "updateFrequency": "annual",
       "definition": "Partnerships with international agencies delivering AI training to Rwandan regulators.",
       "methodology": "Institutional agreements in force during the reference year.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "RWA8-SUBb",
@@ -1174,7 +1220,8 @@
       "updateFrequency": "annual",
       "definition": "Regulators who have participated in AI training programmes.",
       "methodology": "Programme attendance records.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "RWA9",
@@ -1199,7 +1246,8 @@
       "updateFrequency": "annual",
       "definition": "Rwanda's position in a globally recognised government AI readiness index.",
       "methodology": "Oxford Insights Government AI Readiness Index. Scored by rank inversion over the 172-country field; edition changes affect comparability.",
-      "universe": 172
+      "universe": 172,
+      "raiaPillar": "governance"
     },
     {
       "code": "TOR87",
@@ -1224,7 +1272,8 @@
       "updateFrequency": "annual",
       "definition": "Level of participation in ISO/IEC JTC 1/SC 42, the international AI standards committee.",
       "methodology": "Ordinal: none, observer, participating member.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "TOR58",
@@ -1249,7 +1298,8 @@
       "updateFrequency": "annual",
       "definition": "Whether Rwanda is a signatory to the International Open Data Charter.",
       "methodology": "Binary, from the Charter's published membership.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "RWA10",
@@ -1274,7 +1324,8 @@
       "updateFrequency": "annual",
       "definition": "AI solutions in production use within government or public value chains.",
       "methodology": "Counted from the use-case registry. Only deployments past pilot stage are included.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "platforms-intelligence"
     },
     {
       "code": "RWA10-SUBd",
@@ -1299,7 +1350,8 @@
       "updateFrequency": "annual",
       "definition": "Government agencies operating at least one AI solution in production.",
       "methodology": "Distinct institutions in the use-case registry.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "platforms-intelligence"
     },
     {
       "code": "RWA11-SUBe",
@@ -1324,7 +1376,8 @@
       "updateFrequency": "annual",
       "definition": "AI solutions deployed commercially in the Rwandan market.",
       "methodology": "Use-case registry entries from private-sector providers in production or scaled stages.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA11-SUBc",
@@ -1349,7 +1402,8 @@
       "updateFrequency": "annual",
       "definition": "Disclosed investment into Rwandan AI activity from venture, institutional, philanthropic and public sources.",
       "methodology": "Aggregated from funding databases and partnership announcements. Undisclosed rounds are excluded, so the figure is a floor.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA11-SUBd",
@@ -1374,7 +1428,8 @@
       "updateFrequency": "annual",
       "definition": "Rwandan companies making disclosed investment in their own AI capability.",
       "methodology": "Company reporting and survey returns.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA11-SUBb",
@@ -1399,7 +1454,8 @@
       "updateFrequency": "annual",
       "definition": "Stage reached in implementing sector-specific AI deployment plans.",
       "methodology": "Three-state ordinal: not in place, drafted, in force.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA11-SUBa",
@@ -1424,7 +1480,8 @@
       "updateFrequency": "annual",
       "definition": "Proof-of-concept AI projects running under a public–private partnership.",
       "methodology": "Use-case registry entries at proof-of-concept or pilot stage with both a public and a private party.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "TOR108",
@@ -1449,7 +1506,8 @@
       "updateFrequency": "annual",
       "definition": "Whether government has publicly dedicated money to AI.",
       "methodology": "Binary, assessed against published budget and programme documents.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA12-SUBf-C",
@@ -1474,7 +1532,8 @@
       "updateFrequency": "annual",
       "definition": "Collaborations between Rwandan and international firms delivering national AI projects.",
       "methodology": "Contract and partnership records.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "TOR109",
@@ -1499,7 +1558,8 @@
       "updateFrequency": "annual",
       "definition": "Gross domestic expenditure on research and development as a share of GDP.",
       "methodology": "UNESCO UIS. The AI-attributable share is not separately measured anywhere.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "OXF12a",
@@ -1524,7 +1584,8 @@
       "updateFrequency": "annual",
       "definition": "AI companies per 100,000 population.",
       "methodology": "Company database counts over the NISR population estimate. Coverage of African firms in commercial databases is partial.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "OXF12b",
@@ -1549,7 +1610,8 @@
       "updateFrequency": "annual",
       "definition": "AI start-ups per 100,000 population.",
       "methodology": "As above, restricted to firms under the database's start-up classification.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA12-SUBa",
@@ -1574,7 +1636,8 @@
       "updateFrequency": "annual",
       "definition": "Public–private partnership projects delivering AI solutions.",
       "methodology": "Use-case registry entries with both a public and a private party.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA12-SUBc",
@@ -1599,7 +1662,8 @@
       "updateFrequency": "annual",
       "definition": "Stage reached in launching an accreditation programme for innovative technology companies.",
       "methodology": "Three-state ordinal: not in place, drafted, in force.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA12-SUBf-S",
@@ -1624,7 +1688,8 @@
       "updateFrequency": "annual",
       "definition": "Stage reached in launching a regulatory sandbox for AI and data-driven services.",
       "methodology": "Three-state ordinal: not in place, drafted, in force.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "RWA12-SUBg",
@@ -1649,7 +1714,8 @@
       "updateFrequency": "annual",
       "definition": "Uptake of the regulatory sandbox, counting participating actors, matches made and dataset downloads.",
       "methodology": "Sandbox operator reporting.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "OXF4",
@@ -1674,7 +1740,8 @@
       "updateFrequency": "annual",
       "definition": "Stage reached in publishing a national AI ethics framework.",
       "methodology": "Three-state ordinal. Rwanda's framework was developed in 2022 and remains pending board approval, which scores 50.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "RWA13-SUBa",
@@ -1699,7 +1766,8 @@
       "updateFrequency": "annual",
       "definition": "Organisations that have formally endorsed the national AI ethics guidelines.",
       "methodology": "Endorsement register.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "RWA13-SUBc",
@@ -1724,7 +1792,8 @@
       "updateFrequency": "annual",
       "definition": "AI ethics officers appointed across public and private organisations.",
       "methodology": "Institutional returns.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "RWA13-SUBd",
@@ -1749,7 +1818,8 @@
       "updateFrequency": "annual",
       "definition": "Stakeholders participating in the national AI ethics industry consultation.",
       "methodology": "Consultation attendance records.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "AIDV",
@@ -1774,7 +1844,8 @@
       "updateFrequency": "annual",
       "definition": "Artificial Intelligence and Democratic Values Index score.",
       "methodology": "Published index scoring national commitments on AI and democratic values. Ingested as published.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "RWA14-SUBb",
@@ -1799,7 +1870,8 @@
       "updateFrequency": "annual",
       "definition": "Memoranda of understanding signed and implemented with other regulatory agencies on AI matters.",
       "methodology": "Regulator records. Counts implemented agreements, not signed-only.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "RWA14",
@@ -1824,7 +1896,8 @@
       "updateFrequency": "annual",
       "definition": "International or regional AI platforms in which Rwanda holds formal membership.",
       "methodology": "Membership records of standards bodies, policy networks and continental initiatives.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "L26-USAGE",
@@ -1849,7 +1922,8 @@
       "updateFrequency": "annual",
       "definition": "Observed frontier AI usage relative to the level expected for an economy of Rwanda's size and working-age population, where 1.00 is the expected value.",
       "methodology": "Anthropic Economic Index country view. Usage is measured from Claude.ai conversations only and is a proxy for frontier AI adoption.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "L26-USAGERANK",
@@ -1874,7 +1948,8 @@
       "updateFrequency": "annual",
       "definition": "Rwanda's position among 121 ranked economies on measured frontier AI usage.",
       "methodology": "Rank inverted over the 121-economy field for scoring.",
-      "universe": 121
+      "universe": 121,
+      "raiaPillar": "governance"
     },
     {
       "code": "L26-HCI",
@@ -1899,7 +1974,8 @@
       "updateFrequency": "annual",
       "definition": "Expected productivity in adulthood of a child born today, relative to complete education and full health.",
       "methodology": "World Bank Human Capital Index, 0 to 1. Most recent published value is 2020.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "L26-HLO",
@@ -1924,7 +2000,8 @@
       "updateFrequency": "annual",
       "definition": "Harmonised test score on a scale running from 300 at minimum attainment to 625 at advanced attainment.",
       "methodology": "World Bank harmonised learning outcomes, component of the Human Capital Index.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "L26-AILITTEACH",
@@ -1949,7 +2026,8 @@
       "updateFrequency": "annual",
       "definition": "Cumulative teachers reached by national AI literacy and awareness programmes.",
       "methodology": "Programme reporting compiled in the 2026 landscape review.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "skills-delivery"
     },
     {
       "code": "L26-AILITINST",
@@ -1974,7 +2052,8 @@
       "updateFrequency": "annual",
       "definition": "Public institutions whose staff have been reached by national AI capacity building.",
       "methodology": "Programme reporting compiled in the 2026 landscape review.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "L26-SMARTPHONE",
@@ -1999,7 +2078,8 @@
       "updateFrequency": "annual",
       "definition": "Share of the population owning a smartphone.",
       "methodology": "Sector reporting cited in the 2026 landscape review.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "L26-MOBINT",
@@ -2024,7 +2104,8 @@
       "updateFrequency": "annual",
       "definition": "Share of the population actively using mobile internet.",
       "methodology": "Sector reporting cited in the 2026 landscape review.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "L26-GENMW",
@@ -2049,7 +2130,8 @@
       "updateFrequency": "annual",
       "definition": "Installed national generating capacity available to the grid.",
       "methodology": "Indicative national figures from grid operator and sector reporting, 2022 to 2023, pending updated publication.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "compute"
     },
     {
       "code": "L26-COMMIT",
@@ -2074,7 +2156,8 @@
       "updateFrequency": "annual",
       "definition": "Cumulative externally committed funding specifically earmarked for AI programmes in Rwanda since 2025.",
       "methodology": "Sum of disclosed partnership commitments: Horizon 1000 (USD 50m), AI Scaling Hub (USD 17.5m) and TAIRI Lab (USD 0.54m).",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "financing-partnerships"
     },
     {
       "code": "L26-AFGOV",
@@ -2099,7 +2182,8 @@
       "updateFrequency": "annual",
       "definition": "Continental assessment of capacity to govern AI, scored out of 4 across strategy and implementation.",
       "methodology": "Published index. Rwanda is the only state scoring strongly on both strategy and implementation.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
     },
     {
       "code": "L26-GAIR",
@@ -2124,7 +2208,8 @@
       "updateFrequency": "annual",
       "definition": "Rwanda's position among 195 economies on readiness to deploy AI.",
       "methodology": "Rank inverted over the 195-economy field for scoring. Measures readiness to build, not capacity to govern.",
-      "universe": 195
+      "universe": 195,
+      "raiaPillar": "governance"
     },
     {
       "code": "L26-SOVMODELS",
@@ -2149,7 +2234,8 @@
       "updateFrequency": "annual",
       "definition": "Sovereign, openly licensed Kinyarwanda language and speech models released for public use.",
       "methodology": "Count of released models: KinyaBERT, KinyaColBERT and Flex-TTS, released open source in March 2026.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "data"
     },
     {
       "code": "L26-AILAW",
@@ -2169,12 +2255,14 @@
       "origin": "LANDSCAPE26",
       "capabilityGate": null,
       "evidenceType": "administrative",
-      "note": null,
+      "note": "Confirmed absent by the government's own catalogue. The Policy & Responsible AI pillar lists under What Exists Today only Rwanda's data protection and cybersecurity legal framework. No AI statute is claimed.",
       "geographicScope": "National",
       "updateFrequency": "annual",
       "definition": "Whether Rwanda has enacted legislation specific to artificial intelligence.",
       "methodology": "Binary assessment. Enforcement currently rests on the data protection regime alone.",
-      "universe": null
+      "universe": null,
+      "corroboratedBy": "RAIA_CATALOGUE",
+      "raiaPillar": "governance"
     },
     {
       "code": "L26-AIREG",
@@ -2182,24 +2270,25 @@
       "output": "O13",
       "dimension": "D6",
       "unit": "Y/N",
-      "normalisation": "binary",
+      "normalisation": "ordinal",
       "polarity": "positive",
       "baseline": 0,
-      "target": 1,
+      "target": 100,
       "indexMembership": "readiness",
       "reportingOrganisation": "MINICT",
-      "sourceId": "LANDSCAPE26",
+      "sourceId": "RAIA_CATALOGUE",
       "relevance": 3,
       "accessibility": 3,
       "origin": "LANDSCAPE26",
       "capabilityGate": null,
       "evidenceType": "administrative",
-      "note": null,
+      "note": "Raised from 0 to 50 on 17 September 2026. RAIA's national record at ai.gov.rw/record publishes 34 verified use cases across 43 institutions, dated and reviewed against primary documentation. It is an investment catalogue rather than an accountability register: it carries sector and stage, not risk classification, oversight arrangements or routes to redress. Rwanda now publishes what it deploys, but not how those systems are governed.",
       "geographicScope": "National",
       "updateFrequency": "annual",
-      "definition": "Whether a public register of AI systems used by the state is published.",
-      "methodology": "Binary assessment. Automated enforcement currently runs with no transparency duty.",
-      "universe": null
+      "definition": "Whether a public register of AI systems used by the state is published, covering the deploying institution, the model, the legal basis, a risk classification, the human oversight arrangement and the route to redress.",
+      "methodology": "Ordinal. 0 none; 50 a public inventory exists but without risk, oversight or redress metadata; 100 a transparency register meeting the full definition.",
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "L26-AIEVAL",
@@ -2219,12 +2308,14 @@
       "origin": "LANDSCAPE26",
       "capabilityGate": null,
       "evidenceType": "administrative",
-      "note": "The Health Intelligence Centre contains the only formally resourced model evaluation function in the country.",
+      "note": "The Health Intelligence Centre contains the only formally resourced model evaluation function in the country. Confirmed absent by the government's own catalogue. The Policy & Responsible AI pillar lists under What Needs To Be Built: model assurance and AI testing and evaluation capability, tools and institutions that verify AI systems before and during deployment.",
       "geographicScope": "National",
       "updateFrequency": "annual",
       "definition": "Whether a national capability exists to independently evaluate AI model performance and safety.",
       "methodology": "Binary assessment. Vendor accuracy claims currently have no domestic verifier.",
-      "universe": null
+      "universe": null,
+      "corroboratedBy": "RAIA_CATALOGUE",
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "L26-AIPROC",
@@ -2244,12 +2335,14 @@
       "origin": "LANDSCAPE26",
       "capabilityGate": null,
       "evidenceType": "administrative",
-      "note": "Rwanda's largest digital health deployment reached close to a fifth of the population and collapsed in 2023 when its foreign parent entered bankruptcy.",
+      "note": "Rwanda's largest digital health deployment reached close to a fifth of the population and collapsed in 2023 when its foreign parent entered bankruptcy. Not claimed anywhere in the government's own catalogue. The Financing & Partnerships pillar lists outcome-based payment-verification machinery as still to be built.",
       "geographicScope": "National",
       "updateFrequency": "annual",
       "definition": "Whether a national AI procurement standard exists covering continuity, data portability and exit.",
       "methodology": "Binary assessment. The state is anchor buyer without continuity or exit terms.",
-      "universe": null
+      "universe": null,
+      "corroboratedBy": "RAIA_CATALOGUE",
+      "raiaPillar": "governance"
     },
     {
       "code": "L26-AIOWN",
@@ -2274,7 +2367,8 @@
       "updateFrequency": "annual",
       "definition": "Whether a standard national contractual term defines ownership of models fine-tuned on Rwandan public data.",
       "methodology": "Binary assessment.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "policy-responsible-ai"
     },
     {
       "code": "L26-AGENCY",
@@ -2299,7 +2393,164 @@
       "updateFrequency": "annual",
       "definition": "Whether a dedicated standalone national AI institution exists, distinct from an office inside a ministry.",
       "methodology": "Binary assessment. Approved by Cabinet on 8 June 2026; Africa's first standalone national AI institution.",
-      "universe": null
+      "universe": null,
+      "raiaPillar": "governance"
+    },
+    {
+      "code": "RAIA-FIBRE",
+      "name": "National fibre optic network deployed",
+      "output": "O5",
+      "dimension": "D2",
+      "unit": "km",
+      "normalisation": "goalpost",
+      "polarity": "positive",
+      "baseline": 25000,
+      "target": 40000,
+      "indexMembership": "readiness",
+      "reportingOrganisation": "RURA",
+      "sourceId": "RAIA_CATALOGUE",
+      "relevance": 3,
+      "accessibility": 3,
+      "origin": "RAIA_CATALOGUE",
+      "capabilityGate": null,
+      "evidenceType": "administrative",
+      "note": null,
+      "geographicScope": "National",
+      "updateFrequency": "annual",
+      "definition": "Kilometres of national fibre optic backbone deployed.",
+      "methodology": "Self-reported by RAIA in the national AI catalogue. The measurement date and whether the figure counts backbone only or includes last-mile distribution are not published.",
+      "universe": null,
+      "raiaPillar": "compute"
+    },
+    {
+      "code": "RAIA-DIGITALID",
+      "name": "Digital identity coverage",
+      "output": "O7",
+      "dimension": "D3",
+      "unit": "%",
+      "normalisation": "goalpost",
+      "polarity": "positive",
+      "baseline": 95,
+      "target": 100,
+      "indexMembership": "readiness",
+      "reportingOrganisation": "NIDA",
+      "sourceId": "RAIA_CATALOGUE",
+      "relevance": 3,
+      "accessibility": 3,
+      "origin": "RAIA_CATALOGUE",
+      "capabilityGate": null,
+      "evidenceType": "administrative",
+      "note": null,
+      "geographicScope": "National",
+      "updateFrequency": "annual",
+      "definition": "Share of the population holding a digital identity, the identity rail on which trusted data services depend.",
+      "methodology": "RAIA's catalogue states near-universal coverage without a figure. Recorded here as 95% pending a published number, and flagged in_review for that reason.",
+      "universe": null,
+      "raiaPillar": "data"
+    },
+    {
+      "code": "RAIA-STEMGRAD",
+      "name": "STEM graduates per year",
+      "output": "O3",
+      "dimension": "D1",
+      "unit": "persons",
+      "normalisation": "log",
+      "polarity": "positive",
+      "baseline": 50000,
+      "target": 80000,
+      "indexMembership": "readiness",
+      "reportingOrganisation": "MINEDUC",
+      "sourceId": "RAIA_CATALOGUE",
+      "relevance": 3,
+      "accessibility": 3,
+      "origin": "RAIA_CATALOGUE",
+      "capabilityGate": null,
+      "evidenceType": "administrative",
+      "note": null,
+      "geographicScope": "National",
+      "updateFrequency": "annual",
+      "definition": "Graduates completing STEM programmes in the reference year, counted in absolute terms.",
+      "methodology": "Self-reported by RAIA. Held alongside the per-capita indicators OXF20 and TOR36, which remain the internationally comparable form.",
+      "universe": null,
+      "raiaPillar": "skills-delivery"
+    },
+    {
+      "code": "RAIA-OFFICIALS-AI",
+      "name": "Government officials reached by AI training",
+      "output": "O1",
+      "dimension": "D1",
+      "unit": "persons",
+      "normalisation": "log",
+      "polarity": "positive",
+      "baseline": 134000,
+      "target": 400000,
+      "indexMembership": "readiness",
+      "reportingOrganisation": "MINICT",
+      "sourceId": "RAIA_CATALOGUE",
+      "relevance": 3,
+      "accessibility": 3,
+      "origin": "RAIA_CATALOGUE",
+      "capabilityGate": null,
+      "evidenceType": "administrative",
+      "note": "Held separately from RWA8 (civil servants completing AI policy or regulatory training, 41 in the 2022 assessment) and from the 2026 review's figure of 50 officials across 24 institutions. The three differ by orders of magnitude and almost certainly measure different depths of training. The platform publishes all three rather than choosing between them, see the Talent view.",
+      "geographicScope": "National",
+      "updateFrequency": "annual",
+      "definition": "Cumulative government officials recorded as having received AI training of any depth, as reported by RAIA.",
+      "methodology": "Self-reported by RAIA in the national AI catalogue. The programme definition, contact hours and deduplication basis are not published.",
+      "universe": null,
+      "raiaPillar": "skills-delivery"
+    },
+    {
+      "code": "RAIA-GPU",
+      "name": "Sovereign GPUs available to national workloads",
+      "output": "O6",
+      "dimension": "D2",
+      "unit": "GPUs",
+      "normalisation": "goalpost",
+      "polarity": "positive",
+      "baseline": 0,
+      "target": 48,
+      "indexMembership": "readiness",
+      "reportingOrganisation": "RISA",
+      "sourceId": "RAIA_CATALOGUE",
+      "relevance": 3,
+      "accessibility": 3,
+      "origin": "RAIA_CATALOGUE",
+      "capabilityGate": null,
+      "evidenceType": "administrative",
+      "note": "No observation is recorded because none is published. The indicator is declared so the gap is visible and counts against coverage.",
+      "geographicScope": "National",
+      "updateFrequency": "annual",
+      "definition": "Graphics processing units under sovereign control and available to government, university and startup workloads.",
+      "methodology": "Unit and target taken from RAIA's compute pillar, which states an ambition of 24 to 48 or more sovereign GPUs by 2028. No current figure is published.",
+      "universe": null,
+      "raiaPillar": "compute"
+    },
+    {
+      "code": "RAIA-DATASETS",
+      "name": "AI-ready public datasets published",
+      "output": "O7",
+      "dimension": "D3",
+      "unit": "count",
+      "normalisation": "log",
+      "polarity": "positive",
+      "baseline": 0,
+      "target": 100,
+      "indexMembership": "readiness",
+      "reportingOrganisation": "RISA",
+      "sourceId": "RAIA_CATALOGUE",
+      "relevance": 3,
+      "accessibility": 3,
+      "origin": "RAIA_CATALOGUE",
+      "capabilityGate": null,
+      "evidenceType": "administrative",
+      "note": "Declared without an observation. RAIA's data pillar lists the National Data Hub itself as still to be built, so a published count is not expected yet.",
+      "geographicScope": "National",
+      "updateFrequency": "annual",
+      "definition": "Government datasets prepared to an AI-ready standard: secure, documented and interoperable.",
+      "methodology": "Target of 100 or more taken from RAIA's data pillar, which states this as a national ambition. No current count is published.",
+      "universe": null,
+      "raiaPillar": "data"
     }
   ]
 }
