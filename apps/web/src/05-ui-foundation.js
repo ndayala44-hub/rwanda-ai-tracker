@@ -1,11 +1,11 @@
 
 /* ============================ UI FOUNDATION ============================== */
 const $=s=>document.querySelector(s);
-const fmt=(v,d)=>v===null||v===undefined||isNaN(v)?", ":Number(v).toLocaleString("en-US",{minimumFractionDigits:d===undefined?1:d,maximumFractionDigits:d===undefined?1:d});
-const pct=v=>v===null||v===undefined?", ":(v*100).toFixed(0)+"%";
+const fmt=(v,d)=>v===null||v===undefined||isNaN(v)?"–":Number(v).toLocaleString("en-US",{minimumFractionDigits:d===undefined?1:d,maximumFractionDigits:d===undefined?1:d});
+const pct=v=>v===null||v===undefined?"–":(v*100).toFixed(0)+"%";
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function rawFmt(I,v){
-  if(v===null||v===undefined)return ", ";
+  if(v===null||v===undefined)return "–";
   if(I.method==="binary")return v>=1?"Yes":"No";
   if(I.method==="ordinal")return v>=100?"In force":v>=50?"Drafted / pending":"Not in place";
   if(I.unit==="rank")return "#"+Math.round(v)+" of 172";
@@ -15,7 +15,7 @@ function rawFmt(I,v){
 const scColor=s=>s===null?"var(--dim)":s>=70?"var(--green)":s>=50?"var(--teal)":s>=35?"var(--amber)":"var(--red)";
 const confLabel=c=>c>=.8?"High":c>=.65?"Medium-high":c>=.5?"Medium":c>=.35?"Medium-low":"Low";
 function deltaHtml(a,b,suf){
-  if(a===null||b===null||a===undefined||b===undefined)return '<span class="delta flat">, </span>';
+  if(a===null||b===null||a===undefined||b===undefined)return '<span class="delta flat">–</span>';
   const d=a-b,c=d>.05?"up":d<-.05?"down":"flat";
   return `<span class="delta ${c}">${d>0?"▲":d<0?"▼":"■"} ${Math.abs(d).toFixed(1)}${suf||""}</span>`;
 }

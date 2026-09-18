@@ -40,7 +40,7 @@ globalThis.__app = {
   get IND(){return IND}, get OBSERVATIONS(){return OBSERVATIONS},
   get SOURCES(){return SOURCES}, get META(){return META},
   get RUN(){return RUN}, get ML(){return ML}, get YEARS(){return YEARS},
-  get SESSION(){return SESSION}, get FILTER(){return FILTER}, go
+  get SESSION(){return SESSION}, get FILTER(){return FILTER}, get EX(){return EX}, go, renderEX
 };`);
   app = globalThis.__app;
   app.applyDataset(await app.loadDataset());
@@ -378,4 +378,43 @@ test("the copy carries no em dashes", () => {
                "15-view-about-admin-drawers.js", "shell.html"]
     .map(f => read(join(ROOT, "apps/web/src", f), "utf8")).join("");
   assert.equal((src.match(/—/g) || []).length, 0);
+});
+
+test("the layout collapses to one column on small screens", () => {
+  // Views set grid templates inline, so the mobile rules must override them.
+  const html = read(join(ROOT, "apps/web/index.html"), "utf8");
+  const css = html.slice(html.indexOf("<style>"), html.indexOf("</style>"));
+  assert.match(css, /@media\(max-width:900px\)/);
+  assert.match(css, /\.row\{grid-template-columns:1fr !important\}/,
+    "inline grid templates would otherwise win over the media query");
+  assert.match(css, /@media\(max-width:700px\)/);
+  assert.match(css, /\.drawer\{width:100vw/, "the drawer should be full width on a phone");
+  assert.match(css, /\.dt th\.opt,\.dt td\.opt\{display:none\}/,
+    "dense tables need a way to drop their least important columns");
+});
+
+test("tooltips are reachable without a mouse", () => {
+  const html = read(join(ROOT, "apps/web/index.html"), "utf8");
+  assert.ok(html.includes('addEventListener("touchstart"'),
+    "hover-only tooltips are invisible on a phone, where much of the audience reads this");
+});
+
+test("the Data Explorer table is aligned and marks its optional columns", async () => {
+  await app.go("explorer");
+  const html = document.querySelector("#exBody").innerHTML;
+  const headers = (html.match(/<th(?:\s[^>]*)?>/g) || []).length;   // not <thead>
+  const firstRow = html.slice(html.indexOf("<tbody>"), html.indexOf("</tr>", html.indexOf("<tbody>")));
+  const cells = (firstRow.match(/<td[^>]*>/g) || []).length;
+  assert.equal(cells, headers,
+    `header/body mismatch: ${headers} headers against ${cells} cells shifts every column`);
+  assert.ok((html.match(/class="[^"]*\bopt\b/g) || []).length >= 8,
+    "the wide table needs columns it can drop on a phone");
+});
+
+test("empty values render as a placeholder, not stray punctuation", async () => {
+  // The em dash was doing double duty as prose punctuation and as the "no value"
+  // marker. A blanket replacement turned every empty cell into ", ".
+  const html = await app.VIEWS.readiness();
+  assert.ok(!/>,\s*</.test(html), "an empty cell is rendering as a comma");
+  assert.ok(!/\b,\s*<\/b>/.test(html), "an empty figure is rendering as a comma");
 });

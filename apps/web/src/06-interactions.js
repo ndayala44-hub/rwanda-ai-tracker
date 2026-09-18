@@ -65,6 +65,19 @@ function skeleton(){
   document.addEventListener("mouseout",e=>{
     if(e.target.closest&&e.target.closest("[data-tip]")){const t=document.getElementById("tip");if(t)t.classList.remove("on")}
   });
+  /* Touch devices have no hover, so every explanatory tooltip would be
+     unreachable on a phone. A tap shows it; the next tap anywhere hides it. */
+  document.addEventListener("touchstart",e=>{
+    const el=e.target.closest&&e.target.closest("[data-tip]");
+    const t=document.getElementById("tip");
+    if(!t)return;
+    if(!el){t.classList.remove("on");return}
+    t.textContent=el.getAttribute("data-tip");
+    t.classList.add("on");
+    const r=el.getBoundingClientRect();
+    t.style.left=Math.max(8,Math.min(window.innerWidth-8-t.offsetWidth,r.left))+"px";
+    t.style.top=(r.bottom+9)+"px";
+  },{passive:true});
 })();
 /* command palette */
 let CMD={items:[],sel:0};
@@ -193,6 +206,12 @@ function histogram(el,scores){
    the low-bandwidth connections that 34% smartphone ownership implies.
    ======================================================================= */
 const CHART_TABLES = {};
+
+/* Orientation changes resize the viewport after the resize event has fired on
+   some mobile browsers, so charts are re-measured once the new layout settles. */
+window.addEventListener("orientationchange", () => {
+  setTimeout(() => CHARTS.forEach(c => { try { c.resize(); } catch (e) {} }), 250);
+});
 
 /** Register the data behind a chart so it can be rendered as a table. */
 function chartTable(id, caption, headers, rows) {

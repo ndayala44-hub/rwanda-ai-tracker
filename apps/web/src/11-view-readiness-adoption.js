@@ -297,7 +297,7 @@ VIEWS.adoption=async function(){
           <td><span class="tag ${u.stage==="Scaled"?"g":u.stage==="Production"?"b":""}">${u.stage}</span></td>
           <td class="n mono">${u.since}</td>
           <td>${u.risk==="High"?'<span class="tag a">High</span>':u.risk}</td>
-          <td class="small">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:", "}).name)}</td>
+          <td class="small">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:"–"}).name)}</td>
           <td>${qbadge(u.status==="verified"?"verified":"in_review")}</td></tr>`).join("")}
        </tbody></table></div>
        <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
@@ -383,7 +383,7 @@ MOUNT.adoption=async function(){
 };
 function ucDrawer(id){
   const u=USECASES.find(x=>x.id===id);if(!u)return;
-  const o=ORG[u.org]||{name:u.org,type:", ",role:", "};
+  const o=ORG[u.org]||{name:u.org,type:"–",role:"–"};
   const econ=ECON2022.lighthouse.find(l=>l.sector===u.sector);
   openDrawer(u.name,`USE CASE · ${SECTOR[u.sector].name} · ${u.stage}`,
     card("Record","",`
@@ -391,7 +391,7 @@ function ucDrawer(id){
       <div class="kv"><span class="k">Sector</span><span class="v">${esc(SECTOR[u.sector].name)}</span></div>
       <div class="kv"><span class="k">Lifecycle stage</span><span class="v">${u.stage}</span></div>
       <div class="kv"><span class="k">Operating since</span><span class="v mono">${u.since}</span></div>
-      <div class="kv"><span class="k">District</span><span class="v">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:", "}).name)}</span></div>
+      <div class="kv"><span class="k">District</span><span class="v">${esc((DISTRICTS.find(d=>d.code===u.district)||{name:"–"}).name)}</span></div>
       <div class="kv"><span class="k">Sector type</span><span class="v">${u.publicSector?"Public":"Private"}</span></div>
       <div class="kv"><span class="k">Risk classification</span><span class="v">${u.risk}</span></div>
       <div class="kv"><span class="k">Verification</span><span class="v">${qbadge(u.status==="verified"?"verified":"in_review")}</span></div>

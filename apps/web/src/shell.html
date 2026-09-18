@@ -336,8 +336,81 @@ kbd{background:var(--chip);border:1px solid var(--line2);border-bottom-width:2px
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
     transition-duration:.001ms !important;scroll-behavior:auto !important}
 }
-@media(max-width:1100px){ .topnav{order:3;flex-basis:100%;padding-bottom:8px;overflow-x:auto} }
-@media(max-width:640px){ main{padding:14px 12px 40px} .vh h2{font-size:20px} .kpi .val{font-size:25px} }
+
+/* ============================ RESPONSIVE =============================
+   The dashboard is read on phones as often as on desktops, and a policy
+   audience is more likely to open a link on a phone than anywhere else.
+   Layout collapses to a single column, dense tables scroll horizontally
+   inside their card rather than squashing, and the least load-bearing
+   table columns drop out below 700px.
+   ==================================================================== */
+
+/* --- tablet and below --- */
+@media(max-width:1100px){
+  .topnav{order:3;flex-basis:100%;padding-bottom:8px;overflow-x:auto;flex-wrap:nowrap;
+    scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .topnav::-webkit-scrollbar{height:0}
+  .topnav a{white-space:nowrap;scroll-snap-align:start}
+}
+
+/* --- single column: inline grid templates are overridden deliberately --- */
+@media(max-width:900px){
+  .row{grid-template-columns:1fr !important}
+  .bento>*{grid-column:span 12 !important}
+  .gaugewrap{grid-template-columns:1fr !important}
+}
+
+/* --- phone --- */
+@media(max-width:700px){
+  main{padding:12px 10px 40px}
+  .top{padding:9px 12px;gap:8px}
+  .logo h1{font-size:15px}
+  .logo p{display:none}                 /* the strapline costs a line and adds nothing here */
+  .mark{width:32px;height:32px;flex-basis:32px}
+  .topright{gap:5px;margin-left:auto}
+  .iconbtn{padding:6px 9px;font-size:12px}
+
+  /* the status bar scrolls rather than stacking into five lines */
+  .freshbar{flex-wrap:nowrap;overflow-x:auto;gap:12px;padding:6px 12px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .freshbar::-webkit-scrollbar{height:0}
+  .freshbar>span{flex:0 0 auto;white-space:nowrap}
+  .scrub input[type=range]{width:96px}
+
+  .vh h2{font-size:19px;letter-spacing:-.4px}
+  .vh p{font-size:13px}
+  .vh .tools{width:100%;margin-top:10px;flex-wrap:wrap}
+  .kpi .val{font-size:23px}
+  .kpi .lbl{font-size:10.5px}
+  .card header{padding:11px 13px;flex-wrap:wrap;gap:4px}
+  .card .bd{padding:13px}
+
+  /* tables keep their shape and scroll, rather than compressing to unreadable */
+  .card .bd.flush,.scrollbox{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .dt{min-width:560px}
+  .dt th,.dt td{padding:8px 10px;font-size:12.5px}
+  .dt .small{font-size:11px}
+  /* columns that carry the least on a small screen step aside */
+  .dt th.opt,.dt td.opt{display:none}
+
+  .drawer{width:100vw;border-left:0}
+  .drawer .bd{padding:13px}
+  .palbox{width:96vw}
+  .palitem .ps{display:none}
+  .tip{max-width:78vw}
+  .filterbar{gap:6px}
+
+  /* charts get a little more height back, since width is the constraint */
+  .chartswap{justify-content:stretch}
+  .chartswap .btn{width:100%}
+}
+
+/* --- very small --- */
+@media(max-width:400px){
+  .logo h1{font-size:14px}
+  .iconbtn span:not([aria-hidden]){display:none}   /* icon-only buttons */
+  .kpi .val{font-size:21px}
+}
 </style>
 </head>
 <body>

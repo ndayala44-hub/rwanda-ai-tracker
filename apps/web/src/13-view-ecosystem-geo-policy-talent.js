@@ -164,7 +164,7 @@ VIEWS.geo=async function(){
      ${kpi("Districts with recorded activity",withAny,`${districts.length-withAny} have no recorded AI activity yet`)}
      ${kpi("District-level indicators","0 of "+IND.length,"the national framework has no subnational indicator","var(--amber)",
        "Every indicator in the national framework is defined at national level. Producing district scores would mean inventing variation that was never measured.")}
-     ${kpi("Concentration",rows[0]?Math.round(100*(rows[0].usecases+rows[0].orgs)/rows.reduce((s,r)=>s+r.usecases+r.orgs,0))+"%":", ",
+     ${kpi("Concentration",rows[0]?Math.round(100*(rows[0].usecases+rows[0].orgs)/rows.reduce((s,r)=>s+r.usecases+r.orgs,0))+"%":"–",
        rows[0]?"of recorded activity is in "+rows[0].d.name:"","var(--amber)")}
    </div>
    <div class="row" style="grid-template-columns:1.3fr 1fr">
@@ -422,7 +422,7 @@ VIEWS.policy=async function(){
        ${pol.map((p,i)=>`<tr class="clickable" data-act="policy" data-args="${i}">
          <td><b>${esc(p.n)}</b><div class="small muted">${esc(p.d.slice(0,96))}…</div></td>
          <td><span class="tag">${esc(p.cat)}</span></td><td>${esc(p.owner)}</td>
-         <td class="n mono">${p.year||", "}</td>
+         <td class="n mono">${p.year||"–"}</td>
          <td>${p.status.includes("In force")?'<span class="tag g">'+esc(p.status)+'</span>':p.status.includes("Not")?'<span class="tag r">'+esc(p.status)+'</span>':'<span class="tag a">'+esc(p.status)+'</span>'}</td>
          <td class="small"><span class="src" data-act="source" data-args="${p.src}">${esc(SRC(p.src).org)}</span></td></tr>`).join("")}
       </tbody></table>`)}
@@ -463,7 +463,7 @@ function policyDrawer(i){
   openDrawer(p.n,`POLICY INSTRUMENT · ${p.cat}`,
     card("Summary","",`<div class="prose"><p>${esc(p.d)}</p></div>
       <div class="kv"><span class="k">Owner</span><span class="v">${esc(p.owner)}</span></div>
-      <div class="kv"><span class="k">Year</span><span class="v mono">${p.year||", "}</span></div>
+      <div class="kv"><span class="k">Year</span><span class="v mono">${p.year||"–"}</span></div>
       <div class="kv"><span class="k">Status</span><span class="v">${esc(p.status)}</span></div>
       ${p.url?`<div class="kv"><span class="k">Reference</span><span class="v"><a class="src" href="${p.url}" target="_blank" rel="noopener">${esc(p.url)}</a></span></div>`:""}
       ${srcLine(p.src)}`),

@@ -220,11 +220,11 @@ VIEWS.sectors=async function(){
        ${rows.filter(r=>!FILTER.sector||r.S.id===FILTER.sector).map(r=>`<tr class="clickable" data-act="sector" data-args="${r.S.id}">
          <td><b>${r.S.icon} ${esc(r.S.name)}</b></td>
          <td class="n mono">${r.e?"$"+r.e.valueMn+"m":unavailable("Not sized")}</td>
-         <td class="n mono">${r.e?r.e.shareSectorGDP+"%":", "}</td>
+         <td class="n mono">${r.e?r.e.shareSectorGDP+"%":"–"}</td>
          <td class="n mono">${r.uc.length||'<span class="unavail">0</span>'}</td>
          <td class="n mono">${r.uc.filter(u=>["Production","Scaled"].includes(u.stage)).length}</td>
          <td>${r.soc?Object.entries(r.soc).map(([k,v])=>`<span class="tag ${v===3?"g":v===2?"b":""}" title="${esc(econ.socialDimensions.find(d=>d.id===k).name)}">${k} ${"●".repeat(v)}</span>`).join(" "):unavailable("Not graded")}</td>
-         <td class="small muted">${r.e?esc(r.e.driver):", "}</td></tr>`).join("")}
+         <td class="small muted">${r.e?esc(r.e.driver):"–"}</td></tr>`).join("")}
       </tbody></table>
       <div style="padding:12px 15px;border-top:1px solid var(--line)" class="small muted">
         Energy and tourism appear in the sector list because they matter to Rwanda's economy, but neither was sized in the 2022 study and neither has a registered AI deployment yet, so both are shown as unmeasured rather than estimated.

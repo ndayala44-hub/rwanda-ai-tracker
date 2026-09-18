@@ -47,8 +47,8 @@ function buildIndicators(){
       verification: current?current.verification:"not_reported",
       declaredAbsent,
       weight:1, relWeight:d.relevance,
-      lastUpdated: latest?(latest.collectedOn||latest.year+"-12-31"):", ",
-      contributor: (SOURCES[d.sourceId]||{}).org || ", "
+      lastUpdated: latest?(latest.collectedOn||latest.year+"-12-31"):"–",
+      contributor: (SOURCES[d.sourceId]||{}).org || "–"
     };
   });
   BYCODE=Object.fromEntries(IND.map(i=>[i.code,i]));

@@ -82,8 +82,8 @@ VIEWS.about=async function(){
       `<div class="prose">
         <p>A platform whose whole proposition is provenance has to be candid about its own. Of
           <b>${META.provenance?META.provenance.observations.total:OBSERVATIONS.length}</b> observations on record,
-          <b>${META.provenance?(META.provenance.observations.byOrigin["source-reported"]||0):", "}</b>
-          (<b>${META.provenance?(META.provenance.observations.sourceReportedShare*100).toFixed(0):", "}%</b>)
+          <b>${META.provenance?(META.provenance.observations.byOrigin["source-reported"]||0):"–"}</b>
+          (<b>${META.provenance?(META.provenance.observations.sourceReportedShare*100).toFixed(0):"–"}%</b>)
           are reported by a named source, the 2022 readiness assessment, the 2022 economic sizing study,
           the 2026 landscape review, or a published index.</p>
         <p>The remainder are <b>demo values</b>, generated to populate a complete eight-year series so the
@@ -93,9 +93,9 @@ VIEWS.about=async function(){
         <p>Replacing them is a data exercise, not a code one: drop real observations into
           <span class="mono">data/observations.json</span> with <span class="mono">"origin": "source-reported"</span>, or POST them to the API. Nothing in the interface changes.</p>
        </div>
-       <div class="kv"><span class="k">Source-reported observations</span><span class="v mono">${META.provenance?(META.provenance.observations.byOrigin["source-reported"]||0):", "}</span></div>
-       <div class="kv"><span class="k">Demo observations</span><span class="v mono">${META.provenance?(META.provenance.observations.byOrigin["demo"]||0):", "}</span></div>
-       <div class="kv"><span class="k">Sources independently verified</span><span class="v mono">${META.provenance?META.provenance.sources.verified:", "} of ${Object.keys(SOURCES).length}</span></div>
+       <div class="kv"><span class="k">Source-reported observations</span><span class="v mono">${META.provenance?(META.provenance.observations.byOrigin["source-reported"]||0):"–"}</span></div>
+       <div class="kv"><span class="k">Demo observations</span><span class="v mono">${META.provenance?(META.provenance.observations.byOrigin["demo"]||0):"–"}</span></div>
+       <div class="kv"><span class="k">Sources independently verified</span><span class="v mono">${META.provenance?META.provenance.sources.verified:"–"} of ${Object.keys(SOURCES).length}</span></div>
        <button class="btn sm" style="margin-top:10px" data-act="showDemoValues">Show me the demo values</button>`)}
    </div>
 
@@ -336,7 +336,7 @@ function openContribute(kind){
 async function submitContribution(){
   const g=id=>(document.getElementById(id)||{value:""}).value.trim();
   if(!g("cbWho")||!g("cbVal"))return toast("Organisation and value are both required");
-  await api.addContribution({who:g("cbWho"),kind:g("cbKind"),target:g("cbTarget")||", ",value:g("cbVal"),note:g("cbNote")||"No method supplied, reviewer will request one."});
+  await api.addContribution({who:g("cbWho"),kind:g("cbKind"),target:g("cbTarget")||"–",value:g("cbVal"),note:g("cbNote")||"No method supplied, reviewer will request one."});
   closeDrawer();toast("Submitted to the review queue");
   if(["overview","sources"].includes(VIEW))go(VIEW);
 }
@@ -403,7 +403,7 @@ function indDrawer(code){
   openDrawer(I.name,`INDICATOR · ${code} · ${D.short}`,
     `<div class="row" style="grid-template-columns:1fr 1fr 1fr;gap:10px">
       ${kpi("Reported value",s.raw===null?unavailable("not reported"):rawFmt(I,s.raw),esc(I.unit))}
-      ${kpi("Normalised score",s.assessed?fmt(s.score):", ",deltaHtml(s.score,p.score," pts"),scColor(s.score))}
+      ${kpi("Normalised score",s.assessed?fmt(s.score):"–",deltaHtml(s.score,p.score," pts"),scColor(s.score))}
       ${kpi("Confidence",pct(s.confidence),confLabel(s.confidence))}
      </div>
      ${card("What it means and why it matters","",
@@ -436,7 +436,7 @@ function indDrawer(code){
         <div class="kv"><span class="k">Reporting organisation</span><span class="v">${esc((ORG[I.owner]||{name:I.owner}).name)}</span></div>
         <div class="kv"><span class="k">Contributor</span><span class="v">${esc(I.contributor)}</span></div>
         <div class="kv"><span class="k">Reporting period</span><span class="v mono">${META.cycle-(I.stale||0)}</span></div>
-        <div class="kv"><span class="k">Collection date</span><span class="v mono">${(I.obs.find(o=>o.year===META.cycle-(I.stale||0))||{}).collected||", "}</span></div>
+        <div class="kv"><span class="k">Collection date</span><span class="v mono">${(I.obs.find(o=>o.year===META.cycle-(I.stale||0))||{}).collected||"–"}</span></div>
         <div class="kv"><span class="k">Geographic scope</span><span class="v">${I.geoLevel}</span></div>
         <div class="kv"><span class="k">Update frequency</span><span class="v">${esc(I.updateFrequency)}</span></div>
         <div class="kv"><span class="k">Observations on record</span><span class="v mono">${I.obs.length} (${I.obs.length?I.obs[0].year+"–"+I.obs[I.obs.length-1].year:"none"})</span></div>

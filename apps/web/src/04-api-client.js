@@ -85,7 +85,7 @@ const api=(function(){
     },
     async addContribution(rec){
       CONTRIBUTIONS.unshift(Object.assign({id:"C-"+(1043+CONTRIBUTIONS.length),when:new Date().toISOString().slice(0,10),
-        state:"Awaiting review",reviewer:", "},rec));
+        state:"Awaiting review",reviewer:"–"},rec));
       logAudit("CONTRIBUTION_SUBMITTED",rec.target||"new",null,rec.value);return {ok:true};
     },
     async loadDataset(json){
