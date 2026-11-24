@@ -6,3 +6,7 @@ dist/
 *.log
 .DS_Store
 # the revision log is data, committed alongside observations
+
+# test and interpreter output
+__pycache__/
+.pytest_cache/

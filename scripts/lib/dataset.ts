@@ -7,6 +7,7 @@
  * data layer — nothing else.
  */
 import { readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { join, resolve } from "node:path";
 
 export const FILES = {
@@ -31,7 +32,15 @@ export const FILES = {
 } as const;
 
 export type DatasetKey = keyof typeof FILES;
-export type Dataset = Record<DatasetKey, any> & { generated?: string };
+/**
+ * `dataHash` identifies the dataset by content. It replaces a wall-clock
+ * `generated` timestamp: a build is a pure function of data/ and apps/web/src/,
+ * so rebuilding unchanged inputs must produce byte-identical artefacts. That is
+ * what lets CI prove the committed index.html is current (rebuild, git diff) —
+ * with a timestamp inside the inline script, the script's CSP hash changed on
+ * every build and that check could never pass. "When" is recorded by git history.
+ */
+export type Dataset = Record<DatasetKey, any> & { dataHash?: string };
 
 export function dataDir(root: string): string {
   return resolve(process.env.DATA_DIR ?? join(root, "data"));
@@ -42,7 +51,7 @@ export function readDataset(dir: string): Dataset {
   for (const [key, file] of Object.entries(FILES)) {
     out[key as DatasetKey] = JSON.parse(readFileSync(join(dir, file), "utf8"));
   }
-  out.generated = new Date().toISOString();
+  out.dataHash = createHash("sha256").update(JSON.stringify(out)).digest("hex").slice(0, 16);
   return out;
 }
 

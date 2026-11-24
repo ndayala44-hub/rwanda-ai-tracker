@@ -14,7 +14,9 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
 
-      - run: npm install
+      # npm ci installs exactly what package-lock.json records and fails if it has drifted
+      # from package.json; setup-node's cache key is the lockfile, so it must stay committed.
+      - run: npm ci
       - run: pip install -r services/api/requirements-dev.txt
 
       # Referential integrity: unregistered sources, duplicate codes, missing
@@ -26,8 +28,9 @@ jobs:
       - name: Build dashboard
         run: |
           npm run build:web
-          git diff --exit-code apps/web/index.html apps/web/data/bootstrap.json \
-            || (echo "::error::apps/web/index.html is stale. Run: npm run build:web" && exit 1)
+          # The build is deterministic (no timestamps), so any difference is real drift.
+          git diff --exit-code apps/web/index.html apps/web/data/bootstrap.json apps/web/src/00-embedded-dataset.js \
+            || (echo "::error::Generated dashboard files are stale. Run: npm run build:web and commit the result" && exit 1)
 
       - name: Engine tests
         run: npm run test:engine
@@ -47,3 +50,12 @@ jobs:
       # falling back to the snapshot or the embedded dataset.
       - name: Live backend integration
         run: npm run test:live
+
+      # Hermeticity guard. The API suite used to write into the committed data/, so
+      # results depended on what ran before. Nothing the pipeline runs may change a
+      # tracked file or leave untracked output behind.
+      - name: Working tree is unchanged by the suite
+        run: |
+          git status --porcelain
+          test -z "$(git status --porcelain)" \
+            || (echo "::error::The pipeline modified or created files (listed above)" && exit 1)

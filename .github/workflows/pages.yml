@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
 
-      - run: npm install
+      - run: npm ci
 
       # Fail the deployment rather than publish a dataset that does not validate.
       - name: Validate datasets

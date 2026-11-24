@@ -15,8 +15,10 @@ from pathlib import Path
 
 import pytest
 
+import _sandbox
+
 ROOT = Path(__file__).resolve().parents[3]
-os.environ.setdefault("DATA_DIR", str(ROOT / "data"))
+_sandbox.use()      # the write tests below must never reach the committed data/
 os.environ.setdefault("ADMIN_API_TOKEN", "test-token-that-is-long-enough-123456")
 sys.path.insert(0, str(ROOT / "services/api"))
 
